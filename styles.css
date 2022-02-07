@@ -1,4 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  background-color: black;
-  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #07080b;
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+.limiter {
+  margin: 0 auto;
+  min-width: 375px;
+  max-width: 1280px;
+  padding: 0 8px;
+}
+
+section {
+
+}
+
+section.panel {
+  background-color: #fff;
+  color: #07080b;
 }
