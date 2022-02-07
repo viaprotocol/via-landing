@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  transition: all 500ms ease;
+}
+
 html,
 body {
   margin: 0;
@@ -15,7 +20,19 @@ body {
   font-size: 16px;
 }
 
+header {
+  padding: 24px;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+
+section {
+  padding: 24px;
+}
+
 footer {
+  color: #838385;
   padding: 24px;
 }
 
@@ -39,12 +56,23 @@ section {
 
 }
 
+
 section.panel {
   background-color: #fff;
   color: #07080b;
 }
 
+.supported h2 {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0em;
+}
+
 [data-button] {
+  display: inline-block;
   border-radius: 1px;
   padding: 7px 20px;
   background-color: #00FF66;
@@ -53,8 +81,6 @@ section.panel {
   font-weight: 600;
   line-height: 26px;
   letter-spacing: 0.01em;
-  text-decoration: none;
-  transition: all 500ms ease;
 }
 
 [data-button]:hover {
@@ -95,4 +121,22 @@ footer [data-button]:hover {
 }
 footer [data-button]:active {
   border: 1px solid #B90D2C;
+}
+
+footer span {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+
+footer a {
+  color: #838385;
+}
+
+footer a:hover {
+  color: #ff002e
+}
+
+footer a:active {
+  color: #b90d2c
 }
