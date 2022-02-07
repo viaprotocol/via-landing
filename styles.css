@@ -12,6 +12,11 @@ body {
   background-color: #07080b;
   color: #fff;
   font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+}
+
+footer {
+  padding: 24px;
 }
 
 h1 {
@@ -37,4 +42,57 @@ section {
 section.panel {
   background-color: #fff;
   color: #07080b;
+}
+
+[data-button] {
+  border-radius: 1px;
+  padding: 7px 20px;
+  background-color: #00FF66;
+  color: #07080b;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition: all 500ms ease;
+}
+
+[data-button]:hover {
+  background-color: #FF002E;
+  color: #fff;
+}
+
+[data-button]:active {
+  background-color: #B90D2C;
+  color: #f1cfd5;
+}
+
+[data-button="small"] {
+  padding: 0 13px;
+  line-height: 26px;
+}
+
+[data-button="large"] {
+  border-radius: 0;
+  padding: 21px 40px;
+  line-height: 26px;
+  letter-spacing: -0.03em;
+  box-shadow: 0px 0px 40px transparent;
+}
+
+[data-button="large"]:hover {
+  box-shadow: 0px 0px 40px #FF002E;
+}
+
+footer [data-button] {
+  border: 1px solid #838385;
+  background-color: transparent;
+  color: #838385;
+}
+
+footer [data-button]:hover {
+  border: 1px solid #FF002E;
+}
+footer [data-button]:active {
+  border: 1px solid #B90D2C;
 }
