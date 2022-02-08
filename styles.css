@@ -1,3 +1,5 @@
+/* elements */
+
 * {
   box-sizing: border-box;
 }
@@ -5,35 +7,6 @@
 a {
   text-decoration: none;
   transition: all 500ms ease;
-}
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #07080b;
-  color: #fff;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 16px;
-}
-
-header {
-  padding: 24px;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.1em;
-}
-
-section {
-  padding: 24px;
-}
-
-footer {
-  color: #838385;
-  padding: 24px;
 }
 
 h1 {
@@ -45,30 +18,11 @@ h1 {
   text-align: left;
 }
 
-.limiter {
-  margin: 0 auto;
-  min-width: 375px;
-  max-width: 1280px;
-  padding: 0 8px;
-}
-
-section {
-
-}
-
-
-section.panel {
-  background-color: #fff;
-  color: #07080b;
-}
-
-.supported h2 {
-  font-family: Work Sans;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px;
-  letter-spacing: 0em;
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 [data-button] {
@@ -110,17 +64,76 @@ section.panel {
   box-shadow: 0px 0px 40px #FF002E;
 }
 
-footer [data-button] {
-  border: 1px solid #838385;
-  background-color: transparent;
-  color: #838385;
+
+/* layout */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-footer [data-button]:hover {
-  border: 1px solid #FF002E;
+body {
+  background-color: #07080b;
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
 }
-footer [data-button]:active {
-  border: 1px solid #B90D2C;
+
+.limiter {
+  margin: 0 auto;
+  min-width: 375px;
+  max-width: 1280px;
+  padding: 0 8px;
+}
+
+/* sections */
+
+header {
+  padding: 32px 24px;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+
+section {
+  padding: 24px;
+}
+
+
+section.first {
+  padding: 56px 24px 180px;
+}
+
+section.panel {
+  background-color: #fff;
+  color: #07080b;
+}
+
+.supported h2 {
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  letter-spacing: 0em;
+}
+
+
+
+
+section.partners {
+  padding: 80px 24px 88px;
+}
+
+section.awards {
+  border-top: 1px solid #FFFFFF;
+  padding: 80px 24px 120px;
+}
+
+footer {
+  color: #838385;
+  padding: 41px 24px;
 }
 
 footer span {
@@ -139,4 +152,16 @@ footer a:hover {
 
 footer a:active {
   color: #b90d2c
+}
+
+footer [data-button] {
+  border: 1px solid #838385;
+  background-color: transparent;
+  color: #838385;
+}
+footer [data-button]:hover {
+  border: 1px solid #FF002E;
+}
+footer [data-button]:active {
+  border: 1px solid #B90D2C;
 }
