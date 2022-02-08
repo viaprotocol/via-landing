@@ -25,6 +25,10 @@ h3 {
   margin-bottom: 0.5em;
 }
 
+p {
+  line-height: 1.6em;
+}
+
 [data-button] {
   display: inline-block;
   border-radius: 1px;
@@ -133,6 +137,16 @@ section.panel {
   letter-spacing: 0em;
 }
 
+.bridges {
+  margin-top: 28px;
+}
+
+@media only screen and (min-width: 960px) {
+  .bridges {
+    margin-top: 0;
+  }
+}
+
 .features {
   padding: 30px 24px 80px;
 }
@@ -151,6 +165,16 @@ section.panel {
   }
   .features > *:last-child {
     margin-right: 0;
+  }
+}
+
+.feature + .feature {
+  margin-top: 40px;
+}
+
+@media only screen and (min-width: 960px) {
+  .feature + .feature {
+    margin-top: 0;
   }
 }
 
