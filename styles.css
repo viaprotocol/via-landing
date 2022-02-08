@@ -192,6 +192,14 @@ footer {
   padding: 41px 24px;
 }
 
+@media only screen and (min-width: 960px) {
+  footer {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+  }
+}
+
 footer span {
   font-size: 12px;
   line-height: 18px;
@@ -211,7 +219,7 @@ footer a:active {
 }
 
 footer [data-button] {
-  border: 1px solid #838385;
+  border: 1px solid #252528;
   background-color: transparent;
   color: #838385;
 }
@@ -220,4 +228,52 @@ footer [data-button]:hover {
 }
 footer [data-button]:active {
   border: 1px solid #B90D2C;
+}
+
+@media only screen and (min-width: 960px) {
+  .footer-left {
+    display: flex;
+  }
+  .description-and-year {
+    margin-left: 40px;
+  }
+}
+
+.year {
+  margin-left: 40px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 39px;
+}
+
+@media only screen and (min-width: 960px) {
+  .footer-right {
+    margin-top: 0;
+  }
+}
+
+.description-and-year {
+  margin-top: 12px;
+}
+
+@media only screen and (min-width: 960px) {
+  .description-and-year {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.socials * + * {
+  margin-left: 48px;
+}
+
+@media only screen and (min-width: 960px) {
+  .socials {
+    margin-right: 85px;
+  }
 }
