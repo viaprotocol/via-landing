@@ -108,10 +108,24 @@ section.first {
 section.panel {
   background-color: #fff;
   color: #07080b;
+  padding: 0;
+}
+
+.supported {
+  border-bottom: 2px solid #F2F7ED;
+  padding: 24px 24px 28px;
+}
+
+@media only screen and (min-width: 960px) {
+  .supported {
+    display: flex;
+  }
+  .supported > * {
+    width: 50%;
+  }
 }
 
 .supported h2 {
-  font-family: Work Sans;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -119,8 +133,26 @@ section.panel {
   letter-spacing: 0em;
 }
 
+.features {
+  padding: 30px 24px 80px;
+}
 
-
+@media only screen and (min-width: 960px) {
+  .features {
+    display: flex;
+  }
+  .features > * {
+    width: 33.3%;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  .features > *:first-child {
+    margin-left: 0;
+  }
+  .features > *:last-child {
+    margin-right: 0;
+  }
+}
 
 section.partners {
   padding: 80px 24px 88px;
