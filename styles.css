@@ -82,6 +82,23 @@ body {
   color: #fff;
   font-family: 'Work Sans', sans-serif;
   font-size: 16px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url('img/bg-small.png');
+}
+
+@media only screen and (min-width: 960px) {
+  body {
+    background-image: url('img/bg-medium.png');
+    background-position-x: 150px;
+  }
+}
+
+@media only screen and (min-width: 1600px) {
+  body {
+    background-image: url('img/bg-large.png');
+    background-position-x: 445px;
+  }
 }
 
 .limiter {
@@ -90,6 +107,10 @@ body {
   max-width: 1280px;
   padding: 0 8px;
 }
+
+/* decoration */
+
+
 
 /* sections */
 
