@@ -296,16 +296,68 @@ section.partners {
   padding: 80px 24px 88px;
 }
 
+@media only screen and (min-width: 960px) {
+  section.partners {
+    display: flex;
+  }
+  section.partners h2 {
+    margin-right: 146px;
+  }
+}
+
 .partners h2,
 .awards h2 {
   margin-bottom: 35px;
 }
 
-.partners img {
-  /*display: block;*/
+.partners .items {
 }
 
-.partners .items img,
+.partners img {
+  
+}
+
+.partners .size-small img {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.partners .size-small img + img{
+  margin-left: 24px;
+}
+
+.partners [src*="near"] {
+  width: 98px;
+  height: 25px;
+  order: 1;
+}
+.partners [src*="arbitrum"] {
+  width: 164px;
+  height: 31px;
+  order: 2;
+}
+.partners [src*="biconomy"] {
+  width: 145px;
+  height: 27px;
+  order: 3;
+}
+.partners [src*="polygon"] {
+  width: 133px;
+  height: 29px;
+  order: 4;
+}
+.partners [src*="binance"] {
+  width: 120px;
+  height: 24px;
+  order: 5;
+}
+.partners [src*="buildship"] {
+  width: 143px;
+  height: 28px;
+  order: 6;
+}
+
+
 .awards .items img {
   margin: 15px;
 }
