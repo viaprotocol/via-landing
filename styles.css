@@ -94,7 +94,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 1400px) {
   body {
     background-image: url('img/bg-large.png');
     background-position-x: 445px;
@@ -111,6 +111,97 @@ body {
 /* decoration */
 
 
+[class*="pyramid"] {
+  position: absolute;
+  animation: 5s ease-in-out 0s infinite alternate fly
+}
+
+@keyframes fly {
+  0% { transform: translateY(0) }
+  50% { transform: translateY(15%) }
+  100% { transform: translateY(0%) }
+}
+
+.pyramid-1 {
+  width: 192px;
+  height: 179px;
+  left: 61%;
+  top: 40%;
+  animation-delay: -5s;
+}
+
+.pyramid-2 {
+  width: 196px;
+  height: 169px;
+  left: 68%;
+  top: -7%;
+  animation-delay: -4.5s;
+  z-index: -1;
+}
+
+.pyramid-3 {
+  width: 125px;
+  height: 106px;
+  left: 91%;
+  top: 57%;
+  animation-delay: -4s;
+}
+
+.pyramid-4 {
+  width: 97px;
+  height: 79px;
+  left: 78%;
+  top: 70%;
+  animation-delay: -3.5s;
+}
+
+.pyramid-5 {
+  width: 82px;
+  height: 81px;
+  left: 53%;
+  top: -7%;
+  animation-delay: -3s;
+}
+
+.pyramid-6 {
+  width: 79px;
+  height: 67px;
+  left: 53%;
+  top: 89%;
+  animation-delay: -2.5s;
+}
+
+.pyramid-7 {
+  width: 35px;
+  height: 49px;
+  left: 47%;
+  top: 52%;
+  animation-delay: -2s;
+}
+
+.pyramid-8 {
+  width: 123px;
+  height: 105px;
+  left: 95%;
+  top: 79%;
+  animation-delay: -1.5s;
+}
+
+.pyramid-9 {
+  width: 83px;
+  height: 83px;
+  left: 98%;
+  top: 40%;
+  animation-delay: -1s;
+}
+
+.pyramid-10 {
+  width: 101px;
+  height: 94px;
+  left: -8%;
+  top: -28%;
+  animation-delay: -0.5s;
+}
 
 /* sections */
 
@@ -123,11 +214,13 @@ header {
 
 section {
   padding: 24px;
+  position: relative;
 }
 
 
 section.first {
   padding: 56px 24px 180px;
+  z-index: 1;
 }
 
 section.panel {
@@ -212,8 +305,8 @@ section.partners {
   /*display: block;*/
 }
 
-.partners img /*+ img*/,
-.awards img /*+ img*/ {
+.partners .items img,
+.awards .items img {
   margin: 15px;
 }
 
