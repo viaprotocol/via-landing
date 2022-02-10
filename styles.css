@@ -108,6 +108,12 @@ body {
   padding: 0 8px;
 }
 
+@media only screen and (min-width: 960px) {
+  .limiter {
+    padding: 0 24px;
+  }
+}
+
 /* decoration */
 
 
@@ -298,9 +304,18 @@ section.partners {
 
 @media only screen and (min-width: 960px) {
   section.partners {
-    display: flex;
+    padding: 80px 0;
   }
-  section.partners h2 {
+}
+
+@media only screen and (min-width: 960px) {
+  section.partners,
+  section.wins {
+    display: flex;
+    align-items: center;
+  }
+  section.partners h2,
+  section.wins h2 {
     margin-right: 146px;
   }
 }
@@ -358,14 +373,51 @@ section.partners {
 }
 
 
-.awards .items img {
-  margin: 15px;
+
+
+section.wins {
+  border-top: 1px solid #FFFFFF;
+  padding: 80px 24px 100px;
 }
 
-section.awards {
-  border-top: 1px solid #FFFFFF;
-  padding: 80px 24px 120px;
+@media only screen and (min-width: 960px) {
+  section.wins {
+    padding: 80px 0 100px;
+  }
 }
+
+.wins h2 {
+  margin-bottom: 26px;
+}
+
+.wins .items {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr;
+}
+
+.wins .items img {
+  margin-right: 22px;
+  margin-bottom: 22px;
+}
+
+.wins [src*="okex"] {
+  width: 136px;
+  height: 79px;
+}
+.wins [src*="moledao"] {
+  width: 104px;
+  height: 80px;
+}
+.wins [src*="aragon"] {
+  width: 141px;
+  height: 32px;
+}
+.wins [src*="buildit"] {
+  width: 133px;
+  height: 19px;
+}
+
 
 footer {
   color: #838385;
