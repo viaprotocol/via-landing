@@ -66,7 +66,7 @@ p {
 
 @media only screen and (min-width: 960px) {
   [data-button="large"] {
-    line-height: 26px;
+    line-height: 18px;
   }
 }
 
@@ -139,15 +139,22 @@ body {
   width: 192px;
   height: 179px;
   left: 61%;
-  top: 40%;
+  top: 33%;
   animation-delay: -5s;
+  display: none;
+}
+
+@media only screen and (min-width: 960px) {
+  .pyramid-1 {
+    display: unset;
+  }
 }
 
 .pyramid-2 {
   width: 196px;
   height: 169px;
   left: 68%;
-  top: -7%;
+  top: -14%;
   animation-delay: -4.5s;
   z-index: -1;
 }
@@ -179,8 +186,8 @@ body {
 .pyramid-6 {
   width: 79px;
   height: 67px;
-  left: 53%;
-  top: 89%;
+  left: 51%;
+  top: 84%;
   animation-delay: -2.5s;
 }
 
@@ -244,7 +251,7 @@ section.first {
 
 @media only screen and (min-width: 960px) {
   section.first {
-    padding: 26px 46px 180px;
+    padding: 26px 46px 92px;
   }
 }
 
@@ -262,6 +269,7 @@ section.panel {
 @media only screen and (min-width: 960px) {
   .supported {
     display: flex;
+    padding: 40px 46px 34px;
   }
   .supported > * {
     width: 50%;
@@ -293,6 +301,7 @@ section.panel {
 @media only screen and (min-width: 960px) {
   .features {
     display: flex;
+    padding: 78px 46px 80px;
   }
   .features > * {
     width: 33.3%;
@@ -330,7 +339,7 @@ section.partners {
 
 @media only screen and (min-width: 960px) {
   section.partners {
-    padding: 80px 0;
+    padding: 80px 0 50px;
   }
 }
 
@@ -376,7 +385,7 @@ section.wins h2 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  max-width: 670px;
+  max-width: 630px;
   margin-right: -24px;
 }
 
@@ -478,6 +487,29 @@ section.wins {
   width: 133px;
   height: 19px;
 }
+@media only screen and (min-width: 960px) {
+  .wins .items img {
+    margin-right: 19px;
+    margin-bottom: 19px;
+  }
+
+  .wins [src*="okex"] {
+    width: 109px;
+    height: 63px;
+  }
+  .wins [src*="moledao"] {
+    width: 74px;
+    height: 57px;
+  }
+  .wins [src*="aragon"] {
+    width: 144px;
+    height: 32px;
+  }
+  .wins [src*="buildit"] {
+    width: 148px;
+    height: 22px;
+  }
+}
 
 
 footer {
@@ -490,6 +522,7 @@ footer {
     display: flex;
     align-content: center;
     justify-content: space-between;
+    padding: 41px 0;
   }
 }
 
