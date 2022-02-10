@@ -218,6 +218,12 @@ header {
   letter-spacing: 0.1em;
 }
 
+@media only screen and (min-width: 960px) {
+  header {
+    padding: 40px 46px;
+  }
+}
+
 section {
   padding: 24px;
   position: relative;
@@ -227,6 +233,12 @@ section {
 section.first {
   padding: 56px 24px 180px;
   z-index: 1;
+}
+
+@media only screen and (min-width: 960px) {
+  section.first {
+    padding: 26px 46px 180px;
+  }
 }
 
 section.panel {
@@ -347,19 +359,22 @@ section.wins h2 {
 }
 
 .partners .items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 670px;
 }
 
 .partners img {
-  
-}
-
-.partners .size-small img {
   display: inline-block;
-  margin-bottom: 24px;
+  margin-right: 40px;
+  margin-bottom: 35px;
 }
 
-.partners .size-small img + img{
-  margin-left: 24px;
+@media only screen and (min-width: 960px) {
+  .partners img {
+
+  }
 }
 
 .partners [src*="near"] {
@@ -394,8 +409,6 @@ section.wins h2 {
 }
 
 
-
-
 section.wins {
   border-top: 1px solid #FFFFFF;
   padding: 80px 24px 100px;
@@ -412,9 +425,13 @@ section.wins {
 }
 
 .wins .items {
-  display: grid;
+  /*display: grid;
   align-items: center;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto 1fr;*/
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 670px;
 }
 
 @media only screen and (min-width: 960px) {
