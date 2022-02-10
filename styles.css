@@ -308,15 +308,36 @@ section.partners {
   }
 }
 
+section.partners h2,
+section.wins h2 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 47px;
+  letter-spacing: -0.02em;
+}
+
+@media only screen and (min-width: 1400px) {
+  section.partners h2,
+  section.wins h2 {
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+}
+
+
 @media only screen and (min-width: 960px) {
   section.partners,
   section.wins {
     display: flex;
     align-items: center;
   }
-  section.partners h2,
+  section.partners h2 {
+    margin-right: 156px;
+  }
   section.wins h2 {
-    margin-right: 146px;
+    margin-right: 108px;
   }
 }
 
@@ -394,6 +415,12 @@ section.wins {
   display: grid;
   align-items: center;
   grid-template-columns: auto 1fr;
+}
+
+@media only screen and (min-width: 960px) {
+  .wins .items {
+    grid-template-columns: auto auto auto auto;
+  }
 }
 
 .wins .items img {
