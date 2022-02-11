@@ -138,8 +138,8 @@ body {
 .pyramid-1 {
   width: 192px;
   height: 179px;
-  left: 61%;
-  top: 33%;
+  left: 62%;
+  top: 26%;
   animation-delay: -5s;
   display: none;
 }
@@ -151,36 +151,64 @@ body {
 }
 
 .pyramid-2 {
-  width: 196px;
-  height: 169px;
-  left: 68%;
-  top: -14%;
+  width: 152px;
+  height: 130px;
+  left: 60%;
+  top: -7%;
   animation-delay: -4.5s;
   z-index: -1;
 }
 
+@media only screen and (min-width: 960px) {
+  .pyramid-2 {
+    width: 196px;
+    height: 169px;
+    left: 68%;
+    top: -18%;
+  }
+}
+
 .pyramid-3 {
-  width: 125px;
-  height: 106px;
-  left: 91%;
-  top: 57%;
+  width: 196px;
+  height: 167px;
+  left: 74%;
+  top: 71%;
   animation-delay: -4s;
 }
 
+@media only screen and (min-width: 960px) {
+  .pyramid-3 {
+    width: 125px;
+    height: 106px;
+    left: 91%;
+    top: 57%;
+  }
+}
+
 .pyramid-4 {
-  width: 97px;
-  height: 79px;
-  left: 78%;
-  top: 70%;
+  width: 129px;
+  height: 104px;
+  left: 11%;
+  top: 65%;
   animation-delay: -3.5s;
+}
+
+@media only screen and (min-width: 960px) {
+  .pyramid-4 {
+    width: 97px;
+    height: 79px;
+    left: 78%;
+    top: 70%;
+  }
 }
 
 .pyramid-5 {
   width: 82px;
   height: 81px;
   left: 53%;
-  top: -7%;
+  top: -11%;
   animation-delay: -3s;
+  display: none;
 }
 
 .pyramid-6 {
@@ -189,14 +217,16 @@ body {
   left: 51%;
   top: 84%;
   animation-delay: -2.5s;
+  display: none;
 }
 
 .pyramid-7 {
   width: 35px;
   height: 49px;
-  left: 47%;
+  left: 45%;
   top: 52%;
   animation-delay: -2s;
+  display: none;
 }
 
 .pyramid-8 {
@@ -205,22 +235,48 @@ body {
   left: 95%;
   top: 79%;
   animation-delay: -1.5s;
+  display: none;
+}
+
+@media only screen and (min-width: 960px) {
+  .pyramid-5,
+  .pyramid-6,
+  .pyramid-7,
+  .pyramid-8 {
+    display: unset;
+  }
 }
 
 .pyramid-9 {
-  width: 83px;
-  height: 83px;
-  left: 98%;
-  top: 40%;
+  width: 125px;
+  height: 125px;
+  left: 63%;
+  top: 97%;
   animation-delay: -1s;
+}
+
+@media only screen and (min-width: 960px) {
+  .pyramid-9 {
+    width: 83px;
+    height: 83px;
+    left: 98%;
+    top: 40%;
+  }
 }
 
 .pyramid-10 {
   width: 101px;
   height: 94px;
-  left: -8%;
-  top: -28%;
+  left: -19%;
+  top: 0%;
   animation-delay: -0.5s;
+}
+
+@media only screen and (min-width: 960px) {
+  .pyramid-10 {
+    left: -8%;
+    top: -28%;
+  }
 }
 
 /* sections */
