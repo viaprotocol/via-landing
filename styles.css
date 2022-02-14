@@ -602,6 +602,12 @@ footer {
   }
 }
 
+@media only screen and (min-width: 1400px) {
+  footer {
+    padding-bottom: 80px;
+  }
+}
+
 footer span {
   font-size: 12px;
   line-height: 18px;
@@ -635,6 +641,7 @@ footer [data-button]:active {
 @media only screen and (min-width: 960px) {
   .footer-left {
     display: flex;
+    align-items: center;
   }
   .description-and-year {
     margin-left: 40px;
