@@ -91,7 +91,6 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
   background-image: url('img/bg-small.png');
-  overflow-x: clip;
 }
 
 @media only screen and (min-width: 960px) {
@@ -106,6 +105,10 @@ body {
     background-image: url('img/bg-large.png');
     background-position-x: 445px;
   }
+}
+
+.all {
+  overflow-x: clip;
 }
 
 .limiter {
