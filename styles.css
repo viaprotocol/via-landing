@@ -346,14 +346,15 @@ section.panel {
   letter-spacing: 0em;
 }
 
-.dexs .items {
+.dexs .items,
+.bridges .items {
   height: 40px;
-  /*outline: 1px solid #ccc;*/
   text-align: justify;
   position: relative;
 }
 
-.dexs .items > * {
+.dexs .items > *,
+.bridges .items > * {
   position: absolute;
   transition: all 0.5s ease;
   opacity: 0;
@@ -367,14 +368,6 @@ section.panel {
   .bridges {
     margin-top: 0;
   }
-}
-
-.bridges .items {
-  height: 40px;
-  overflow-y: hidden;
-  /*outline: 1px solid #ccc;*/
-  text-align: justify;
-  position: relative;
 }
 
 .features {
