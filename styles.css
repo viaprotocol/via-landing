@@ -108,7 +108,7 @@ body {
 }
 
 .all {
-  overflow-x: clip;
+  overflow: hidden;
 }
 
 .limiter {
