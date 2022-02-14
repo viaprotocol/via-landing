@@ -330,6 +330,9 @@ section.panel {
   .supported > * {
     width: 50%;
   }
+  .supported > * + * {
+    margin-left: 40px;
+  }
 }
 
 .supported h2 {
@@ -338,6 +341,13 @@ section.panel {
   font-weight: 600;
   line-height: 26px;
   letter-spacing: 0em;
+}
+
+.dexs .items,
+.bridges .items {
+  height: 40px;
+  overflow: hidden;
+  text-align: justify;
 }
 
 .bridges {
