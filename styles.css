@@ -635,7 +635,7 @@ footer [data-button]:active {
 }
 
 .year {
-  margin-left: 40px;
+  margin-left: 35px;
 }
 
 .footer-right {
@@ -653,6 +653,13 @@ footer [data-button]:active {
 
 .description-and-year {
   margin-top: 12px;
+}
+
+@media only screen and (max-width: 520px) {
+  .description-and-year {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (min-width: 960px) {
