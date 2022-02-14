@@ -334,7 +334,7 @@ section.panel {
     width: 50%;
   }
   .supported > * + * {
-    margin-left: 40px;
+    margin-left: 60px;
   }
 }
 
@@ -346,11 +346,17 @@ section.panel {
   letter-spacing: 0em;
 }
 
-.dexs .items,
-.bridges .items {
+.dexs .items {
   height: 40px;
-  overflow: hidden;
+  /*outline: 1px solid #ccc;*/
   text-align: justify;
+  position: relative;
+}
+
+.dexs .items > * {
+  position: absolute;
+  transition: all 0.5s ease;
+  opacity: 0;
 }
 
 .bridges {
@@ -361,6 +367,14 @@ section.panel {
   .bridges {
     margin-top: 0;
   }
+}
+
+.bridges .items {
+  height: 40px;
+  overflow-y: hidden;
+  /*outline: 1px solid #ccc;*/
+  text-align: justify;
+  position: relative;
 }
 
 .features {
