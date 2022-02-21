@@ -438,8 +438,8 @@ section.panel {
 
 @media only screen and (min-width: 960px) {
   .features > * {
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 42px;
+    margin-right: 42px;
   }
 }
 
@@ -483,7 +483,7 @@ section.partners {
   }
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1420px) {
   section.partners {
     padding: 120px 0 90px;
   }
@@ -525,6 +525,9 @@ section.wins h2 {
 @media only screen and (min-width: 1420px) {
   section.partners h2 {
     margin-right: 202px;
+  }
+  section.wins h2 {
+    margin-right: 130px;
   }
 }
 
@@ -668,6 +671,12 @@ section.wins {
   }
 }
 
+@media only screen and (min-width: 1420px) {
+  section.wins {
+    padding: 120px 0 90px;
+  }
+}
+
 .wins h2 {
   margin-bottom: 26px;
 }
@@ -686,6 +695,12 @@ section.wins {
 @media only screen and (min-width: 960px) {
   .wins .items {
     grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  .wins .items {
+    max-width: 780px;
   }
 }
 
@@ -710,6 +725,7 @@ section.wins {
   width: 133px;
   height: 19px;
 }
+
 @media only screen and (min-width: 960px) {
   .wins .items img {
     margin-right: 19px;
@@ -731,6 +747,30 @@ section.wins {
   .wins [src*="buildit"] {
     width: 148px;
     height: 22px;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .wins .items img {
+    margin-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  .wins [src*="okex"] {
+    width: 136px;
+    height: 79px;
+  }
+  .wins [src*="moledao"] {
+    width: 92px;
+    height: 71px;
+  }
+  .wins [src*="aragon"] {
+    width: 179px;
+    height: 40px;
+  }
+  .wins [src*="buildit"] {
+    width: 184px;
+    height: 27px;
   }
 }
 
