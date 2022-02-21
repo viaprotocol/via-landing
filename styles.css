@@ -801,6 +801,13 @@ footer span {
   letter-spacing: 0.1em;
 }
 
+@media only screen and (min-width: 960px) {
+  footer span {
+    font-size: 14px;
+    line-height: 26px;
+  }
+}
+
 footer a {
   color: #838385;
 }
@@ -837,6 +844,12 @@ footer [data-button]:active {
 
 .year {
   margin-left: 35px;
+}
+
+@media only screen and (min-width: 960px) {
+  .year {
+    margin-left: 40px;
+  }
 }
 
 .footer-right {
@@ -878,5 +891,8 @@ footer [data-button]:active {
 @media only screen and (min-width: 960px) {
   .socials {
     margin-right: 85px;
+  }
+  .socials * + * {
+    margin-left: 60px;
   }
 }
