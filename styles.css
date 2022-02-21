@@ -34,10 +34,6 @@ h3 {
   margin-bottom: 0.5em;
 }
 
-p {
-  line-height: 1.6em;
-}
-
 [data-button] {
   display: inline-block;
   border-radius: 1px;
@@ -140,6 +136,13 @@ body {
     padding: 0 24px;
   }
 }
+
+@media only screen and (min-width: 1420px) {
+  .limiter {
+    padding: 0;
+  }
+}
+
 
 /* decoration */
 
@@ -433,6 +436,13 @@ section.panel {
   }
 }
 
+@media only screen and (min-width: 960px) {
+  .features > * {
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+}
+
 .feature + .feature {
   margin-top: 40px;
 }
@@ -450,6 +460,19 @@ section.panel {
   letter-spacing: -0.02em;
 }
 
+@media only screen and (min-width: 1420px) {
+  .feature h2 {
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+
+.features p {
+  font-size: 16px;
+  line-height: 26px;
+}
+
+
 section.partners {
   padding: 80px 24px 60px;
 }
@@ -457,6 +480,12 @@ section.partners {
 @media only screen and (min-width: 960px) {
   section.partners {
     padding: 80px 0 50px;
+  }
+}
+
+@media only screen and (min-width: 960px) {
+  section.partners {
+    padding: 120px 0 90px;
   }
 }
 
@@ -493,6 +522,12 @@ section.wins h2 {
   }
 }
 
+@media only screen and (min-width: 1420px) {
+  section.partners h2 {
+    margin-right: 202px;
+  }
+}
+
 .partners h2,
 .awards h2 {
   margin-bottom: 35px;
@@ -504,6 +539,12 @@ section.wins h2 {
   align-items: center;
   max-width: 630px;
   margin-right: -24px;
+}
+
+@media only screen and (min-width: 1420px) {
+  .partners .items {
+    max-width: 760px;
+  }
 }
 
 .partners img {
@@ -550,6 +591,71 @@ section.wins h2 {
   order: 6;
 }
 
+@media only screen and (min-width: 960px) {
+  .partners [src*="near"] {
+    width: 110px;
+    height: 30px;
+    order: 1;
+  }
+  .partners [src*="arbitrum"] {
+    width: 164px;
+    height: 31px;
+    order: 4;
+  }
+  .partners [src*="biconomy"] {
+    width: 137px;
+    height: 26px;
+    order: 2;
+  }
+  .partners [src*="polygon"] {
+    width: 132px;
+    height: 29px;
+    order: 6;
+  }
+  .partners [src*="binance"] {
+    width: 155px;
+    height: 31px;
+    order: 5;
+  }
+  .partners [src*="buildship"] {
+    width: 163px;
+    height: 32px;
+    order: 3;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .partners [src*="near"] {
+    width: 134px;
+    height: 35px;
+    order: 1;
+  }
+  .partners [src*="arbitrum"] {
+    width: 230px;
+    height: 45px;
+    order: 4;
+  }
+  .partners [src*="biconomy"] {
+    width: 166px;
+    height: 31px;
+    order: 2;
+  }
+  .partners [src*="polygon"] {
+    width: 160px;
+    height: 35px;
+    order: 6;
+  }
+  .partners [src*="binance"] {
+    width: 187px;
+    height: 38px;
+    order: 5;
+  }
+  .partners [src*="buildship"] {
+    width: 199px;
+    height: 38px;
+    order: 3;
+  }
+}
 
 section.wins {
   border-top: 1px solid #FFFFFF;
