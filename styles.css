@@ -173,6 +173,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 1420px) {
+  .pyramid-1 {
+    width: 325px;
+    height: 304px;
+    left: 68%;
+    top: 3%;
+  }
+}
+
 .pyramid-2 {
   width: 152px;
   height: 130px;
@@ -188,6 +197,15 @@ body {
     height: 169px;
     left: 68%;
     top: -18%;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .pyramid-2 {
+    width: 332px;
+    height: 286px;
+    left: 82%;
+    top: -32%;
   }
 }
 
@@ -208,6 +226,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 1420px) {
+  .pyramid-3 {
+    width: 241px;
+    height: 206px;
+    left: 103%;
+    top: 50%;
+  }
+}
+
 .pyramid-4 {
   width: 129px;
   height: 104px;
@@ -225,6 +252,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 1420px) {
+  .pyramid-4 {
+    width: 177px;
+    height: 143px;
+    left: 78%;
+    top: 56%;
+  }
+}
+
 .pyramid-5 {
   width: 82px;
   height: 81px;
@@ -232,6 +268,21 @@ body {
   top: -11%;
   animation-delay: -3s;
   display: none;
+}
+
+@media only screen and (min-width: 960px) {
+  .pyramid-5 {
+    display: unset;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .pyramid-5 {
+    width: 117px;
+    height: 116px;
+    left: 55%;
+    top: -26%;
+  }
 }
 
 .pyramid-6 {
@@ -243,6 +294,21 @@ body {
   display: none;
 }
 
+@media only screen and (min-width: 960px) {
+  .pyramid-6 {
+    display: unset;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .pyramid-6 {
+    width: 113px;
+    height: 96px;
+    left: 62%;
+    top: 84%;
+  }
+}
+
 .pyramid-7 {
   width: 35px;
   height: 49px;
@@ -250,6 +316,21 @@ body {
   top: 52%;
   animation-delay: -2s;
   display: none;
+}
+
+@media only screen and (min-width: 960px) {
+  .pyramid-7 {
+    display: unset;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .pyramid-7 {
+    width: 50px;
+    height: 69px;
+    left: 48%;
+    top: 53%;
+  }
 }
 
 .pyramid-8 {
@@ -262,11 +343,17 @@ body {
 }
 
 @media only screen and (min-width: 960px) {
-  .pyramid-5,
-  .pyramid-6,
-  .pyramid-7,
   .pyramid-8 {
     display: unset;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .pyramid-8 {
+    width: 169px;
+    height: 144px;
+    left: 94%;
+    top: 78%;
   }
 }
 
@@ -287,6 +374,15 @@ body {
   }
 }
 
+@media only screen and (min-width: 1420px) {
+  .pyramid-9 {
+    width: 125px;
+    height: 125px;
+    left: 105%;
+    top: 39%;
+  }
+}
+
 .pyramid-10 {
   width: 101px;
   height: 94px;
@@ -298,7 +394,14 @@ body {
 @media only screen and (min-width: 960px) {
   .pyramid-10 {
     left: -8%;
-    top: -28%;
+    top: -34%;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .pyramid-10 {
+    left: -13%;
+    top: 37%;
   }
 }
 
