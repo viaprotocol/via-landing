@@ -10,6 +10,8 @@ a {
 }
 
 h1 {
+  margin-top: 0;
+  margin-bottom: 0.5em;
   font-size: 48px;
   font-style: normal;
   font-weight: 600;
@@ -18,7 +20,14 @@ h1 {
   text-align: left;
 }
 
-h1,
+@media only screen and (min-width: 1420px) {
+  h1 {
+    margin-bottom: 60px;
+    font-size: 80px;
+    line-height: 90px;
+  }
+}
+
 h2,
 h3 {
   margin-top: 0;
@@ -70,6 +79,14 @@ p {
   }
 }
 
+@media only screen and (min-width: 1420px) {
+  [data-button="large"] {
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: -0.03em;
+  }
+}
+
 [data-button="large"]:hover {
   box-shadow: 0px 0px 40px #FF002E;
 }
@@ -100,7 +117,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1420px) {
   body {
     background-image: url('img/bg-large.png');
     background-position-x: 445px;
@@ -297,6 +314,24 @@ header {
   }
 }
 
+@media only screen and (min-width: 1420px) {
+  header {
+    padding: 120px 0;
+  }
+}
+
+header img[src*="logo"] {
+  width: 120px;
+  height: 26px;
+}
+
+@media only screen and (min-width: 1420px) {
+  header img[src*="logo"] {
+    width: 157px;
+    height: 34px;
+  }
+}
+
 section {
   padding: 24px;
   position: relative;
@@ -311,6 +346,12 @@ section.first {
 @media only screen and (min-width: 960px) {
   section.first {
     padding: 26px 46px 92px;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  section.first {
+    padding: 0 0 194px;
   }
 }
 
@@ -427,7 +468,7 @@ section.wins h2 {
   letter-spacing: -0.02em;
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1420px) {
   section.partners h2,
   section.wins h2 {
     font-size: 60px;
@@ -602,7 +643,7 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1420px) {
   footer {
     padding-bottom: 80px;
   }
