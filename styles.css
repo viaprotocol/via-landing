@@ -1001,7 +1001,19 @@ footer [data-button]:active {
   }
 }
 
-@media only screen and (max-width: 1150px) {
+@media only screen and (min-width: 960px) and (max-width: 1110px) {
+  a[href*="github"],
+  a[href*="discord"] {
+    display: none;
+  }
+
+  a[href*="github"] + *,
+  a[href*="discord"] + * {
+    margin-left: unset;
+  }
+}
+
+@media only screen and (max-width: 550px) {
   a[href*="github"],
   a[href*="discord"] {
     display: none;
