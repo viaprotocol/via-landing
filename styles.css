@@ -1000,3 +1000,15 @@ footer [data-button]:active {
     margin-left: 60px;
   }
 }
+
+@media only screen and (max-width: 1150px) {
+  a[href*="github"],
+  a[href*="discord"] {
+    display: none;
+  }
+
+  a[href*="github"] + *,
+  a[href*="discord"] + * {
+    margin-left: unset;
+  }
+}
