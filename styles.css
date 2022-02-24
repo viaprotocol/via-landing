@@ -524,6 +524,19 @@ section.panel {
   opacity: 0;
 }
 
+@media only screen and (min-width: 960px) {
+  .bridges .items {
+    display: flex;
+    justify-content: space-between;
+  }
+  .bridges .items > * {
+    /* overwrite js */
+    position: unset;
+    opacity: 1!important;
+    transform: unset!important;
+  }
+}
+
 .bridges {
   margin-top: 28px;
 }
@@ -533,6 +546,7 @@ section.panel {
     margin-top: 0;
   }
 }
+
 
 .features {
   padding: 30px 24px 80px;
