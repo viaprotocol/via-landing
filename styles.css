@@ -487,11 +487,27 @@ section.panel {
 }
 
 .supported h2 {
+  display: inline-block;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
   letter-spacing: 0em;
+}
+
+.supported a.view-all {
+  margin-left: 19px;
+  font-size: 16px;
+  line-height: 26px;
+  color: #838385;
+}
+
+.supported a.view-all:hover {
+  color: #ff002e;
+}
+
+.supported a.view-all:active {
+  color: #b90d2c
 }
 
 .dexs .items,
@@ -1051,11 +1067,11 @@ footer a {
 }
 
 footer a:hover {
-  color: #ff002e
+  color: #ff002e;
 }
 
 footer a:active {
-  color: #b90d2c
+  color: #b90d2c;
 }
 
 footer [data-button] {
