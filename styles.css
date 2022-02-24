@@ -103,8 +103,8 @@ body {
   font-size: 16px;
   background-repeat: no-repeat;
   background-size: 100%;
-  /*background-image: url('img/bg-small.png');*/
-  background-image: url('img/bg-large.jpg');
+  background-image: url('img/bg-small.png');
+  /*background-image: url('img/bg-large.jpg');*/
 }
 
 @media only screen and (min-width: 960px) {
@@ -988,39 +988,27 @@ footer [data-button]:active {
   }
 }
 
+.socials {
+  margin-right: 18px;
+}
 .socials * + * {
-  margin-left: 48px;
+  margin-left: 7px;
 }
 
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1000px) {
   .socials {
-    margin-right: 85px;
+    margin-right: 44px;
   }
   .socials * + * {
-    margin-left: 60px;
+    margin-left: 28px;
   }
 }
 
-@media only screen and (min-width: 960px) and (max-width: 1110px) {
-  a[href*="github"],
-  a[href*="discord"] {
-    display: none;
+@media only screen and (min-width: 1420px) {
+  .socials {
+    margin-right: 60px;
   }
-
-  a[href*="github"] + *,
-  a[href*="discord"] + * {
-    margin-left: unset;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  a[href*="github"],
-  a[href*="discord"] {
-    display: none;
-  }
-
-  a[href*="github"] + *,
-  a[href*="discord"] + * {
-    margin-left: unset;
+  .socials * + * {
+    margin-left: 54px;
   }
 }
