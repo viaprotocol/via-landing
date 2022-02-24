@@ -6,7 +6,10 @@ function animate(selector, numberOfItems) {
 
   function reinit() {
     wrapperWidth = wrapper.clientWidth
-    var slots = Math.floor(wrapperWidth / itemWidth)
+    var slots = Math.min(
+      Math.floor(wrapperWidth / itemWidth),
+      window.innerWidth >= 960 ? 10 : 9000
+    )
     gap = (wrapperWidth - slots * itemWidth) / (slots - 1)
   }
 
@@ -39,7 +42,7 @@ function animate(selector, numberOfItems) {
 
   function setPosition(n, pos) {
     var img = document.querySelector(selector + ' [src*="-' + n + '."]')
-    img.style.opacity = (pos < 0 || pos > wrapperWidth) ? 0 : 1
+    img.style.opacity = (pos < 0 || pos >= wrapperWidth) ? 0 : 1
     img.style.transform = 'translateX(' + pos + 'px)'
   }
 
