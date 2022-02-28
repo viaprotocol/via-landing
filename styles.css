@@ -694,7 +694,7 @@ section.backers h2 {
 
 @media only screen and (min-width: 960px) {
   .partners img {
-    margin-right: 29px;
+    margin-right: 23px;
     margin-bottom: 25px;
   }
 }
@@ -729,37 +729,47 @@ section.backers h2 {
   height: 28px;
   order: 6;
 }
+.partners [src*="zksync"] {
+  width: 122px;
+  height: 24px;
+  order: 7;
+}
 
 @media only screen and (min-width: 960px) {
   .partners [src*="near"] {
-    width: 110px;
-    height: 30px;
+    width: 103px;
+    height: 27px;
     order: 1;
   }
   .partners [src*="arbitrum"] {
-    width: 164px;
-    height: 31px;
-    order: 4;
+    width: 189px;
+    height: 37px;
+    order: 5;
   }
   .partners [src*="biconomy"] {
-    width: 137px;
-    height: 26px;
+    width: 124px;
+    height: 24px;
     order: 2;
   }
   .partners [src*="polygon"] {
     width: 132px;
     height: 29px;
-    order: 6;
+    order: 7;
   }
   .partners [src*="binance"] {
     width: 155px;
     height: 31px;
-    order: 5;
+    order: 6;
   }
   .partners [src*="buildship"] {
-    width: 163px;
-    height: 32px;
+    width: 148px;
+    height: 28px;
     order: 3;
+  }
+  .partners [src*="zksync"] {
+    width: 122px;
+    height: 24px;
+    order: 4;
   }
 }
 
@@ -772,7 +782,7 @@ section.backers h2 {
   .partners [src*="arbitrum"] {
     width: 230px;
     height: 45px;
-    order: 4;
+    order: 5;
   }
   .partners [src*="biconomy"] {
     width: 166px;
@@ -782,17 +792,22 @@ section.backers h2 {
   .partners [src*="polygon"] {
     width: 160px;
     height: 35px;
-    order: 6;
+    order: 7;
   }
   .partners [src*="binance"] {
     width: 187px;
     height: 38px;
-    order: 5;
+    order: 6;
   }
   .partners [src*="buildship"] {
     width: 199px;
     height: 38px;
     order: 3;
+  }
+  .partners [src*="zksync"] {
+    width: 156px;
+    height: 31px;
+    order: 4;
   }
 }
 
