@@ -521,8 +521,12 @@ section.panel {
 .dexs .items > *,
 .bridges .items > * {
   position: absolute;
-  transition: all 0.5s ease;
   opacity: 0;
+}
+
+.dexs .items.inited > *,
+.bridges .items.inited > * {
+  transition: all 0.5s ease;
 }
 
 @media only screen and (min-width: 960px) {

@@ -40,6 +40,9 @@ function animate(selector, numberOfItems) {
 
   redraw()
   setInterval(redraw, 1000)
+  setTimeout(function() {
+    wrapper.classList.add('inited')
+  }, 1)
 }
 
 animate('.dexs .items', 40)
