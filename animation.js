@@ -2,11 +2,11 @@ function animate(selector, numberOfItems) {
   var wrapper = document.querySelector(selector)
   var itemWidth = 40
 
-  var wrapperWidth, gap
+  var wrapperWidth, slots, gap
 
   function reinit() {
     wrapperWidth = wrapper.clientWidth
-    var slots = Math.min(
+    slots = Math.min(
       Math.floor(wrapperWidth / itemWidth),
       window.innerWidth >= 960 ? 10 : 9000
     )
@@ -16,28 +16,20 @@ function animate(selector, numberOfItems) {
   window.addEventListener('resize', reinit)
   reinit()
 
-  var i = 1
+  var pointer = 1
 
   function redraw() {
-    for (let j = 1; j <= numberOfItems; j++) {
-      var pos
-      if (j === numberOfItems + 1 - i) {
-        pos = -120
-      } else {
-        pos = ((i + j - 2) % numberOfItems) * (itemWidth + gap)
-      }
-      setPosition(j, pos)
+    for (let i = 1; i <= numberOfItems; i++) {
+      var pos = (itemWidth + gap) * ((slots - i + pointer - 1) % numberOfItems)
+      pos = (pos >= wrapperWidth + itemWidth + gap) ? -120 : pos
+      setPosition(i, pos)
     }
 
     if (itemWidth * numberOfItems <= wrapperWidth) {
       return
     }
 
-    if (i === numberOfItems) {
-      i = 1
-    } else {
-      i++
-    }
+    pointer = pointer === numberOfItems ? 1 : ++pointer
   }
 
   function setPosition(n, pos) {
