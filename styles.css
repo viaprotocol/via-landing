@@ -486,6 +486,15 @@ section.panel {
   }
 }
 
+@media only screen and (min-width: 1420px) {
+  .supported {
+    padding: 80px 64px;
+  }
+  .supported > * + * {
+    margin-left: 68px;
+  }
+}
+
 .supported h2 {
   display: inline-block;
   font-size: 16px;
@@ -493,6 +502,18 @@ section.panel {
   font-weight: 600;
   line-height: 26px;
   letter-spacing: 0em;
+}
+
+@media only screen and (min-width: 960px) {
+  .supported h2 {
+    margin-bottom: 7px;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .supported h2 {
+    margin-bottom: 14px;
+  }
 }
 
 .supported a.view-all {
@@ -572,6 +593,12 @@ section.panel {
   }
   .features > *:last-child {
     margin-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1420px) {
+  .features {
+    padding: 78px 64px 80px;
   }
 }
 
