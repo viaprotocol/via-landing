@@ -992,13 +992,13 @@ section.backers {
 }
 
 .backers .items {
-  max-width: 910px;
+  max-width: 1210px;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .backers .item {
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 25px;
   margin-bottom: 20px;
 }
 
