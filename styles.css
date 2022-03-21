@@ -1006,6 +1006,10 @@ section.backers {
   margin-bottom: 15px;
 }
 
+.backers .item.prior img {
+  height: 32px;
+}
+
 @media only screen and (min-width: 640px) {
   .backers .item {
     margin-right: 20px;
@@ -1021,6 +1025,9 @@ section.backers {
   .backers .item.prior {
     margin-bottom: 30px;
   }
+  .backers .item.prior img {
+    height: 40px;
+  }
 }
 
 @media only screen and (min-width: 1420px) {
@@ -1029,6 +1036,9 @@ section.backers {
   }
   .backers .item.prior {
     margin-bottom: 60px;
+  }
+  .backers .item.prior img {
+    height: 50px;
   }
 }
 
