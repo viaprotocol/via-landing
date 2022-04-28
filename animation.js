@@ -46,4 +46,4 @@ function animate(selector, numberOfItems) {
 }
 
 animate('.dexs .items', 40)
-animate('.bridges .items', 10)
+animate('.bridges .items', 11)
