@@ -103,20 +103,20 @@ body {
   font-size: 16px;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-image: url('img/bg-small.png');
-  /*background-image: url('img/bg-large.jpg');*/
+  background-image: url('../img/bg-small.png');
+  /*background-image: url('../img/bg-large.jpg');*/
 }
 
 @media only screen and (min-width: 960px) {
   body {
-    background-image: url('img/bg-large.jpg');
+    background-image: url('../img/bg-large.jpg');
     background-position-x: 150px;
   }
 }
 
 @media only screen and (min-width: 1420px) {
   body {
-    background-image: url('img/bg-large.jpg');
+    background-image: url('../img/bg-large.jpg');
     background-position-x: 445px;
   }
 }
