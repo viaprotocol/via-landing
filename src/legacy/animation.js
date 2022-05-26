@@ -6,10 +6,7 @@ function animate(selector, numberOfItems) {
 
   function reinit() {
     wrapperWidth = wrapper.clientWidth
-    slots = Math.min(
-      Math.floor(wrapperWidth / itemWidth),
-      window.innerWidth >= 960 ? 10 : 9000
-    )
+    slots = Math.min(Math.floor(wrapperWidth / itemWidth), window.innerWidth >= 960 ? 10 : 9000)
     gap = (wrapperWidth - slots * itemWidth) / (slots - 1)
   }
 
@@ -21,7 +18,7 @@ function animate(selector, numberOfItems) {
   function redraw() {
     for (let i = 1; i <= numberOfItems; i++) {
       var pos = (itemWidth + gap) * ((slots - i + pointer - 1) % numberOfItems)
-      pos = (pos >= wrapperWidth + itemWidth + gap) ? -120 : pos
+      pos = pos >= wrapperWidth + itemWidth + gap ? -120 : pos
       setPosition(i, pos)
     }
 
@@ -34,13 +31,13 @@ function animate(selector, numberOfItems) {
 
   function setPosition(n, pos) {
     var img = document.querySelector(selector + ' [src*="-' + n + '."]')
-    img.style.opacity = (pos < 0 || pos >= wrapperWidth) ? 0 : 1
+    img.style.opacity = pos < 0 || pos >= wrapperWidth ? 0 : 1
     img.style.transform = 'translateX(' + pos + 'px)'
   }
 
   redraw()
   setInterval(redraw, 1000)
-  setTimeout(function() {
+  setTimeout(function () {
     wrapper.classList.add('inited')
   }, 1)
 }
