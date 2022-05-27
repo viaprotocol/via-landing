@@ -2,6 +2,7 @@ export default class DesktopHeader {
   constructor() {
     this._moreSocialsButton = document.querySelector('.header__more-button')
     this._moreSocialEl = document.querySelector('.header__more-socials')
+    this._socialEl = document.querySelector('.header__socials')
 
     this._productsButton = document.querySelector('.header__products-button')
     this._productsEl = document.querySelector('.header__products')
@@ -12,7 +13,8 @@ export default class DesktopHeader {
 
   _toggleSocials() {
     this._moreSocialsButton.classList.toggle('header__more-button--opened', this.isSocialsOpened)
-    this._moreSocialEl.classList.toggle('header__more-socials--opened', this.isSocialsOpened)
+    this._moreSocialEl.classList.toggle('header__socials--opened', this.isSocialsOpened)
+    this._socialEl.classList.toggle('header__socials--opened', this.isSocialsOpened)
   }
 
   _toggleProducts() {

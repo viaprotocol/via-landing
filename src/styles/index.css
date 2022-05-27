@@ -7,6 +7,10 @@ body {
   }
 }
 
+button {
+  font-family: inherit;
+}
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -73,18 +77,21 @@ body {
     margin: 0;
     padding: 0;
     list-style: none;
+    transform: translateX(calc(100% + var(--socials-gap)));
     gap: var(--socials-gap);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+
+    &--opened {
+      transform: translateX(0);
+    }
   }
 
   &__more-socials {
     z-index: -5;
     opacity: 0;
-    transform: translateX(200%);
-    margin-right: var(--socials-gap);
-    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+    margin-left: var(--socials-gap);
 
-    &--opened {
-      transform: translateX(0);
+    &.header__socials--opened {
       opacity: 1;
       z-index: 1;
     }
@@ -117,10 +124,6 @@ body {
     border: none;
     appearance: none;
     background-color: transparent;
-    background-image: url('../img/icons/dots.svg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center;
     color: white;
     width: 40px;
     height: 40px;
@@ -136,9 +139,20 @@ body {
     }
 
     &--opened {
-      background-image: url('../img/icons/close.svg');
-      background-size: 16px 16px;
+      & .header__more-icon:first-child {
+        display: none;
+      }
+      & .header__more-icon:last-child {
+        display: block;
+      }
     }
+  }
+
+  &__more-icon:first-child {
+    display: block;
+  }
+  &__more-icon:last-child {
+    display: none;
   }
 
   &__action-button {
@@ -206,6 +220,10 @@ body {
     padding: 72px 24px 24px;
     opacity: 0;
 
+    @supports (-moz-appearance: none) {
+      background-color: #07080b;
+    }
+
     &--opened {
       transition: opacity 0.4s ease-in-out;
       z-index: 20;
@@ -250,7 +268,7 @@ body {
 .mobile-menu {
   display: none;
   z-index: 10;
-  padding: 24px 16px 16px;
+  padding: 32px 16px 16px;
   background-color: rgba(26, 27, 30, 0.64);
   box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(120px);
@@ -426,11 +444,11 @@ body {
         content: '';
         position: absolute;
         background-color: rgba(0, 255, 102, 0.7);
-        filter: blur(40px);
+        filter: blur(20px);
         z-index: -1;
         width: 48px;
         height: 48px;
-        top: calc(100% + 2px);
+        top: 30%;
         left: 50%;
         transform: translateX(-50%);
       }
