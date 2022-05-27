@@ -150,6 +150,13 @@ body {
   &--soon {
     cursor: not-allowed;
 
+    & .menu-product__wrapper {
+      &:hover,
+      &:active {
+        background-color: transparent;
+      }
+    }
+
     & .menu-product__info {
       color: rgba(255, 255, 255, 0.15);
     }
