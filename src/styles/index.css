@@ -48,6 +48,8 @@ body {
     backdrop-filter: blur(120px);
     border-radius: 8px;
     border: none;
+    padding: 8px;
+    font-size: 0;
 
     @media screen and (min-width: 768px) {
       display: none;
