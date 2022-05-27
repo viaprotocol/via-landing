@@ -465,6 +465,7 @@ section.first {
 
 section.panel {
   background-color: #fff;
+  border-radius: 24px;
   color: #07080b;
   padding: 0;
 }
