@@ -36,7 +36,7 @@ h3 {
 
 [data-button] {
   display: inline-block;
-  border-radius: 1px;
+  border-radius: 12px;
   padding: 7px 20px;
   background-color: #00ff66;
   color: #07080b;
@@ -62,7 +62,6 @@ h3 {
 }
 
 [data-button='large'] {
-  border-radius: 0;
   padding: 21px 40px;
   line-height: 16px;
   letter-spacing: -0.03em;
@@ -1207,6 +1206,7 @@ footer [data-button]:active {
 }
 
 .socials {
+  color: #fff;
   margin-right: 18px;
 }
 .socials * + * {
