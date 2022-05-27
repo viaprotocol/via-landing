@@ -25,6 +25,8 @@ body {
   align-items: center;
   justify-content: space-between;
 
+  letter-spacing: normal !important; /* WHY I NEED FIX THIS? 🥲 */
+
   --socials-gap: 10px;
 
   @media screen and (min-width: 800px) {
@@ -54,6 +56,7 @@ body {
 
   &__actions {
     display: none;
+    position: relative;
     align-items: center;
 
     @media screen and (min-width: 768px) {
@@ -120,6 +123,7 @@ body {
     width: 40px;
     height: 40px;
     transition: background-color 0.25s ease-in-out;
+    cursor: pointer;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.04);
@@ -136,13 +140,19 @@ body {
   }
 
   &__action-button {
+    display: flex;
+    align-content: center;
+    justify-content: center;
     border: none;
     appearance: none;
     padding: 10px 16px;
     border-radius: 12px;
     font-size: 16px;
     line-height: 20px;
+    cursor: pointer;
+    margin-right: 8px;
     letter-spacing: -0.03em;
+    z-index: 5;
 
     background-color: #07080b;
     color: white;
@@ -159,10 +169,79 @@ body {
       box-shadow: none;
       color: #07080b;
     }
+  }
 
-    &:not(:last-child) {
-      margin-right: 8px;
+  &__products-button {
+    width: 99px;
+    margin-right: 0;
+
+    &--opened {
+      z-index: 27;
+      font-size: 0;
+
+      & .header__products-icon {
+        margin-top: 2px;
+        display: block;
+      }
     }
+  }
+
+  &__products-icon {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__products {
+    z-index: -1;
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    background-color: rgba(26, 27, 30, 0.64);
+    box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(120px);
+    border-radius: 24px;
+    padding: 72px 24px 24px;
+    opacity: 0;
+
+    &--opened {
+      transition: opacity 0.4s ease-in-out;
+      z-index: 20;
+      opacity: 1;
+    }
+  }
+
+  &__products-close-button {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    appearance: none;
+    border: none;
+    width: 99px;
+    height: 40px;
+    border-radius: 12px;
+    padding: 12px;
+    background-color: #07080b;
+    color: white;
+    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+
+    &:hover {
+      background-color: #04ff66;
+      box-shadow: 0px 0px 16px rgba(4, 255, 102, 0.6);
+      color: #07080b;
+    }
+
+    &:active {
+      background-color: #30ba66;
+      box-shadow: none;
+      color: #07080b;
+    }
+  }
+
+  &__products-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
   }
 }
 
@@ -312,22 +391,63 @@ body {
     transition: background-color 0.25s ease-in-out;
     background-color: transparent;
 
-    &:hover,
+    @media screen and (min-width: 768px) {
+      padding: 16px;
+      align-content: center;
+      border-radius: 12px;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
     &:active {
       background-color: rgba(255, 255, 255, 0.12);
     }
   }
 
-  &__img-wrapper {
+  &__image-wrapper {
+    position: relative;
     font-size: 0;
+    line-height: 0;
     padding: 6px;
     background-color: #111215;
     border-radius: 8px;
     margin-right: 12px;
+
+    @media screen and (min-width: 768px) {
+      padding: 20px;
+      margin-right: 24px;
+      border-radius: 24px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        background-color: rgba(0, 255, 102, 0.7);
+        filter: blur(40px);
+        z-index: -1;
+        width: 48px;
+        height: 48px;
+        top: calc(100% + 2px);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &__image {
+    @media screen and (min-width: 768px) {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &__info {
     padding: 6px 0;
+
+    @media screen and (min-width: 768px) {
+      padding: 0;
+    }
   }
 
   &__title {
@@ -337,6 +457,11 @@ body {
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 
   &__description {
@@ -344,5 +469,10 @@ body {
     padding: 0;
     font-size: 13px;
     line-height: 20px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 16px;
+      line-height: 24px;
+    }
   }
 }
