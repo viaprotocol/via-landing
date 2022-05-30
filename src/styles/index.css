@@ -347,6 +347,18 @@ button {
   }
 
   &__product {
+    overflow: hidden;
+
+    &:first-child {
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+
     &:not(:last-child) {
       border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     }
@@ -404,6 +416,7 @@ button {
   }
 
   &__wrapper {
+    overflow: hidden;
     display: flex;
     padding: 8px;
     align-items: flex-start;
@@ -413,7 +426,7 @@ button {
 
     @media screen and (min-width: 768px) {
       padding: 16px;
-      align-content: center;
+      align-items: center;
       border-radius: 12px;
     }
 
