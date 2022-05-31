@@ -1,0 +1,7 @@
+{
+  "plugins": {
+    "posthtml-inline-svg": {
+      "cwd": "./src/img/"
+    }
+  }
+}
