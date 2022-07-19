@@ -484,7 +484,7 @@ section.panel {
     width: 50%;
   }
   .supported > * + * {
-    margin-left: 60px;
+    margin-left: 100px;
   }
 }
 
@@ -493,7 +493,7 @@ section.panel {
     padding: 80px 64px;
   }
   .supported > * + * {
-    margin-left: 68px;
+    margin-left: 120px;
   }
 }
 

@@ -1,13 +1,15 @@
-function animate(selector, numberOfItems) {
-  var wrapper = document.querySelector(selector)
-  var itemWidth = 40
+var dexsWrapper = document.querySelector('.dexs .items')
+var bridgesWrapper = document.querySelector('.bridges .items')
+var size = 40
 
+function animate(wrapper) {
+  var numberOfItems = wrapper.children.length
   var wrapperWidth, slots, gap
 
   function reinit() {
     wrapperWidth = wrapper.clientWidth
-    slots = Math.min(Math.floor(wrapperWidth / itemWidth), window.innerWidth >= 960 ? 10 : 9000)
-    gap = (wrapperWidth - slots * itemWidth) / (slots - 1)
+    slots = Math.min(Math.floor(wrapperWidth / size), window.innerWidth >= 960 ? 10 : 9000)
+    gap = (wrapperWidth - slots * size) / (slots - 1)
   }
 
   window.addEventListener('resize', reinit)
@@ -16,13 +18,13 @@ function animate(selector, numberOfItems) {
   var pointer = 1
 
   function redraw() {
-    for (let i = 1; i <= numberOfItems; i++) {
-      var pos = (itemWidth + gap) * ((slots - i + pointer - 1) % numberOfItems)
-      pos = pos >= wrapperWidth + itemWidth + gap ? -120 : pos
+    for (var i = 1; i <= numberOfItems; i++) {
+      var pos = (size + gap) * ((slots - i + pointer - 1) % numberOfItems)
+      pos = pos >= wrapperWidth + size + gap ? -120 : pos
       setPosition(i, pos)
     }
 
-    if (itemWidth * numberOfItems <= wrapperWidth) {
+    if (size * numberOfItems <= wrapperWidth) {
       return
     }
 
@@ -30,7 +32,7 @@ function animate(selector, numberOfItems) {
   }
 
   function setPosition(n, pos) {
-    var img = document.querySelector(selector + ' img:nth-child(' + n + ')')
+    var img = wrapper.querySelector('img:nth-child(' + n + ')')
     img.style.opacity = pos < 0 || pos >= wrapperWidth ? 0 : 1
     img.style.transform = 'translateX(' + pos + 'px)'
   }
@@ -42,28 +44,24 @@ function animate(selector, numberOfItems) {
   }, 1)
 }
 
-const append = (item, parent) => {
-  const image = document.createElement('img')
+function append(item, parent) {
+  var image = document.createElement('img')
   image.setAttribute('src', item.logoURI)
-  image.setAttribute('height', 40)
-  image.setAttribute('width', 40)
+  image.setAttribute('height', size)
+  image.setAttribute('width', size)
   image.setAttribute('alt', item.name)
   parent.appendChild(image)
 }
 
-const dexsContainer = document.querySelector('.dexs .items')
-const bridgesContainer = document.querySelector('.bridges .items')
-
 fetch('https://router-api.via.exchange/api/v2/tools')
-  .then(response => response.json())
-  .then(data => {
-    const dexs = data.tools.filter(tool => tool.type === 'swap')
-    dexs.forEach(dex => { append(dex, dexsContainer) })
-    animate('.dexs .items', dexs.length)
+  .then(function(response) { return response.json() })
+  .then(function(data) {
+    var dexs = data.tools.filter(function(tool) { return tool.type === 'swap' })
+    dexs.forEach(function(dex) { append(dex, dexsWrapper) })
+    animate(dexsWrapper)
 
-    const bridges = data.tools.filter(tool => tool.type === 'cross')
-    bridges.forEach(bridge => { append(bridge, bridgesContainer) })
-    animate('.bridges .items', bridges.length)
-
+    var bridges = data.tools.filter(function(tool) { return tool.type === 'cross' })
+    bridges.forEach(function(bridge) { append(bridge, bridgesWrapper) })
+    animate(bridgesWrapper)
   })
   .catch(console.error)
