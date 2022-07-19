@@ -545,24 +545,13 @@ section.panel {
 .bridges .items > * {
   position: absolute;
   opacity: 0;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .dexs .items.inited > *,
 .bridges .items.inited > * {
   transition: all 0.5s ease;
-}
-
-@media only screen and (min-width: 960px) {
-  .bridges .items {
-    display: flex;
-    justify-content: space-between;
-  }
-  .bridges .items > * {
-    /* overwrite js */
-    position: unset;
-    opacity: 1 !important;
-    transform: unset !important;
-  }
 }
 
 .bridges {
