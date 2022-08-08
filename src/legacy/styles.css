@@ -188,13 +188,6 @@ section.first {
   }
 }
 
-section.panel {
-  background-color: #fff;
-  border-radius: 24px;
-  color: #07080b;
-  padding: 0;
-}
-
 .supported {
   border-bottom: 2px solid #f2f7ed;
   padding: 24px 24px 28px;
@@ -289,69 +282,6 @@ section.panel {
   }
 }
 
-.features {
-  padding: 30px 24px 80px;
-}
-
-@media only screen and (min-width: 960px) {
-  .features {
-    display: flex;
-    padding: 78px 46px 80px;
-  }
-  .features > * {
-    width: 33.3%;
-    margin-left: 22px;
-    margin-right: 22px;
-  }
-  .features > *:first-child {
-    margin-left: 0;
-  }
-  .features > *:last-child {
-    margin-right: 0;
-  }
-}
-
-@media only screen and (min-width: 1420px) {
-  .features {
-    padding: 78px 64px 80px;
-  }
-}
-
-@media only screen and (min-width: 960px) {
-  .features > * {
-    margin-left: 42px;
-    margin-right: 42px;
-  }
-}
-
-.feature + .feature {
-  margin-top: 40px;
-}
-
-@media only screen and (min-width: 960px) {
-  .feature + .feature {
-    margin-top: 0;
-  }
-}
-
-.feature h2 {
-  font-size: 32px;
-  font-weight: 600;
-  line-height: 38px;
-  letter-spacing: -0.02em;
-}
-
-@media only screen and (min-width: 1420px) {
-  .feature h2 {
-    font-size: 40px;
-    line-height: 47px;
-  }
-}
-
-.features p {
-  font-size: 16px;
-  line-height: 26px;
-}
 
 footer {
   color: #838385;

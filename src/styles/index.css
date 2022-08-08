@@ -509,3 +509,61 @@ button {
     }
   }
 }
+
+
+.features {
+  padding: 30px 24px 80px;
+
+  @media only screen and (min-width: 960px) {
+    display: flex;
+    padding: 78px 46px 80px;
+  }
+
+  .feature + .feature {
+    margin-top: 10px;
+
+    @media only screen and (min-width: 960px) {
+      margin-top: 0;
+    }
+  }
+
+  @media only screen and (min-width: 960px) {
+    .feature {
+      width: 33.3%;
+      margin-left: 12px;
+      margin-right: 12px;
+    }
+    .feature:first-child {
+      margin-left: 0;
+    }
+    .feature:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .feature {
+    padding: 46px 40px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  h2 {
+    margin-top: 40px;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+
+    @media only screen and (min-width: 1420px) {
+      font-size: 40px;
+      line-height: 47px;
+    }
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
