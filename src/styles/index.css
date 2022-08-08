@@ -511,7 +511,14 @@ button {
 }
 
 
-.features {
+.central-sections {
+  background-image: url('../img/backgrounds/bg-central-large.jpg');
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+section.features {
   padding: 30px 24px 80px;
 
   @media only screen and (min-width: 960px) {
@@ -565,5 +572,64 @@ button {
     font-size: 18px;
     line-height: 28px;
     color: rgba(255, 255, 255, 0.4);
+  }
+}
+
+section.tools {
+  padding: 24px 24px 28px;
+  text-align: center;
+
+  h2 {
+    display: inline-block;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 80px;
+    letter-spacing: 0em;
+
+    .dot {
+      color: #00FF60;
+    }
+
+    @media only screen and (min-width: 960px) {
+      margin-bottom: 7px;
+    }
+
+    @media only screen and (min-width: 1420px) {
+      margin-bottom: 14px;
+    }
+  }
+
+  p {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    max-width: 600px;
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  .dexs .items,
+  .bridges .items {
+    height: 40px;
+    text-align: justify;
+    position: relative;
+  }
+
+  .dexs .items > *,
+  .bridges .items > * {
+    position: absolute;
+    opacity: 0;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  .dexs .items.inited > *,
+  .bridges .items.inited > * {
+    transition: all 0.5s ease;
+  }
+
+  .bridges {
+    margin-top: 28px;
   }
 }
