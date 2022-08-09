@@ -150,12 +150,12 @@ header {
   }
 
   img[src*='logo'] {
-    width: 120px;
-    height: 26px;
+    width: 93px;
+    height: 20px;
 
-    @media only screen and (min-width: 1420px) {
-      width: 157px;
-      height: 34px;
+    @media only screen and (min-width: 960px) {
+      width: 110px;
+      height: 24px;
     }
   }
 }
