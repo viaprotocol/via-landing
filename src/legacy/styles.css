@@ -223,18 +223,6 @@ footer a:active {
   color: #b90d2c;
 }
 
-footer [data-button] {
-  border: 1px solid #252528;
-  background-color: transparent;
-  color: #838385;
-}
-footer [data-button]:hover {
-  border: 1px solid #ff002e;
-}
-footer [data-button]:active {
-  border: 1px solid #b90d2c;
-}
-
 @media only screen and (min-width: 960px) {
   .footer-left {
     display: flex;
