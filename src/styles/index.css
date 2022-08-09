@@ -727,6 +727,7 @@ section.tools {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 40px;
+    max-width: 600px;
     font-size: 18px;
     line-height: 28px;
 
