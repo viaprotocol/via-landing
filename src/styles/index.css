@@ -71,12 +71,16 @@ button {
   }
 
   &__socials {
-    display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
     gap: var(--socials-gap);
+    display: none;
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
   }
 
   &__social-link {
@@ -86,10 +90,12 @@ button {
     border-radius: 8px;
     color: white;
     padding: 8px;
-    transition: background 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    opacity: 0.4;
 
     &:hover {
       background-color: rgba(255, 255, 255, 0.04);
+      opacity: 1;
     }
 
     &:active {
