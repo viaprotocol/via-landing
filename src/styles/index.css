@@ -111,15 +111,16 @@ button {
     appearance: none;
     padding: 10px 16px;
     border-radius: 12px;
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
     cursor: pointer;
     margin-right: 8px;
     letter-spacing: -0.03em;
     z-index: 5;
 
-    background-color: #07080b;
-    color: white;
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #FFFFFFCC;
     transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
 
     &:hover {
@@ -144,7 +145,7 @@ button {
       font-size: 0;
 
       & .header__products-icon {
-        margin-top: 2px;
+        margin-top: 4px;
         display: block;
       }
     }
@@ -173,6 +174,7 @@ button {
     }
 
     &--opened {
+      width: 660px;
       transition: opacity 0.4s ease-in-out;
       z-index: 20;
       opacity: 1;
