@@ -18,7 +18,7 @@ h1 {
   letter-spacing: -0.02em;
   transform: scale(0.9);
   opacity: 0;
-  animation: appear 1.5s ease-in-out 1 normal forwards;
+  animation: appear 1.5s ease 1 normal forwards;
 
   @media only screen and (min-width: 960px) {
     margin-bottom: 64px;
@@ -135,7 +135,7 @@ body {
 .all {
   overflow: hidden;
   background: #090a0cff;
-  animation: enlight 1.5s ease-in-out 1 normal forwards;
+  animation: enlight 2s ease 1 normal forwards;
   will-change: background;
 }
 
@@ -668,10 +668,24 @@ section.first {
   .form-image {
     width: 100%;
     max-width: 480px;
+    opacity: 0;
+    animation: slideDown 0.8s ease 1 normal forwards;
+    animation-delay: 0.7s;
 
     @media only screen and (min-width: 960px) {
       width: auto;
       max-width: 100%;
+    }
+  }
+
+  @keyframes slideDown {
+    0% {
+      opacity: 0;
+      transform: scale(0.96) translateY(-9%);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
     }
   }
 
