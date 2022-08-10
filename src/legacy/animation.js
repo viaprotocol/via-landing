@@ -16,12 +16,12 @@ fetch('https://router-api.via.exchange/api/v2/tools')
   .then(function(response) { return response.json() })
   .then(function(data) {
     var dexs = data.tools.filter(function(tool) { return tool.type === 'swap' })
-    data.tools.forEach(function(tool) { append(tool, toolsWrapper1) })
-    data.tools.forEach(function(tool) { append(tool, toolsWrapper2) })
-    data.tools.forEach(function(tool) { append(tool, toolsWrapper3) })
-    data.tools.forEach(function(tool) { append(tool, toolsWrapper4) })
-    data.tools.forEach(function(tool) { append(tool, toolsWrapper5) })
-    //animate(toolsWrapper)
+    var sort = function() { return (Math.random() > .5) ? 1 : -1 }
+    data.tools.sort(sort).forEach(function(tool) { append(tool, toolsWrapper1) })
+    data.tools.sort(sort).forEach(function(tool) { append(tool, toolsWrapper2) })
+    data.tools.sort(sort).forEach(function(tool) { append(tool, toolsWrapper3) })
+    data.tools.sort(sort).forEach(function(tool) { append(tool, toolsWrapper4) })
+    data.tools.sort(sort).forEach(function(tool) { append(tool, toolsWrapper5) })
   })
   .catch(console.error)
 
