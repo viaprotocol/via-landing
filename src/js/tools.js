@@ -24,10 +24,13 @@ function filterTools(tools, toolType) {
 function fillRows(toolType) {
   var toolsFiltered = filterTools(tools, toolType)
   var sortFunc = function() { return (Math.random() > .5) ? 1 : -1 }
-  console.log('toolsFiltered', toolsFiltered)
   toolsWrappers.map(function(wrapper) {
     wrapper.innerHTML = ''
-    toolsFiltered.sort(sortFunc).forEach(function(tool) { append(tool, wrapper) })
+    var sortedTools = toolsFiltered.sort(sortFunc)
+    while (sortedTools.length && sortedTools.length < 60) {
+      sortedTools = sortedTools.concat(sortedTools)
+    }
+    sortedTools.forEach(function(tool) { append(tool, wrapper) })
   })
 }
 
