@@ -226,7 +226,6 @@ body {
     appearance: none;
     background-color: rgba(255, 255, 255, 0.04);
     box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(120px);
     border-radius: 8px;
     border: none;
     padding: 8px;
@@ -601,13 +600,13 @@ body {
         content: '';
         position: absolute;
         background-color: rgba(0, 255, 102, 0.7);
-        filter: blur(20px);
+        filter: blur(12px);
         z-index: -1;
-        width: 48px;
-        height: 48px;
-        top: 30%;
+        width: 60px;
+        height: 60px;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
       }
     }
   }
