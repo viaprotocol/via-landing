@@ -1,4 +1,4 @@
-const features = document.querySelectorAll('.feature')
+var features = document.querySelectorAll('.feature')
 features.forEach(function(feature) {
   feature.onmousemove = function(e) {
     feature.style.setProperty('--cursor-x', e.layerX)

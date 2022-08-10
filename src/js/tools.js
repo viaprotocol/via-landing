@@ -1,3 +1,4 @@
+var tools
 var toolsWrappers = [
   '.tools .row-1',
   '.tools .row-2',
@@ -16,17 +17,40 @@ function append(item, parent) {
   parent.appendChild(image)
 }
 
-function fillRows(tools) {
+function filterTools(tools, toolType) {
+  return tools.filter(function(tool) { return !toolType || tool.type === toolType })
+}
+
+function fillRows(toolType) {
+  var toolsFiltered = filterTools(tools, toolType)
   var sortFunc = function() { return (Math.random() > .5) ? 1 : -1 }
+  console.log('toolsFiltered', toolsFiltered)
   toolsWrappers.map(function(wrapper) {
-    tools.sort(sortFunc).forEach(function(tool) { append(tool, wrapper) })
+    wrapper.innerHTML = ''
+    toolsFiltered.sort(sortFunc).forEach(function(tool) { append(tool, wrapper) })
   })
 }
 
 fetch('https://router-api.via.exchange/api/v2/tools')
   .then(function(response) { return response.json() })
   .then(function(data) {
-    //var dexs = data.tools.filter(function(tool) { return tool.type === 'swap' })
-    fillRows(data.tools)
+    tools = data.tools
+    document.querySelector('.bridges-number').innerText = filterTools(tools, 'cross').length
+    document.querySelector('.dexs-number').innerText = filterTools(tools, 'swap').length
+    fillRows()
   })
   .catch(console.error)
+
+var buttons = document.querySelectorAll('.tools-switch button')
+buttons.forEach(function(button) {
+  button.onclick = function() {
+    if (button.classList.contains('active')) {
+      return
+    }
+    buttons.forEach(function(button) {
+      button.classList.remove('active')
+    })
+    button.classList.add('active')
+    fillRows(button.value)
+  }
+})
