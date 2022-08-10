@@ -151,7 +151,7 @@ body {
 .limiter {
   margin: 0 auto;
   min-width: 375px;
-  max-width: 1280px;
+  max-width: 1800px;
   padding: 0 8px;
 
   @media only screen and (min-width: 960px) {
@@ -762,7 +762,7 @@ section.first {
 
 section.tools {
   margin-bottom: 80px;
-  padding: 24px 24px 0;
+  padding: 24px 0 0;
   text-align: center;
 
   @media only screen and (min-width: 960px) {
@@ -800,6 +800,34 @@ section.tools {
       margin-bottom: 80px;
       font-size: 24px;
       line-height: 38px;
+    }
+  }
+
+  .rows {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(270deg, rgb(9, 10, 12) 0%, rgba(9, 10, 12, 0) 100%);
+      transform: rotate(-180deg);
+      will-change: transform;
+      width: 15%;
+      height: 100%;
+      z-index: 1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: linear-gradient(270deg, rgb(9, 10, 12) 0%, rgba(9, 10, 12, 0) 100%);
+      width: 15%;
+      height: 100%;
+      z-index: 1;
     }
   }
 
@@ -867,6 +895,9 @@ section.features {
 
   @media only screen and (min-width: 960px) {
     display: flex;
+    max-width: 1070px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .feature + .feature {
@@ -965,6 +996,10 @@ section.features {
     font-size: 18px;
     line-height: 28px;
     color: rgba(255, 255, 255, 0.4);
+
+    @media only screen and (min-width: 960px) {
+      max-width: unset;
+    }
   }
 }
 
