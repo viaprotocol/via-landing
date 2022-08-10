@@ -824,6 +824,7 @@ section.features {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 12px;
     background: rgba(255, 255, 255, 0.02);
+    color: inherit;
     position: relative;
     --y: calc((var(--cursor-y) * 1px));
     --x: calc((var(--cursor-x) * 1px));
