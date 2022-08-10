@@ -16,11 +16,25 @@ h1 {
   font-weight: 600;
   line-height: 54px;
   letter-spacing: -0.02em;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: appear 1.5s ease-in-out 1 normal forwards;
 
   @media only screen and (min-width: 960px) {
     margin-bottom: 64px;
     font-size: 96px;
     line-height: 108px;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -117,6 +131,18 @@ body {
 
 .all {
   overflow: hidden;
+  background: #090a0cff;
+  animation: enlight 1.5s ease-in-out 1 normal forwards;
+  will-change: background;
+}
+
+@keyframes enlight {
+  0% {
+    background: #090a0cff;
+  }
+  100% {
+    background: #090a0c00;
+  }
 }
 
 .limiter {
