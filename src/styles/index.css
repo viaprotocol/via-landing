@@ -245,6 +245,10 @@ body {
     @media screen and (min-width: 768px) {
       display: flex;
     }
+
+    @media screen and (min-width: 1420px) {
+      margin-left: 160px;
+    }
   }
 
   --socials-gap: 10px;
