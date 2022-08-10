@@ -65,3 +65,12 @@ fetch('https://router-api.via.exchange/api/v2/tools')
     animate(bridgesWrapper)
   })
   .catch(console.error)
+
+
+const features = document.querySelectorAll('.feature')
+features.forEach(function(feature) {
+  feature.onmousemove = function(e) {
+    feature.style.setProperty('--cursor-x', e.layerX)
+    feature.style.setProperty('--cursor-y', e.layerY)
+  }
+})
