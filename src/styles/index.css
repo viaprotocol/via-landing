@@ -665,16 +665,32 @@ section.first {
     padding: 62px 46px 260px;
   }
 
-  .form-image {
+  .form-wrapper {
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
     max-width: 480px;
+
+    @media only screen and (min-width: 960px) {
+      width: 720px;
+      max-width: unset;
+    }
+  }
+
+  .form-link {
+    display: block;
+    padding-bottom: 55.97%;
     opacity: 0;
     animation: slideDown 0.8s ease 1 normal forwards;
     animation-delay: 0.7s;
+    position: relative;
 
-    @media only screen and (min-width: 960px) {
-      width: auto;
-      max-width: 100%;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
     }
   }
 
