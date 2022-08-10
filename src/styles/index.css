@@ -411,7 +411,7 @@ body {
 .mobile-menu {
   display: none;
   z-index: 10;
-  padding: 32px 16px 16px;
+  padding: 20px 16px 16px;
   background-color: rgba(26, 27, 30, 0.64);
   box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(120px);
@@ -754,12 +754,13 @@ section.first {
 
 .central-sections {
   background-image: url('../img/backgrounds/bg-central-large.jpg');
-  background-size: 80%;
   background-repeat: no-repeat;
-  background-position: center 10%;
+  background-size: 100%;
+  background-position: center 20%;
 
   @media only screen and (min-width: 960px) {
-    background-position: center center;
+    background-size: 80%;
+    background-position: center 34%;
   }
 }
 
@@ -1056,7 +1057,7 @@ footer {
   padding: 40px 24px;
 
   @media only screen and (min-width: 960px) {
-    margin-top: 200px;
+    margin-top: 195px;
     display: flex;
     flex-direction: row;
     align-content: center;
@@ -1073,6 +1074,41 @@ footer {
       font-size: 18px;
       line-height: 28px;
       margin-top: 0;
+    }
+  }
+
+  .docs-link {
+    margin-top: 40px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border: none;
+    appearance: none;
+    padding: 8px 17px;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #FFFFFFCC;
+    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+
+    @media only screen and (min-width: 960px) {
+      display: none;
+    }
+
+    &:hover {
+      background-color: #04ff66;
+      box-shadow: 0px 0px 16px rgba(4, 255, 102, 0.6);
+      color: #07080b;
+    }
+
+    &:active {
+      background-color: #30ba66;
+      box-shadow: none;
+      color: #07080b;
     }
   }
 }
