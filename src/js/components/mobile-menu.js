@@ -45,6 +45,5 @@ export default class MobileMenu {
   init() {
     this._initHandleCloseMenu()
     this._initHandleOpenMenu()
-    console.log('inited')
   }
 }

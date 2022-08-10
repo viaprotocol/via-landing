@@ -803,28 +803,61 @@ section.tools {
     }
   }
 
-  .dexs .items,
-  .bridges .items {
-    height: 40px;
-    text-align: justify;
+  .row-wrapper {
     position: relative;
+    height: 40px;
+
+    & + .row-wrapper {
+      margin-top: 20px;
+    }
+
+    @media only screen and (min-width: 960px) {
+      height: 80px;
+    }
   }
 
-  .dexs .items > *,
-  .bridges .items > * {
+  .row {
+    width: max-content;
     position: absolute;
-    opacity: 0;
-    border-radius: 50%;
-    overflow: hidden;
-  }
+    top: 0;
+    left: 0;
 
-  .dexs .items.inited > *,
-  .bridges .items.inited > * {
-    transition: all 0.5s ease;
-  }
+    &.row-1,
+    &.row-3,
+    &.row-5 {
+      animation: moveSide 420s linear infinite both;
+    }
 
-  .bridges {
-    margin-top: 28px;
+    &.row-2,
+    &.row-4 {
+      animation: moveSide 300s linear infinite both;
+    }
+
+
+    @keyframes moveSide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-83%);
+      }
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      overflow: hidden;
+
+      @media only screen and (min-width: 960px) {
+        width: 80px;
+        height: 80px;
+      }
+
+      & + img {
+        margin-left: 40px;
+      }
+    }
   }
 }
 
