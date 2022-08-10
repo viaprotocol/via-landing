@@ -36,9 +36,8 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=swap" rel="stylesheet" />
 
-    <link href="./legacy/styles.css" rel="stylesheet" />
     <link href="./styles/index.css" rel="stylesheet" />
 
     <!-- Google Tag Manager -->
@@ -60,57 +59,59 @@
     <div class="all">
       <div class="limiter">
         <header class="header">
-          <img src="img/logo.svg" alt="VIA" class="header__logo" />
+          <div class="header__logo-container">
+            <img src="img/logo.svg" alt="Via" class="header__logo" />
+            <div class="header__logo-description">
+              <strong>Cross-chain</strong>
+              <div>liquidity aggregation protocol</div>
+            </div>
+          </div>
+
+          <ul class="header__socials">
+            <li>
+              <a class="header__social-link" href="https://twitter.com/via_protocol" target="_blank">
+                <icon src="socials/twitter.svg" width="24" height="24"></icon>
+                <span class="visually-hidden">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a class="header__social-link" href="https://discord.gg/viaexchange" target="_blank">
+                <icon src="socials/discord.svg" width="24" height="24"></icon>
+                <span class="visually-hidden">Discord</span>
+              </a>
+            </li>
+            <li>
+              <a class="header__social-link" href="https://medium.com/via-exchange" target="_blank">
+                <icon src="socials/medium.svg" width="24" height="24"></icon>
+                <span class="visually-hidden">Medium</span>
+              </a>
+            </li>
+            <li>
+              <a class="header__social-link" href="https://gitcoin.co/grants/4665/via-protocol" target="_blank">
+                <icon src="socials/gitcoin.svg" width="24" height="24"></icon>
+                <span class="visually-hidden">Gitcoin</span>
+              </a>
+            </li>
+            <li>
+              <a class="header__social-link" href="https://github.com/viaprotocol" target="_blank">
+                <icon src="socials/github.svg" width="24" height="24"></icon>
+                <span class="visually-hidden">Github</span>
+              </a>
+            </li>
+            <!-- <li>
+              <a class="header__social-link" href="https://t.me/viaexchange" target="_blank">
+                <icon src="socials/telegram.svg" width="24" height="24"></icon>
+                <span class="visually-hidden">Telegram</span>
+              </a>
+            </li> -->
+          </ul>
+
           <button type="button" class="header__burger-button">
             <img src="./img/icons/menu-icon.svg" alt="Menu icon" width="24" height="24" />
           </button>
 
           <nav class="header__actions">
-            <ul class="header__socials">
-              <li>
-                <a class="header__social-link" href="https://twitter.com/via_protocol" target="_blank">
-                  <icon src="socials/twitter.svg" width="24" height="24"></icon>
-                  <span class="visually-hidden">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a class="header__social-link" href="https://discord.gg/viaexchange" target="_blank">
-                  <icon src="socials/discord.svg" width="24" height="24"></icon>
-                  <span class="visually-hidden">Discord</span>
-                </a>
-              </li>
-              <li>
-                <a class="header__social-link" href="https://medium.com/via-exchange" target="_blank">
-                  <icon src="socials/medium.svg" width="24" height="24"></icon>
-                  <span class="visually-hidden">Medium</span>
-                </a>
-              </li>
-            </ul>
-            <ul class="header__more-socials">
-              <li>
-                <a class="header__social-link" href="https://gitcoin.co/grants/4665/via-protocol" target="_blank">
-                  <icon src="socials/gitcoin.svg" width="24" height="24"></icon>
-                  <span class="visually-hidden">Gitcoin</span>
-                </a>
-              </li>
-              <li>
-                <a class="header__social-link" href="https://github.com/viaprotocol" target="_blank">
-                  <icon src="socials/github.svg" width="24" height="24"></icon>
-                  <span class="visually-hidden">Github</span>
-                </a>
-              </li>
-              <li>
-                <a class="header__social-link" href="https://t.me/viaexchange" target="_blank">
-                  <icon src="socials/telegram.svg" width="24" height="24"></icon>
-                  <span class="visually-hidden">Telegram</span>
-                </a>
-              </li>
-            </ul>
-            <button class="header__more-button" href="https://medium.com/via-exchange" type="button" aria-label="More socials">
-              <icon class="header__more-icon" src="icons/dots.svg" width="24" height="24" ></icon>
-              <icon class="header__more-icon" src="icons/close.svg" width="16" height="16" ></icon>
-            </button>
-            <a href="https://docs.via.exchange/product-docs/" class="header__action-button">
+            <a href="https://docs.via.exchange/product-docs/" class="header__action-button" target="_blank">
               Docs
             </a>
             <button class="header__action-button header__products-button">
@@ -130,18 +131,7 @@
                     </div>
                   </a>
                 </li>
-                <li class="header__product menu-product">
-                  <a href="https://viaexchange.notion.site/Cross-chain-NFT-sale-and-minting-062f73d68a4d44e08b4ae5ea49f9a2f5" class="menu-product__wrapper" target="_blank" rel="noopener noreferrer">
-                    <div class="menu-product__image-wrapper">
-                      <img class="menu-product__image" width="24" height="24" src="./img/icons/checkout.svg" alt="Cross-chain NFT Checkout for dApps" />
-                    </div>
-                    <div class="menu-product__info">
-                      <h4 class="menu-product__title">Cross-chain NFT Checkout for dApps</h4>
-                      <p class="menu-product__description">Allow users to pay with the preferred blockchain in your dApp</p>
-                    </div>
-                  </a>
-                </li>
-                <li class="header__product menu-product menu-product--soon">
+                <!-- <li class="header__product menu-product menu-product--soon">
                   <a href="#" class="menu-product__wrapper">
                     <div class="menu-product__image-wrapper">
                       <img class="menu-product__image" width="24" height="24" src="./img/icons/lop.svg" alt="Limit Order Protocol" />
@@ -151,7 +141,7 @@
                       <p class="menu-product__description">First cross-chain limit order protocol for Private Market Makers</p>
                     </div>
                   </a>
-                </li>
+                </li> -->
                 <li class="header__product menu-product">
                   <a href="https://github.com/viaprotocol/via-sdk-js" class="menu-product__wrapper" target="_blank" rel="noopener noreferrer">
                     <div class="menu-product__image-wrapper">
@@ -170,150 +160,22 @@
 
         <main>
           <section class="first">
+            <div class="form-wrapper">
+              <a class="form-link" href="https://router.via.exchange" target="_blank">
+                <img src="img/backgrounds/bg-form.svg" />
+              </a>
+            </div>
             <h1>
               Cross-chain<br />
-              liquidity aggregation<br />
-              protocol
+              without limits
             </h1>
             <a data-button="large" href="https://router.via.exchange/" target="_blank">Launch dApp</a>
-            <img alt="" class="pyramid-1" src="img/pyramides/pyramid-1.png" />
-            <img alt="" class="pyramid-2" src="img/pyramides/pyramid-2.png" />
-            <img alt="" class="pyramid-3" src="img/pyramides/pyramid-3.png" />
-            <img alt="" class="pyramid-4" src="img/pyramides/pyramid-4.png" />
-            <img alt="" class="pyramid-5" src="img/pyramides/pyramid-5.png" />
-            <img alt="" class="pyramid-6" src="img/pyramides/pyramid-6.png" />
-            <img alt="" class="pyramid-7" src="img/pyramides/pyramid-7.png" />
-          </section>
 
-          <section class="panel">
-            <div class="supported">
-              <div class="dexs">
-                <h2>Supported DEXs</h2>
-                <a
-                  class="view-all"
-                  href="https://docs.via.exchange/product-docs/via-ecosystem/supported-bridges-and-dexs"
-                  target="_blank"
-                  rel="noopener"
-                  >View all</a
-                >
-                <div class="items"><!-- items will be added using js --></div>
-              </div>
-              <div class="bridges">
-                <h2>Supported Bridges</h2>
-                <div class="items"><!-- items will be filled with js --></div>
-              </div>
-            </div>
-
-            <div class="features">
-              <div class="feature">
-                <h2>Cross&#8209;chain bridge aggregation</h2>
-                <p>
-                  We aggregate multiple cross&#8209;chain bridges and DEXs on EVM and non-EVM blockchains and find the
-                  fastest and cheapest swap paths.
-                </p>
-                <a data-button href="https://router.via.exchange" target="_blank">Try it</a>
-              </div>
-              <div class="feature">
-                <h2>Customized checkouts and API access</h2>
-                <p>
-                  For GameFi and NFT marketplaces, we provide our ready-to-use checkout pages to sell NFT or in-game
-                  tokens for any token on any network with instant transactions. Also, projects can build their own
-                  interface using our API.
-                </p>
-                <a data-button href="https://pay.via.exchange/nft/bb811382-1f1b-4376-8884-5f74bd808f83/" target="_blank"
-                  >Try it</a
-                >
-              </div>
-              <div class="feature">
-                <h2>Instant cross&#8209;chain swaps</h2>
-                <p>
-                  Cross&#8209;chain transactions execute in 10-60 seconds, as we use liquidity from our execution pool
-                  in the target chains.
-                </p>
-              </div>
-            </div>
-            <img alt="" class="pyramid-8" src="img/pyramides/pyramid-8.png" />
-            <img alt="" class="pyramid-9" src="img/pyramides/pyramid-9.png" />
-          </section>
-
-          <section class="partners">
-            <h2>Partners<br />&&nbsp;Friends</h2>
-            <div class="items">
-              <img alt="" src="img/partners/partner-near.png" />
-              <img alt="" src="img/partners/partner-arbitrum.png" />
-              <img alt="" src="img/partners/partner-biconomy.png" />
-              <img alt="" src="img/partners/partner-polygon.png" />
-              <img alt="" src="img/partners/partner-binance.png" />
-              <img alt="" src="img/partners/partner-buildship.png" />
-              <img alt="" src="img/partners/partner-zksync.png" />
-            </div>
-          </section>
-
-          <section class="wins">
-            <h2>Hackathons<br />winner</h2>
-            <div class="items">
-              <img alt="" src="img/win/win-okex.png" />
-              <img alt="" src="img/win/win-moledao.png" />
-              <img alt="" src="img/win/win-aragon.png" />
-              <img alt="" src="img/win/win-buildit.png" />
-            </div>
-            <img class="pyramid-10" alt="" src="img/pyramides/pyramid-10.png" />
-          </section>
-
-          <section class="backers">
-            <h2>Backed by</h2>
-            <div class="items">
-              <div class="row">
-                <div class="item prior">
-                  <img alt="" src="img/backers/backer-ravikant.svg" />
-                </div>
-                <div class="item prior">
-                  <img alt="" src="img/backers/backer-shima.svg" />
-                </div>
-                <!-- <div class="item prior">
-                <img alt="" src="img/backers/backer-arbitrum.svg" />
-              </div> -->
-              </div>
-              <div class="item">
-                <h3>Ivan Bogatyy</h3>
-                <img alt="" src="img/backers/backer-dragonfly.svg" />
-              </div>
-              <div class="item">
-                <h3>Evgeny Yurtaev</h3>
-                <img alt="" src="img/backers/backer-zerion.svg" />
-              </div>
-              <div class="item">
-                <h3>Gleb Onishchenko</h3>
-                <img alt="" src="img/backers/backer-runa.svg" />
-              </div>
-              <div class="item">
-                <h3>Kostya Gnyp</h3>
-                <img alt="" src="img/backers/backer-runa.svg" />
-              </div>
-              <div class="item">
-                <h3>Vitaly Pavlenko</h3>
-              </div>
-              <div class="item">
-                <h3>Oleg Ostroumov</h3>
-              </div>
-            </div>
-          </section>
-        </main>
-
-        <footer>
-          <div class="footer-left">
-            <img src="img/logo-footer.svg" alt="VIA" width="74" height="16" />
-            <div class="description-and-year">
-              <span class="description">Cross&#8209;chain&nbsp;aggregation&nbsp;protocol</span>
-              <span class="year">2022</span>
-            </div>
-          </div>
-          <div class="footer-right">
             <div class="socials">
-                <a href="https://gitcoin.co/grants/4665/via-protocol" target="_blank">
-                  <icon src="socials/gitcoin.svg" width="24" height="24"></icon>
-                  <span class="visually-hidden">Gitcoin</span>
-                </a>
+              <a href="https://gitcoin.co/grants/4665/via-protocol" target="_blank">
+                <icon src="socials/gitcoin.svg" width="24" height="24"></icon>
+                <span class="visually-hidden">Gitcoin</span>
+              </a>
               <a href="https://github.com/viaprotocol" target="_blank">
                 <icon src="socials/github.svg" width="24" height="24"></icon>
                 <span class="visually-hidden">Github</span>
@@ -326,22 +188,83 @@
                 <icon src="socials/twitter.svg" width="24" height="24"></icon>
                 <span class="visually-hidden">Twitter</span>
               </a>
-              <a href="https://t.me/viaexchange" target="_blank">
+              <!-- <a href="https://t.me/viaexchange" target="_blank">
                 <icon src="socials/telegram.svg" width="24" height="24"></icon>
                 <span class="visually-hidden">Telegram</span>
-              </a>
+              </a> -->
               <a href="https://medium.com/via-exchange" target="_blank">
                 <icon src="socials/medium.svg" width="24" height="24"></icon>
                 <span class="visually-hidden">Medium</span>
               </a>
             </div>
-            <a
-              data-button="small"
-              href="https://viaexchange.notion.site/viaexchange/Work-at-VIA-ex-WeBill-dfb1c4052c6242969effcb381bdc91ea"
-              target="_blank"
-              >Career</a
-            >
+          </section>
+
+          <div class="central-sections">
+            <section class="tools">
+              <h2>Bridges, DEXs, Aggregators<span class="dot">.</span></h2>
+              <p>We aggregate all cross-chain routers, which allows us to&nbsp;provide our users with a&nbsp;vast selection of&nbsp;the&nbsp;most efficient routes for any&#8209;to&#8209;any token exchanging.</p>
+              <div class="tools-switch">
+                <button class="active">All</button>
+                <button value="cross">Bridges <span class="number bridges-number">??</span></button>
+                <button value="swap">DEXs <span class="number dexs-number">??</span></button>
+              </div>
+              <div class="rows">
+                <div class="row-wrapper">
+                  <div class="row row-1"><!-- items will be added using js --></div>
+                </div>
+                <div class="row-wrapper">
+                  <div class="row row-2"><!-- items will be added using js --></div>
+                </div>
+                <div class="row-wrapper">
+                  <div class="row row-3"><!-- items will be added using js --></div>
+                </div>
+                <div class="row-wrapper">
+                  <div class="row row-4"><!-- items will be added using js --></div>
+                </div>
+                <div class="row-wrapper">
+                  <div class="row row-5"><!-- items will be added using js --></div>
+                </div>
+              </div>
+            </section>
+
+            <section class="features">
+              <a class="feature" href="https://docs.via.exchange/product-docs/features/list-of-routes/filters" target="_blank">
+                <div class="feature-top">
+                  <icon src="features/feature-1.svg" width="40" height="34"></icon>
+                  <h2>Smart filters and sorts</h2>
+                </div>
+                <p>
+                  Conduct a&nbsp;research about the&nbsp;bridge according the decentralization, the&nbsp;actuality of&nbsp;audits and&nbsp;existence of&nbsp;centralized relayers.
+                </p>
+              </a>
+              <a class="feature" href="https://docs.via.exchange/product-docs/features/list-of-routes/security-score" target="_blank">
+                <div class="feature-top">
+                  <icon src="features/feature-2.svg" width="40" height="35"></icon>
+                  <h2>Security score</h2>
+                </div>
+                <p>
+                  Eliminate the&nbsp;possibility of&nbsp;using a&nbsp;hacked or broken bridge by&nbsp;analyzing the&nbsp;success of&nbsp;10&nbsp;past transactions.
+                </p>
+              </a>
+              <a class="feature" href="https://docs.via.exchange/product-docs/features/list-of-routes/success-rate" target="_blank">
+                <div class="feature-top">
+                  <icon src="features/feature-3.svg" width="40" height="40"></icon>
+                  <h2>Success rate</h2>
+                </div>
+                <p>
+                  Set filters for&nbsp;bridges, dexes, and slippage, then choose the&nbsp;best route considering all&nbsp;attributes.
+                </p>
+              </a>
+            </section>
           </div>
+        </main>
+
+        <footer>
+          <img src="img/logo-footer.svg" alt="Via" width="74" height="16" />
+          <div class="description-and-year">
+            <span class="description">Cross&#8209;chain aggregation protocol, 2022</span>
+          </div>
+          <a href="https://docs.via.exchange/product-docs/" class="docs-link" target="_blank">Docs</a>
         </footer>
       </div>
     </div>
@@ -353,7 +276,7 @@
         </button>
 
         <a href="https://docs.via.exchange/product-docs/" class="mobile-menu__docs" target="_blank" rel="noopener noreferrer">
-          <span>VIA Docs</span>
+          <span>Via Docs</span>
           <img src="./img/icons/external.svg" alt="External link" width="16" height="16" />
         </a>
       </header>
@@ -372,18 +295,7 @@
             </div>
           </a>
         </li>
-        <li class="mobile-menu__product menu-product">
-          <a href="https://viaexchange.notion.site/Cross-chain-NFT-sale-and-minting-062f73d68a4d44e08b4ae5ea49f9a2f5" class="menu-product__wrapper" target="_blank" rel="noopener noreferrer">
-            <div class="menu-product__image-wrapper">
-              <img class="menu-product__image" width="24" height="24" src="./img/icons/checkout.svg" alt="Cross-chain NFT Checkout for dApps" />
-            </div>
-            <div class="menu-product__info">
-              <h4 class="menu-product__title">Cross-chain NFT Checkout for dApps</h4>
-              <p class="menu-product__description">Allow users to pay with the preferred blockchain in your dApp</p>
-            </div>
-          </a>
-        </li>
-        <li class="mobile-menu__product menu-product menu-product--soon">
+        <!-- <li class="mobile-menu__product menu-product menu-product--soon">
           <a href="#" class="menu-product__wrapper">
             <div class="menu-product__image-wrapper">
               <img class="menu-product__image" width="24" height="24" src="./img/icons/lop.svg" alt="Limit Order Protocol" />
@@ -393,7 +305,7 @@
               <p class="menu-product__description">First cross-chain limit order protocol for Private Market Makers</p>
             </div>
           </a>
-        </li>
+        </li> -->
         <li class="mobile-menu__product menu-product">
           <a href="https://github.com/viaprotocol/via-sdk-js" class="menu-product__wrapper" target="_blank" rel="noopener noreferrer">
             <div class="menu-product__image-wrapper">
@@ -431,12 +343,12 @@
             <span class="visually-hidden">Twitter</span>
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a class="mobile-menu__social-link" href="https://t.me/viaexchange" target="_blank">
             <icon src="socials/telegram.svg" width="24" height="24"></icon>
             <span class="visually-hidden">Telegram</span>
           </a>
-        </li>
+        </li> -->
         <li>
           <a class="mobile-menu__social-link" href="https://medium.com/via-exchange" target="_blank">
             <icon src="socials/medium.svg" width="24" height="24"></icon>
@@ -445,8 +357,9 @@
         </li>
       </г>
     </section>
-    <script src="./legacy/animation.js"></script>
     <script src="./js/index.js" type="module"></script>
+    <script src="./js/tools.js"></script>
+    <script src="./js/features.js"></script>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript
