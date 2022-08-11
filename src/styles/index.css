@@ -893,22 +893,28 @@ section.tools {
     position: absolute;
     top: 0;
     left: 0;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: both;
+
+    &.animated {
+      animation-name: moveSide;
+    }
 
     &.row-1,
     &.row-3,
     &.row-5 {
-      animation: moveSide 420s linear infinite both;
+      animation-duration: 1300s;
     }
 
     &.row-2,
     &.row-4 {
-      animation: moveSide 300s linear infinite both;
+      animation-duration: 1100s;
     }
-
 
     @keyframes moveSide {
       0% {
-        transform: translateX(0);
+        transform: translateX(0%);
       }
       100% {
         transform: translateX(-100%);

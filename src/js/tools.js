@@ -25,12 +25,16 @@ function fillRows(toolType) {
   var toolsFiltered = filterTools(tools, toolType)
   var sortFunc = function() { return (Math.random() > .5) ? 1 : -1 }
   toolsWrappers.map(function(wrapper) {
+    wrapper.style.display = 'none'
+    wrapper.classList.remove('animated')
     wrapper.innerHTML = ''
     var sortedTools = toolsFiltered.sort(sortFunc)
-    while (sortedTools.length && sortedTools.length < 60) {
+    while (sortedTools.length && sortedTools.length < 120) {
       sortedTools = sortedTools.concat(sortedTools)
     }
     sortedTools.forEach(function(tool) { append(tool, wrapper) })
+    wrapper.style.display = 'block'
+    wrapper.classList.add('animated')
   })
 }
 
@@ -54,6 +58,8 @@ buttons.forEach(function(button) {
       button.classList.remove('active')
     })
     button.classList.add('active')
-    fillRows(button.value)
+    setTimeout(function() {
+      fillRows(button.value)
+    }, 1)
   }
 })
