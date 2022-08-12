@@ -117,12 +117,11 @@ body {
   font-size: 16px;
   background-repeat: no-repeat;
   background-size: 100%;
-  background-image: url('../img/backgrounds/bg-top-large.jpg');
-  /*background-image: url('../img/backgrounds/bg-small.png');*/
+  background-image: url('../img/backgrounds/bg-top-small.jpg');
   position: relative;
 
-  @media only screen and (min-width: 960px) {
-    /*background-image: url('../img/backgrounds/bg-large.jpg');*/
+  @media only screen and (min-width: 620px) {
+    background-image: url('../img/backgrounds/bg-top-large.jpg');
   }
 
   &.no-scroll {
