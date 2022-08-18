@@ -9,8 +9,15 @@ var toolsWrappers = [
   return document.querySelector(wrapper)
 })
 
+function getPlaceholder(text) {
+  return "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='80' width='80'%3E%3Ccircle cx='40' cy='40' r='40' fill='%23d4d4d4' fill-opacity='0.6' /%3E%3Ctext style='fill: rgb(0,0,0,0.6); font-family: Arial, sans-serif; font-size: 11px; line-height: 16px; text-anchor: middle; white-space: pre;' x='40' y='45'%3E" + text + "%3C/text%3E%3C/svg%3E"
+}
+
 function append(item, parent) {
   var image = document.createElement('img')
+  image.addEventListener('error', function() {
+    image.setAttribute('src', getPlaceholder(item.name))
+  })
   image.setAttribute('src', item.logoURI)
   image.setAttribute('alt', item.name)
   image.setAttribute('title', item.name)
