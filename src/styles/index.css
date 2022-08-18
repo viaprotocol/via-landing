@@ -124,6 +124,13 @@ body {
     background-image: url('../img/backgrounds/bg-top-large.jpg');
   }
 
+  @media only screen and (min-width: 2600px) {
+    background-position-y: -20vw;
+  }
+  @media only screen and (min-width: 5200px) {
+    background-position-y: -30vw;
+  }
+
   &.no-scroll {
     height: 100%;
     overflow: hidden;
