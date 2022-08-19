@@ -1,8 +1,18 @@
 import type { NextPage } from 'next'
+import Header from '../components/common/Header'
+import Intro from '../components/Intro'
 
 const Home: NextPage = () => {
   return (
-    <h1>It works!</h1>
+    <div className="all">
+      <div className="limiter">
+        <Header></Header>
+
+        <main>
+          <Intro />
+        </main>
+      </div>
+    </div>
   )
 }
 
