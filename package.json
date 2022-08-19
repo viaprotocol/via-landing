@@ -1,33 +1,24 @@
 {
-  "name": "via-landing",
-  "version": "1.0.0",
-  "source": "src/index.html",
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "parcel",
-    "build": "parcel build"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/viaprotocol/via-landing.git"
+  "dependencies": {
+    "next": "12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/viaprotocol/via-landing/issues"
-  },
-  "homepage": "https://github.com/viaprotocol/via-landing#readme",
   "devDependencies": {
-    "@parcel/packager-raw-url": "2.6.0",
-    "@parcel/transformer-webmanifest": "2.6.0",
-    "autoprefixer": "^10.4.7",
-    "parcel": "^2.6.0",
-    "postcss": "^8.1.0",
-    "postcss-nested": "^5.0.6",
-    "posthtml": "^0.16.6",
-    "posthtml-inline-svg": "^0.2.0"
-  },
-  "@parcel/transformer-css": {
-    "drafts": {
-      "nesting": true
-    }
+    "@types/node": "18.7.6",
+    "@types/react": "18.0.17",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.22.0",
+    "eslint-config-next": "12.2.5",
+    "typescript": "4.7.4"
   }
 }
