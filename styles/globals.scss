@@ -1023,7 +1023,7 @@ section.features {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
 
     @media only screen and (min-width: 960px) {
       display: block;
