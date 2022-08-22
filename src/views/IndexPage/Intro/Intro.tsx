@@ -1,5 +1,5 @@
 import React from 'react'
-import { socials } from '../data/socials'
+import { socials } from '@/data/socials'
 
 function Intro() {
   return (
@@ -27,4 +27,4 @@ function Intro() {
   )
 }
 
-export default Intro
+export { Intro }

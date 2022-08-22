@@ -1,7 +1,6 @@
 import type { NextPage } from 'next'
-import Header from '../components/Header'
-import Intro from '../components/Intro'
-import { Footer } from '../components/Footer'
+import { Intro } from '@/views/IndexPage'
+import { Footer, Header } from '@/components/layout'
 
 const Home: NextPage = () => {
   return (
