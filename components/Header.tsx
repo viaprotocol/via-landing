@@ -9,6 +9,7 @@ function Header() {
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(state => !state)
   }, [])
+
   return (
     <header className="header">
       <div className="header__logo-container">
