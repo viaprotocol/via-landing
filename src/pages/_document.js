@@ -35,7 +35,7 @@ class MyDocument extends Document {
           <meta name="twitter:image" content="/images/meta/meta-preview.jpg" />
           <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=optional" rel="stylesheet" />
         </Head>
-        <body>
+        <body className='dark'>
           <Main />
           <NextScript />
           <Script
