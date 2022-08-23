@@ -3,7 +3,7 @@ import { socials } from '@/data/socials'
 
 function Intro() {
   return (
-    <section className="first">
+    <section className="intro">
       <div className="form-wrapper">
         <a className="form-link" href="https://router.via.exchange" target="_blank" rel="noreferrer">
           <img src="/images/backgrounds/bg-form.svg" />

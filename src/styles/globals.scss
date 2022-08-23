@@ -31,6 +31,13 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 56px;
+  letter-spacing: -0.04em;
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
@@ -44,8 +51,7 @@ h1 {
 
 h2,
 h3 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin: 0;
 }
 
 [data-button] {
@@ -193,10 +199,13 @@ body {
 section {
   padding: 24px;
   position: relative;
+  max-width: 1172px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
-section.first {
+section.intro {
   padding: 40px 10px 93px;
   text-align: center;
 
