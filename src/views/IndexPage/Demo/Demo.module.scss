@@ -1,0 +1,22 @@
+.demo {
+  display: grid;
+  align-items: center;
+  grid-template-areas: ". routes"
+                       "title routes"
+                       "description routes";
+}
+
+.title {
+  @apply font-semibold text-5xl leading-[56px] tracking-tighter text-white;
+  grid-area: title;
+}
+
+.description {
+  @apply text-white/40 text-[32px] leading-tight tracking-tighter;
+  grid-area: description;
+}
+
+.routes {
+  @apply max-h-[600px] overflow-y-auto;
+  grid-area: routes;
+}
