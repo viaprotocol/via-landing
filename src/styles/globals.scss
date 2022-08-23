@@ -196,21 +196,12 @@ body {
   margin: -1px;
 }
 
-section {
-  padding: 24px;
-  position: relative;
-  max-width: 1172px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
 section.intro {
-  padding: 40px 10px 93px;
+  padding: 40px 10px 80px;
   text-align: center;
 
   @media only screen and (min-width: 960px) {
-    padding: 62px 46px 260px;
+    padding: 62px 46px 180px;
   }
 
   .form-wrapper {
@@ -262,6 +253,7 @@ section.intro {
     }
 
     a {
+      display: inline-block;
       color: #838385;
 
       &:hover {

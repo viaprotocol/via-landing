@@ -1,9 +1,11 @@
 import React from 'react'
 import { socials } from '@/data/socials'
 
+import { Section } from '@/components/layout'
+
 function Intro() {
   return (
-    <section className="intro">
+    <Section className="intro">
       <div className="form-wrapper">
         <a className="form-link" href="https://router.via.exchange" target="_blank" rel="noreferrer">
           <img src="/images/backgrounds/bg-form.svg" />
@@ -23,7 +25,7 @@ function Intro() {
           </a>
         ))}
       </div>
-    </section>
+    </Section>
   )
 }
 

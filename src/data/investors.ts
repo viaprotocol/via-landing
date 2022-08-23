@@ -9,14 +9,14 @@ export const investors = [
   },
   {
     title: 'Shima Capital',
-    fileName: 'shima-capital.svg'
+    fileName: 'shima-capital.svg',
   },
   {
     title: 'Paradigm',
-    fileName: 'paradigm.svg'
+    fileName: 'paradigm.svg',
   },
   {
     title: 'Multicoin Capital',
-    fileName: 'multicoin-capital.svg'
-  }
+    fileName: 'multicoin-capital.svg',
+  },
 ]
