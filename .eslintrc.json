@@ -2,7 +2,8 @@
   "extends": [
     "next/core-web-vitals",
     "next",
-    "@antfu"
+    "@antfu",
+    "plugin:tailwindcss/recommended"
   ],
   "rules": {
     "sort-imports": "off"
