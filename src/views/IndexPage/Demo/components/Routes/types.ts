@@ -1,3 +1,4 @@
+import { classNames } from 'classnames';
 import type { MouseEventHandler } from 'react'
 
 export type TToken = {
@@ -151,8 +152,7 @@ export enum RoutePriorityEnum {
 }
 
 type TRoutesProps = {
-  onSelect: Function
-  onClose: MouseEventHandler
+  className?: string
 }
 
 enum RouteViewEnum {

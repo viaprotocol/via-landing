@@ -2,6 +2,7 @@ import type { FunctionComponent, PropsWithChildren, SVGProps } from 'react'
 
 import closeIcon from 'public/images/icons/close.svg'
 import arrowDown from 'public/images/icons/arrow-down.svg'
+import arrowRight from 'public/images/icons/arrow-right.svg'
 import highRiskDark from 'public/images/icons/security/highrisk.svg'
 import potentialRiskDark from 'public/images/icons/security/potentialrisk.svg'
 import secureRiskDark from 'public/images/icons/security/secure.svg'
@@ -25,6 +26,7 @@ const icon = (
 const ICONS = {
   close: icon(closeIcon),
   arrowDown: icon(arrowDown),
+  arrowRight: icon(arrowRight),
   highRiskDark: icon(highRiskDark),
   potentialRiskDark: icon(potentialRiskDark),
   secureRiskDark: icon(secureRiskDark),

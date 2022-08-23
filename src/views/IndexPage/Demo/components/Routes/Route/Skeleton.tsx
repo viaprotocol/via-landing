@@ -32,8 +32,8 @@ const RouteSkeleton = function RouteSkeleton({ active }: PropsWithChildren<TRout
       <header className="flex flex-1 items-center justify-between">
         <Skeleton h="16px" />
         <div>
-          <button type="button" onClick={onClick}>
-            <Icon icon="arrowDown" width={24} height={24} className={cx('hover:bg-[#11121514] dark:hover:bg-[#ffffff14] active:bg-coal-160 dark:active:bg-white-160', !isExpanded && '-rotate-90')} />
+          <button type="button" onClick={onClick} className="'hover:bg-[#11121514] dark:hover:bg-[#ffffff14] active:bg-coal-160 dark:active:bg-white-160' p-1 rounded-lg flex items-center justify-center">
+            <Icon icon="arrowDown" width={18} height={18} className={cx(!isExpanded && '-rotate-90')} />
           </button>
         </div>
       </header>

@@ -88,7 +88,6 @@ const Route = memo((props: PropsWithChildren<TRouteProps>) => {
   return (
     <section
       aria-hidden="true"
-      {...(index && { 'data-testid': `form-possible-route-${index}` })}
       className={cx(
         'rounded-xl py-3 px-2 mb-2 md:p-4 transition-colors',
         sectionStyles || [

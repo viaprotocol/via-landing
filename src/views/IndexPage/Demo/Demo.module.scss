@@ -1,22 +1,25 @@
 .demo {
-  display: grid;
-  align-items: center;
-  grid-template-areas: ". routes"
-                       "title routes"
+  @apply grid items-end gap-4;
+  grid-template-areas: "title routes"
                        "description routes";
+  grid-template-columns: 1fr 1fr;
 }
 
 .title {
-  @apply font-semibold text-5xl leading-[56px] tracking-tighter text-white;
+  @apply font-semibold text-5xl leading-[56px] tracking-tight text-white;
   grid-area: title;
 }
 
 .description {
-  @apply text-white/40 text-[32px] leading-tight tracking-tighter;
+  @apply flex-col flex items-start justify-start self-start text-white/40 text-[32px] leading-tight tracking-tighter;
   grid-area: description;
 }
 
 .routes {
-  @apply max-h-[600px] overflow-y-auto;
+  @apply h-[648px] overflow-y-auto;
   grid-area: routes;
+}
+
+.button {
+  @apply block mt-20 bg-[#00FF60] text-base font-bold tracking-tight text-black px-9 py-3 w-auto rounded-lg
 }
