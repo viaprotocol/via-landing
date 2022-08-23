@@ -243,49 +243,6 @@ section.intro {
       transform: scale(1) translateY(0);
     }
   }
-
-  .socials {
-    color: #fff;
-    margin-top: 42px;
-
-    @media only screen and (min-width: 960px) {
-      display: none;
-    }
-
-    a {
-      display: inline-block;
-      color: #838385;
-
-      &:hover {
-        color: #ff002e;
-      }
-
-      &:active {
-        color: #b90d2c;
-      }
-    }
-  }
-  .socials * + * {
-    margin-left: 32px;
-  }
-
-  @media only screen and (min-width: 960px) {
-    .socials {
-      margin-right: 44px;
-    }
-    .socials * + * {
-      margin-left: 22px;
-    }
-  }
-
-  @media only screen and (min-width: 1420px) {
-    .socials {
-      margin-right: 60px;
-    }
-    .socials * + * {
-      margin-left: 54px;
-    }
-  }
 }
 
 
