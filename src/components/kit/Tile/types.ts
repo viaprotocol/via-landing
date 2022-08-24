@@ -1,8 +1,9 @@
 interface TTileProps {
   className?: string
   slots?: 1 | 2 | 3
+  icon?: any
   title?: string
-  description: string
+  description?: string
 }
 
 interface TTileGroupProps {
