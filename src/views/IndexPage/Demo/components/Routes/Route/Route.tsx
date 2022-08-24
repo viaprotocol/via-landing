@@ -187,12 +187,12 @@ const Route = memo((props: PropsWithChildren<TRouteProps>) => {
             data-testid="button-show-route-details"
           >
             <div className="absolute -inset-y-3 -right-2 w-14 md:-inset-y-4 md:-right-4" />
-            <div>
+            <div className='flex w-full h-full items-center justify-center'>
               <Icon
                 className={cx('text-[#111215cc] dark:text-[#ffffff66]', !isExpanded && '-rotate-90')}
                 icon="arrowDown"
-                width={24}
-                height={24}
+                width={19}
+                height={19}
               />
             </div>
           </button>
@@ -204,7 +204,7 @@ const Route = memo((props: PropsWithChildren<TRouteProps>) => {
         data-testid="form-route-transaction-details"
       >
         {actions.map((action, actionIndex) => {
-          const { isNeedGas, isNeedApprove, transferGasFromNetwork } = action.meta
+          const { isNeedGas, isNeedApprove } = action.meta
           const transactionNo = actionIndex + 1
           const isLastAction = transactionNo === actions.length
           return (
@@ -241,7 +241,7 @@ const Route = memo((props: PropsWithChildren<TRouteProps>) => {
                       {showGas && stepIndex === 0 && !!Number(action.meta.totalGas.token) && (
                         <Tooltip
                           isAnimated={false}
-                          interactive={isNeedGas && !!transferGasFromNetwork}
+                          interactive={isNeedGas}
                           content={
                             <ActionFeeTooltip
                               action={action}

@@ -9,8 +9,6 @@ import type { TAnimationProps, TTooltipProps } from './types'
 
 import 'react-popper-tooltip/dist/styles.css'
 
-const rootElement = document.getElementById('root')!
-
 const TooltipWrapper = function Animation({ children, isAnimated, isVisible }: PropsWithChildren<TAnimationProps>) {
   if (isAnimated) {
     return (
@@ -54,6 +52,8 @@ const Tooltip =
       placement,
       offset: [0, 0]
     })
+
+    const rootElement = document.body
 
     return (
       <>

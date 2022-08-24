@@ -55,7 +55,6 @@ export type TRouteActionWithMeta = {
     totalGas: TTokenPrice
     isNeedApprove: boolean
     isNeedGas: boolean
-    transferGasFromNetwork: TNetwork | null
   }
 } & TRouteAction
 

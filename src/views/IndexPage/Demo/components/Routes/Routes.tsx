@@ -7,10 +7,11 @@ import type { TRangingRoute, TRoutesProps } from './types'
 import UsdtLogo from 'public/images/tokens/usdt.svg'
 import EthLogo from 'public/images/tokens/eth.svg'
 import { Icon } from '@/components/ui'
+import { useRoutes } from '@/hooks/useRoutes/useRoutes'
 const ROUTES_ACTIVE_BY_DEFAULT = 3
 
 const Routes: FC<PropsWithChildren<TRoutesProps>> = memo(({ className }) => {
-  const routes: TRangingRoute[] = []
+  const routes: TRangingRoute[] = useRoutes()
 
   const isSkeletonsVisible = routes.length < 5
 
@@ -18,7 +19,7 @@ const Routes: FC<PropsWithChildren<TRoutesProps>> = memo(({ className }) => {
   const skeletonArray = useMemo(() => new Array(countOfSkeletons).fill(null), [countOfSkeletons])
 
   return (
-    <section className={cx("flex flex-col overflow-y-auto overflow-x-hidden", className)}>
+    <section className={className}>
       <header className='dark:bg-[#ffffff0a] py-6 px-4 rounded-2xl flex items-center gap-6 mb-2'>
         <div className='flex'>
           <UsdtLogo className='w-10 h-10 mr-[10px]' />
@@ -36,7 +37,7 @@ const Routes: FC<PropsWithChildren<TRoutesProps>> = memo(({ className }) => {
           </div>
         </div>
       </header>
-      <div>
+      <div className='h-[556px] overflow-y-auto overflow-x-hidden'>
         {routes.map((route, routeIndex) => (
           <Route
             index={routeIndex + 1}

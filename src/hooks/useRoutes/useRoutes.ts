@@ -1,8 +1,11 @@
 import type IsoWebSocket from 'isomorphic-ws'
 import { useEffect, useRef, useState } from 'react'
 import { cli } from '@/api/router'
+import { useFormattedRoutes } from './useFormattedRoutes'
+import { TRoute } from '@/views/IndexPage/Demo/components/Routes'
 
 export function useRoutes() {
+  const [routes, setRoutes] = useState<TRoute[]>([])
   const [status, setStatus] = useState<string>('idle')
   const ws = useRef<IsoWebSocket>()
 
@@ -20,14 +23,17 @@ export function useRoutes() {
 
     const wsCurrent = ws.current
 
-    ws.current.onopen = () => setStatus('inited')
+    ws.current.onopen = () => {
+      setRoutes([])
+      setStatus('inited')
+    }
     ws.current.onclose = () => setStatus('closed')
     ws.current.onmessage = (e) => {
-      const message = JSON.parse(e.data as string)
-      if (Array.isArray(message)) {
-        console.log(message)
+      const data = JSON.parse(e.data as string)
+      if (Array.isArray(data)) {
+        setRoutes(routes => [...routes, ...data])
       } else {
-        const { finished, all } = message.status
+        const { finished, all } = data.status
         if (finished === all) {
           wsCurrent.close()
         }
@@ -39,5 +45,7 @@ export function useRoutes() {
     }
   }, [])
 
-  return { status }
+  const formattedRoutes = useFormattedRoutes(routes)
+
+  return formattedRoutes
 }

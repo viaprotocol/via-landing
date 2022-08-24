@@ -16,8 +16,9 @@
 }
 
 .routes {
-  @apply h-[648px] overflow-y-auto;
+  @apply p-0 tracking-normal max-w-[600px] place-self-center;
   grid-area: routes;
+  font-family: "Inter", sans-serif;
 }
 
 .button {

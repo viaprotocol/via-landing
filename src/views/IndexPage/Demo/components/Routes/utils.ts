@@ -5,6 +5,20 @@ type TFormatTimeOpts = {
 }
 
 /**
+ * It takes a chainId and returns the network object that has the same chainId
+ * @param {number} chainId - The chain ID of the network you want to connect to.
+ * @returns The network object that matches the chainId
+ */
+export const getNetworkByChainId = (chainId: number) => {
+  const network = networks.find(network => network.chainId === chainId)
+  if (!network) {
+    throw new Error(`Network with chainId ${chainId} not found`)
+  }
+
+  return network
+}
+
+/**
  * It takes a number of seconds and returns a string of the format `hrs`h `mins`m `secs`s
  * @param {number} time - The time in seconds to format.
  * @returns A string
