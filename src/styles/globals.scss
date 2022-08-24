@@ -241,19 +241,6 @@ section.intro {
   }
 }
 
-
-.central-sections {
-  background-image: url('/images/backgrounds/bg-central-large.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center 20%;
-
-  @media only screen and (min-width: 960px) {
-    background-size: 80%;
-    background-position: center 34%;
-  }
-}
-
 section.tools {
   margin-bottom: 80px;
   padding: 24px 0 0;

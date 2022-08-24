@@ -3,8 +3,6 @@ import { investors } from '@/data/investors'
 import { Section } from '@/components/layout'
 import { useMedia } from '@/hooks'
 
-const isMobile = true
-
 const becomeLink = (
   <a className="block mt-6 md:mt-1 -ml-2 md:ml-12 px-2 py-1.5 font-semibold text-white/80 hover:text-white" href="mailto:serafim@via.exchange">Become an Investor</a>
 ) 
