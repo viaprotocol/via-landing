@@ -1,6 +1,6 @@
 import type { FunctionComponent, PropsWithChildren, SVGProps } from 'react'
 
-import closeIcon from '../../../public/images/icons/close.svg'
+import closeIcon from 'public/images/icons/close.svg'
 
 const icon = (
   Component: FunctionComponent<PropsWithChildren<SVGProps<SVGSVGElement>>> & { title?: string | undefined },
