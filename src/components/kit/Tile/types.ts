@@ -2,4 +2,8 @@ interface TTileProps {
   className?: string
 }
 
-export type { TTileProps }
+interface TTileGroupProps {
+  className?: string
+}
+
+export type { TTileProps, TTileGroupProps }
