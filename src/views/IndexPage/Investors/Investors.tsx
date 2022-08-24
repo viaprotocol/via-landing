@@ -1,6 +1,7 @@
 import React from 'react'
 import { investors } from '@/data/investors'
 import { Section } from '@/components/layout'
+import { useMedia } from '@/hooks'
 
 const isMobile = true
 
@@ -9,6 +10,8 @@ const becomeLink = (
 ) 
 
 function Investors() {
+  const { isMobile } = useMedia()
+
   return (
     <Section>
       <div className="flex items-center mb-4 md:mb-10">
@@ -17,13 +20,12 @@ function Investors() {
       </div>
       <div className="flex align-bottom justify-start md:justify-evenly gap-2.5">
         {investors.map(investor => (
-          <div className="p-5 md:p-0 rounded-lg bg-white/5 md:bg-transparent">
+          <div className="p-5 md:p-0 rounded-lg bg-white/5 md:bg-transparent" key={investor.title}>
             <img
               className="md:opacity-50"
               src={`/images/investors/${investor.fileName}`}
               title={investor.title}
               alt={investor.title}
-              key={investor.title}
             />
           </div>
         ))}

@@ -4,7 +4,7 @@ import Head from 'next/head'
 import 'tailwindcss/tailwind.css'
 import '../styles/globals.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return <>
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -14,4 +14,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   </>
 }
 
-export default MyApp
+export default App
