@@ -13,7 +13,7 @@ function Icon({
   className,
   icon,
   width = DEFAULT_WIDTH,
-  height = DEFAULT_HEIGHT,
+  height = DEFAULT_HEIGHT
 }: PropsWithChildren<TIconProps>) {
   const IconComponent = ICONS[icon].Component
   return <IconComponent style={{ width, height }} className={cx(className)} />

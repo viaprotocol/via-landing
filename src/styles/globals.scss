@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 /* elements */
-
 * {
   box-sizing: border-box;
 }
@@ -123,6 +122,7 @@ body {
   background-size: 100%;
   background-image: url('/images/backgrounds/bg-top-small.jpg');
   position: relative;
+  letter-spacing: -0.02em;
 
   @media only screen and (min-width: 620px) {
     background-image: url('/images/backgrounds/bg-top-large.jpg');
