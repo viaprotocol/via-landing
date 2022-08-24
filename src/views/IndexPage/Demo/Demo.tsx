@@ -2,8 +2,6 @@ import { Routes } from './components/Routes'
 import styles from './Demo.module.scss'
 
 function Demo() {
-  // const { status } = useRoutes()
-
   return (
     <section className={styles.demo}>
       <h2 className={styles.title}>All cross-chain<br />routes in one interface</h2>
