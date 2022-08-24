@@ -3,9 +3,18 @@ import type { PropsWithChildren } from 'react'
 
 import type { TTileGroupProps, TTileProps } from './types'
 
-function Tile({ className, children }: PropsWithChildren<TTileProps>) {
+function Tile({ slots = 1, className, children }: PropsWithChildren<TTileProps>) {
+
   return (
-    <div className={cx(className, 'min-h-[180px] md:min-h-[320px] bg-white/5 rounded-2xl p-10')}>
+    <div className={cx(
+      className,
+      'col-span-1 min-h-[180px] md:min-h-[320px] bg-white/5 rounded-2xl p-10',
+      ({
+        1: `md:col-span-1`,
+        2: `md:col-span-2`,
+        3: `md:col-span-3`,
+      }[slots])
+    )}>
       {children}
     </div>
   )

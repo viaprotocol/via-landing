@@ -26,11 +26,11 @@ function Safety() {
             <h2>Security score</h2>
             <p>Conduct a research about the bridge according the decentralization, the actuality of audits and existence of centralized relayers.</p>
           </Tile>
-          <Tile>
+          <Tile slots={2}>
             <h2>Transfer gas</h2>
             <p>Move gas between any networks in 1 click</p>
           </Tile>
-          <Tile  className="col-span-2">
+          <Tile>
             <h2>Advanced routes</h2>
             <p>Transfer tokens between any two networks, even if there is no direct bridge between them.</p>
           </Tile>
