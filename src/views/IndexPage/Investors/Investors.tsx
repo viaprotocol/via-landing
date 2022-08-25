@@ -14,7 +14,7 @@ function Investors() {
     <Section>
       <div className="px-2.5 md:px-0">
         <div className="flex items-center mb-4 md:mb-10">
-          <h2 className="">Investors</h2>
+          <h2 className="font-semibold text-[36px] leading-[44px] lg:text-[48px] lg:leading-[56px]">Investors</h2>
           {!isMobile && becomeLink}
         </div>
         <div className="flex items-bottom md:items-center justify-start md:justify-between gap-2.5 md:gap-[95px]">

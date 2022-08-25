@@ -15,7 +15,7 @@ function Safety() {
     <Section>
       <>
         {!isLarge &&
-          <h2 className="mb-6 ml-2">Safety first</h2>
+          <h2 className="mb-6 ml-2 font-semibold text-[36px] leading-[44px] lg:text-[48px] lg:leading-[56px]">Safety first</h2>
         }
         <Tile.Group>
           {isLarge &&

@@ -30,18 +30,6 @@ h1 {
   }
 }
 
-h2 {
-  font-size: 36px;
-  line-height: 44px;
-  font-weight: 600;
-  letter-spacing: -0.04em;
-
-  @media only screen and (min-width: 960px) {
-    font-size: 48px;
-    line-height: 56px;
-  }
-}
-
 @keyframes appear {
   0% {
     opacity: 0;
