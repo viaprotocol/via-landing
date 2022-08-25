@@ -1,10 +1,12 @@
 export const investors = [
   {
-    title: 'Ravicant Capital',
-    fileName: 'ravicant-capital.svg',
+    title: 'Ravikant Capital',
+    fileNameSmall: 'ravikant-small.svg',
+    fileNameBig: 'ravikant-big.svg',
   },
   {
     title: 'Shima Capital',
-    fileName: 'shima-capital.svg',
+    fileNameSmall: 'shima-small.svg',
+    fileNameBig: 'shima-big.svg',
   },
 ]

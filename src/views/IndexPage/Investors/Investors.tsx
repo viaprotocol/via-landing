@@ -17,12 +17,12 @@ function Investors() {
           <h2 className="">Investors</h2>
           {!isMobile && becomeLink}
         </div>
-        <div className="flex align-bottom justify-start md:justify-evenly gap-2.5">
+        <div className="flex items-bottom md:items-center justify-start md:justify-between gap-2.5 md:gap-[95px]">
           {investors.map(investor => (
             <div className="flex items-end w-[140px] h-[120px] md:w-auto md:h-auto p-5 md:p-0 rounded-lg bg-white/5 md:bg-transparent" key={investor.title}>
               <img
                 className="md:opacity-50"
-                src={`/images/investors/${investor.fileName}`}
+                src={`/images/investors/${isMobile ? investor.fileNameSmall : investor.fileNameBig}`}
                 title={investor.title}
                 alt={investor.title}
               />

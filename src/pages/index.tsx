@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <main>
           <Intro />
           <Investors />
-          <div className="h-[120px] md:h-[64px]"></div>
+          <div className="h-[86px] md:h-[150px]"></div>
           <Safety />
         </main>
 
