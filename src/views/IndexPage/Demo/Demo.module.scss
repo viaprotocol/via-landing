@@ -1,0 +1,57 @@
+.demo {
+  @apply grid items-end gap-4;
+  grid-template-areas: "title"
+                       "routes"
+                       "description";
+
+  @media only screen and (min-width: 768px) {
+    grid-template-areas: "title routes"
+                         "description routes";
+  }
+
+  @media only screen and (min-width: 960px) {
+    padding: 40px 46px;
+  }
+}
+
+.title {
+  @apply font-semibold text-4xl tracking-tight text-white;
+  grid-area: title;
+
+  @media only screen and (min-width: 768px) {
+    @apply text-5xl leading-[56px]
+  }
+}
+
+.description {
+  @apply flex-col flex items-start justify-start self-start text-white/40 mt-6 text-2xl md:text-[32px] md:leading-tight tracking-tighter;
+  grid-area: description;
+}
+
+.routes {
+  @apply p-0 tracking-normal max-w-[553px] place-self-center w-full;
+  grid-area: routes;
+  font-family: "Inter", sans-serif;
+}
+
+.button {
+  @apply block mt-10 md:mt-20 bg-[#00FF60] text-base font-bold tracking-tight text-black px-9 py-3 w-auto rounded-lg
+}
+
+.content {
+  @apply h-[300px] overflow-y-scroll overflow-x-hidden pr-1 flex flex-col;
+
+  @media screen and (min-width: 768px) {
+    @apply h-[556px]
+  }
+
+  &::-webkit-scrollbar {
+    @apply w-1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply w-1 rounded-sm bg-white-120;
+  }
+
+
+}

@@ -1,0 +1,3 @@
+[submodule "src/format-crypto"]
+	path = src/format-crypto
+	url = https://github.com/viaprotocol/format-crypto
