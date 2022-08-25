@@ -2,7 +2,7 @@ import type { PropsWithChildren } from 'react'
 import { useEffect, useMemo, useState } from 'react'
 import useCollapse from 'react-collapsed'
 import cx from 'classnames'
-import { Icon, Skeleton } from '@/components/ui'
+import { Icon, Skeleton } from '@/components/kit'
 
 import type { TRouteSkeletonProps } from '../types'
 

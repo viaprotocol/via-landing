@@ -1,6 +1,6 @@
 import { memo } from 'react'
 
-import { Icon } from '@/components/ui'
+import { Icon } from '@/components/kit'
 
 import { SecurityIcon } from '../SecurityIcon'
 import type { TRiskInfoProps } from '../types'

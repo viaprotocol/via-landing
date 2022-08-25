@@ -7,15 +7,15 @@ import type { TExchangeInfoProps, TExchangeInfoStandProps, TToken } from '../../
 import { getNotAvailablePriceText } from '../helpers'
 import { CURRENCY_CRYPTO, formatValue } from '@/format-crypto/format'
 
-import type { TTooltipProps } from '@/components/ui'
-import { Icon, Logo, NetworkLogo } from '@/components/ui'
+import type { TTooltipProps } from '@/components/kit'
+import { Icon, Logo, NetworkLogo } from '@/components/kit'
 
 import { fromDecimal, networks } from '../../utils'
 
 const MIN_NO_PRICE = 2
 const MAX_NO_PRICE = 5
 
-const Tooltip = dynamic<PropsWithChildren<TTooltipProps>>(() => import('@/components/ui/Tooltip/Tooltip').then(mod => mod.Tooltip), {
+const Tooltip = dynamic<PropsWithChildren<TTooltipProps>>(() => import('@/components/kit/Tooltip/Tooltip').then(mod => mod.Tooltip), {
   ssr: false
 })
 

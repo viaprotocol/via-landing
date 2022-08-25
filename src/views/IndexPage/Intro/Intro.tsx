@@ -1,9 +1,10 @@
 import React from 'react'
-import { socials } from '@/data/socials'
+
+import { Section } from '@/components/layout'
 
 function Intro() {
   return (
-    <section className="first">
+    <Section className="intro">
       <div className="form-wrapper">
         <a className="form-link" href="https://router.via.exchange" target="_blank" rel="noreferrer">
           <img src="/images/backgrounds/bg-form.svg" />
@@ -14,16 +15,7 @@ function Intro() {
         without limits
       </h1>
       <a data-button="large" href="https://router.via.exchange/" target="_blank" rel="noreferrer">Launch dApp</a>
-
-      <div className="socials">
-        {socials.map(social => (
-          <a key={social.name} href={social.link} target="_blank" rel="noopener noreferrer">
-            {social.icon}
-            <span className="visually-hidden">{social.name}</span>
-          </a>
-        ))}
-      </div>
-    </section>
+    </Section>
   )
 }
 

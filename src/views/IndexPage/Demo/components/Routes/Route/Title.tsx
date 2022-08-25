@@ -1,10 +1,10 @@
 import { NetValueInfo } from './Tools/NetValueInfo'
 import type { TTitleProps } from './types'
 import dynamic from 'next/dynamic'
-import type { TTooltipProps } from '@/components/ui'
+import type { TTooltipProps } from '@/components/kit'
 import type { PropsWithChildren } from 'react'
 
-const Tooltip = dynamic<PropsWithChildren<TTooltipProps>>(() => import('@/components/ui/Tooltip/Tooltip').then(mod => mod.Tooltip), {
+const Tooltip = dynamic<PropsWithChildren<TTooltipProps>>(() => import('@/components/kit/Tooltip/Tooltip').then(mod => mod.Tooltip), {
   ssr: false
 })
 

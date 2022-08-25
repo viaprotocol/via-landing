@@ -43,8 +43,7 @@ h1 {
 
 h2,
 h3 {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+  margin: 0;
 }
 
 [data-button] {
@@ -162,15 +161,6 @@ body {
   margin: 0 auto;
   min-width: 375px;
   max-width: 1800px;
-  padding: 0 8px;
-
-  @media only screen and (min-width: 960px) {
-    padding: 0 24px;
-  }
-
-  @media only screen and (min-width: 1420px) {
-    padding: 0;
-  }
 }
 
 
@@ -190,18 +180,12 @@ body {
   margin: -1px;
 }
 
-section {
-  padding: 24px;
-  position: relative;
-}
-
-
-section.first {
-  padding: 40px 10px 93px;
+section.intro {
+  padding: 40px 10px 80px;
   text-align: center;
 
   @media only screen and (min-width: 960px) {
-    padding: 62px 46px 260px;
+    padding: 62px 46px 180px;
   }
 
   .form-wrapper {
@@ -242,61 +226,6 @@ section.first {
       opacity: 1;
       transform: scale(1) translateY(0);
     }
-  }
-
-  .socials {
-    color: #fff;
-    margin-top: 42px;
-
-    @media only screen and (min-width: 960px) {
-      display: none;
-    }
-
-    a {
-      color: #838385;
-
-      &:hover {
-        color: #ff002e;
-      }
-
-      &:active {
-        color: #b90d2c;
-      }
-    }
-  }
-  .socials * + * {
-    margin-left: 32px;
-  }
-
-  @media only screen and (min-width: 960px) {
-    .socials {
-      margin-right: 44px;
-    }
-    .socials * + * {
-      margin-left: 22px;
-    }
-  }
-
-  @media only screen and (min-width: 1420px) {
-    .socials {
-      margin-right: 60px;
-    }
-    .socials * + * {
-      margin-left: 54px;
-    }
-  }
-}
-
-
-.central-sections {
-  background-image: url('/images/backgrounds/bg-central-large.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center 20%;
-
-  @media only screen and (min-width: 960px) {
-    background-size: 80%;
-    background-position: center 34%;
   }
 }
 

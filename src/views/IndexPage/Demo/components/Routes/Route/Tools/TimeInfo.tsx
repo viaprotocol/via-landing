@@ -1,4 +1,4 @@
-import { Icon } from '@/components/ui'
+import { Icon } from '@/components/kit'
 
 import type { TTimeInfoProps } from './types'
 

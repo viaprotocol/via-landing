@@ -6,7 +6,7 @@ import Head from 'next/head'
 import 'tailwindcss/tailwind.css'
 import '../styles/globals.scss'
 
-function MyApp({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   return <>
     <QueryClientProvider client={queryClient}>
       <Head>
@@ -18,4 +18,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   </>
 }
 
-export default MyApp
+export default App

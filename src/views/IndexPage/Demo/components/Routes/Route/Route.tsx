@@ -14,8 +14,8 @@ import { Title } from './Title'
 import { ExchangeInfo, RiskInfo, TransactionsRate } from './Tools'
 import { TimeInfo } from './Tools/TimeInfo'
 import { ActionFeeTooltip, TotalFeeTooltip } from './Tools/TotalFee'
-import type { TTooltipProps } from '@/components/ui'
-import { Icon, Logo, Label } from '@/components/ui'
+import type { TTooltipProps } from '@/components/kit'
+import { Icon, Logo, Label } from '@/components/kit'
 import { formatTime, getNumberWithOrdinal, getSmartRoundedNumber } from '../utils'
 import dynamic from 'next/dynamic'
 
@@ -25,7 +25,7 @@ const getFeeHeader = (transactionNo: number) => {
   return `For a ${transactionText} transaction you need to have`
 }
 
-const Tooltip = dynamic<PropsWithChildren<TTooltipProps>>(() => import('@/components/ui/Tooltip/Tooltip').then(mod => mod.Tooltip), {
+const Tooltip = dynamic<PropsWithChildren<TTooltipProps>>(() => import('@/components/kit/Tooltip/Tooltip').then(mod => mod.Tooltip), {
   ssr: false
 })
 

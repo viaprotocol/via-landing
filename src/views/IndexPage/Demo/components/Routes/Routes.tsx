@@ -6,7 +6,7 @@ import type { TRangingRoute, TRoutesProps } from './types'
 
 import UsdtLogo from 'public/images/tokens/usdt.svg'
 import EthLogo from 'public/images/tokens/eth.svg'
-import { Icon } from '@/components/ui'
+import { Icon } from '@/components/kit'
 import { useRoutes } from '@/hooks/useRoutes/useRoutes'
 import styles from '../../Demo.module.scss'
 
