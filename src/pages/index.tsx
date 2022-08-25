@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Intro, Investors, Safety } from '@/views/IndexPage'
+import { Intro, Investors, Safety, Features } from '@/views/IndexPage'
 import { Footer, Header } from '@/components/layout'
 
 const Home: NextPage = () => {
@@ -13,6 +13,8 @@ const Home: NextPage = () => {
           <Investors />
           <div className="h-[86px] md:h-[150px]"></div>
           <Safety />
+          <div className="h-[120px] md:h-[200px]"></div>
+          <Features />
         </main>
 
         <Footer />

@@ -28,6 +28,7 @@ function Tile({ slots = 1, className, icon, title, description, children }: Prop
         </div>
       }
       <div className={cx(
+        'max-w-[400px]',
         isAllElements && slots === 1 && 'lg:pl-5',
         isIconAndText && slots >= 2 && 'mt-6 lg:mt-0'
       )}>
