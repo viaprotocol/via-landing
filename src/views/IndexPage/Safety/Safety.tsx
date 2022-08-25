@@ -9,16 +9,16 @@ import TransferGasIcon from 'public/images/features/transfer-gas.svg'
 import AdvancedRoutesIcon from 'public/images/features/advanced-routes.svg'
 
 function Safety() {
-  const { isMobile } = useMedia()
+  const { isLarge } = useMedia()
 
   return (
     <Section>
       <>
-        {isMobile &&
-          <h2 className="md:hidden mb-6 ml-2">Safety first</h2>
+        {!isLarge &&
+          <h2 className="mb-6 ml-2">Safety first</h2>
         }
         <Tile.Group>
-          {!isMobile &&
+          {isLarge &&
             <Tile title="Safety first" />
           }
           <Tile
