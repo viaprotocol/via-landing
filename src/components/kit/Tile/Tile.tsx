@@ -6,11 +6,12 @@ import type { TTileGroupProps, TTileProps } from './types'
 function Tile({ slots = 1, className, icon, title, description, children }: PropsWithChildren<TTileProps>) {
   const isOnlyTitle = title && !description
   const isIconAndText = (title || description) && icon
+  const isAllElements = title && description && icon
 
   return (
     <div className={cx(
       className,
-      'flex flex-col col-span-1 min-h-[180px] md:min-h-[320px] bg-white/5 rounded-2xl p-10',
+      'flex flex-col col-span-1 min-h-[180px] md:min-h-[320px] bg-white/5 rounded-2xl px-5 py-6 md:px-10 md:py-10',
       (isOnlyTitle || slots === 2) && 'md:items-center md:justify-center',
       isIconAndText && 'md:justify-between',
       isIconAndText && slots === 2 && 'md:flex-row-reverse',
@@ -18,14 +19,15 @@ function Tile({ slots = 1, className, icon, title, description, children }: Prop
         1: `md:col-span-1`,
         2: `md:col-span-2`,
         3: `md:col-span-3`,
-      }[slots])
+      }[slots]),
+      isAllElements && slots === 1 && 'md:pt-5 md:pl-5',
     )}>
       {icon &&
         <div>
           (icon){icon.Component}
         </div>
       }
-      <div>
+      <div className={cx(isAllElements && slots === 1 && 'md:pl-5')}>
         {title &&
           <h3 className={cx(
             'font-semibold',
