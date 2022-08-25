@@ -24,7 +24,7 @@ function Tile({ slots = 1, className, icon, title, description, children }: Prop
     )}>
       {icon &&
         <div>
-          (icon){icon.Component}
+          {icon}
         </div>
       }
       <div className={cx(isAllElements && slots === 1 && 'md:pl-5')}>
