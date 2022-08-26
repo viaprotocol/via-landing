@@ -5,6 +5,8 @@ type TWalletItem = {
 
 type TWalletListProps = {
   items: TWalletItem[]
+  delay?: number
+  speed?: number
 }
 
 export type { TWalletItem, TWalletListProps }
