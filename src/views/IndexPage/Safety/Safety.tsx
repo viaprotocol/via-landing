@@ -1,7 +1,6 @@
 import React from 'react'
 import { Section } from '@/components/layout'
 import { Tile } from '@/components/kit'
-import { useMedia } from '@/hooks'
 
 import WatchdogIcon from 'public/images/features/watchdog.svg'
 import SecurityScoreIcon from 'public/images/features/security-score.svg'
@@ -9,18 +8,12 @@ import TransferGasIcon from 'public/images/features/transfer-gas.svg'
 import AdvancedRoutesIcon from 'public/images/features/advanced-routes.svg'
 
 function Safety() {
-  const { isLarge } = useMedia()
-
   return (
     <Section>
       <>
-        {!isLarge &&
-          <h2 className="mb-6 ml-2 font-semibold text-[36px] leading-[44px] lg:text-[48px] lg:leading-[56px]">Safety first</h2>
-        }
+        <h2 className="lg:hidden mb-6 ml-2 font-semibold text-[36px] leading-[44px]">Safety first</h2>
         <Tile.Group>
-          {isLarge &&
-            <Tile title="Safety first" />
-          }
+          <Tile title="Safety first" className="hidden lg:flex" />
           <Tile
             icon={<WatchdogIcon/>}
             title="Bridges' watchdog"
