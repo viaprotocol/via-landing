@@ -1,8 +1,8 @@
-import type {TRoute, TRouteWithMeta} from '@/views/IndexPage/Demo/components/Routes'
-import {useCallback, useEffect, useMemo, useState} from 'react'
-import {EVM_BASE_TOKEN_ADDRESS, getFormattedRoutes, uniqueArrayByKey} from './utils'
-import {useTokenPrice} from '@/hooks/queries/useTokenPrice'
-import {useRangedRoutes} from './useRangedRoutes'
+import type { TRoute, TRouteWithMeta } from '@/views/IndexPage/Demo/components/Routes'
+import { useCallback, useEffect, useMemo, useState } from 'react'
+import { EVM_BASE_TOKEN_ADDRESS, getFormattedRoutes, uniqueArrayByKey } from './utils'
+import { useTokenPrice } from '@/hooks/queries/useTokenPrice'
+import { useRangedRoutes } from './useRangedRoutes'
 
 function useFormattedRoutes(routes: TRoute[] | null) {
   const [cachedRoutes, setCachedRoutes] = useState<TRouteWithMeta[]>([])

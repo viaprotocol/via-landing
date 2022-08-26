@@ -11,7 +11,7 @@ function Safety() {
   return (
     <Section>
       <>
-        <h2 className="lg:hidden mb-6 ml-2 font-semibold text-[36px] leading-[44px]">Safety first</h2>
+        <h2 className="mb-6 ml-2 text-[36px] font-semibold leading-[44px] lg:hidden">Safety first</h2>
         <Tile.Group>
           <Tile title="Safety first" className="hidden lg:flex" />
           <Tile
