@@ -33,7 +33,7 @@ class MyDocument extends Document {
             content="Via Protocol unites cross-chain protocols and finds the cheapest 1-transaction any-to-any swaps."
           />
           <meta name="twitter:image" content="/images/meta/meta-preview.jpg" />
-          <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&display=optional" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=optional" rel="stylesheet" />
         </Head>
         <body className='dark'>
           <Main />
