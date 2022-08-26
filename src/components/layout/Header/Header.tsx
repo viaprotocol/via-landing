@@ -1,8 +1,10 @@
 import Image from 'next/image'
-import { useCallback, useState } from 'react'
+import { useCallback, useContext, useState } from 'react'
 import cx from 'classnames'
+
 import styles from './Header.module.scss'
 import { socials } from '@/data/socials'
+import { StateContext } from '@/state'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
@@ -10,6 +12,8 @@ function Header() {
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(state => !state)
   }, [])
+
+  const { openMobileMenu } = useContext(StateContext)
 
   return (
     <header className={styles.header}>
@@ -32,7 +36,7 @@ function Header() {
         ))}
       </ul>
 
-      <button type="button" className={styles.headerBurgerButton}>
+      <button type="button" className={styles.headerBurgerButton} onClick={openMobileMenu}>
         <img src="/images/icons/menu-icon.svg" alt="Menu icon" width="24" height="24" />
       </button>
 
