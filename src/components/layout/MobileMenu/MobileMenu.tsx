@@ -2,6 +2,7 @@ import cx from 'classnames'
 import { useContext } from 'react'
 
 import { StateContext } from '@/state'
+import { Icon } from '@/components/kit'
 
 function MobileMenu() {
   const { isMobileMenuOpen, closeMobileMenu } = useContext(StateContext)
@@ -13,12 +14,12 @@ function MobileMenu() {
     )}>
       <header className="mobile-menu__header">
         <button type="button" className="mobile-menu__close" onClick={closeMobileMenu}>
-          <img src="icons/close.svg" width="16" height="16" />
+          <Icon icon="close" />
         </button>
 
         <a href="https://docs.via.exchange/product-docs/" className="mobile-menu__docs" target="_blank" rel="noopener noreferrer">
           <span>Via Docs</span>
-          <img src="./img/icons/external.svg" alt="External link" width="16" height="16" />
+          <img src="/images/icons/external.svg" alt="External link" width="16" height="16" />
         </a>
       </header>
 
@@ -28,7 +29,7 @@ function MobileMenu() {
         <li className="mobile-menu__product menu-product">
           <a href="https://router.via.exchange/" className="menu-product__wrapper" target="_blank" rel="noopener noreferrer">
             <div className="menu-product__image-wrapper">
-              <img className="menu-product__image" width="24" height="24" src="./img/icons/router.svg" alt="Cross-chain Aggregation Protocol" />
+              <img className="menu-product__image" width={24} height={24} src="/images/icons/router.svg" alt="Cross-chain Aggregation Protocol" />
             </div>
             <div className="menu-product__info">
               <h4 className="menu-product__title">Cross-chain Aggregation Protocol</h4>
@@ -39,7 +40,7 @@ function MobileMenu() {
         <li className="mobile-menu__product menu-product">
           <a href="https://github.com/viaprotocol/via-sdk-js" className="menu-product__wrapper" target="_blank" rel="noopener noreferrer">
             <div className="menu-product__image-wrapper">
-              <img className="menu-product__image" width="24" height="24" src="./img/icons/api.svg" alt="API" />
+              <img className="menu-product__image" width={24} height={24} src="/images/icons/api.svg" alt="API" />
             </div>
             <div className="menu-product__info">
               <h4 className="menu-product__title">API</h4>
@@ -51,37 +52,37 @@ function MobileMenu() {
       <ul className="mobile-menu__socials">
         <li>
           <a className="mobile-menu__social-link" href="https://gitcoin.co/grants/4665/via-protocol" target="_blank">
-            <img src="socials/gitcoin.svg" width="24" height="24" />
+            <Icon icon="gitcoin" width={24} height={24} />
             <span className="visually-hidden">Gitcoin</span>
           </a>
         </li>
         <li>
           <a className="mobile-menu__social-link" href="https://github.com/viaprotocol" target="_blank">
-            <img src="socials/github.svg" width="24" height="24" />
+            <Icon icon="github" width={24} height={24} />
             <span className="visually-hidden">Github</span>
           </a>
         </li>
         <li>
           <a className="mobile-menu__social-link" href="https://discord.gg/viaexchange" target="_blank">
-            <img src="socials/discord.svg" width="24" height="24" />
+            <Icon icon="discord" width={24} height={24} />
             <span className="visually-hidden">Discord</span>
           </a>
         </li>
         <li>
           <a className="mobile-menu__social-link" href="https://twitter.com/via_protocol" target="_blank">
-            <img src="socials/twitter.svg" width="24" height="24" />
+            <Icon icon="twitter" width={24} height={24} />
             <span className="visually-hidden">Twitter</span>
           </a>
         </li>
         <li>
           <a className="mobile-menu__social-link" href="https://t.me/viaexchange" target="_blank">
-            <img src="socials/telegram.svg" width="24" height="24" />
+            <Icon icon="telegram" width={24} height={24} />
             <span className="visually-hidden">Telegram</span>
           </a>
         </li>
         <li>
           <a className="mobile-menu__social-link" href="https://medium.com/via-exchange" target="_blank">
-            <img src="socials/medium.svg" width="24" height="24" />
+            <Icon icon="medium" width={24} height={24} />
             <span className="visually-hidden">Medium</span>
           </a>
         </li>
