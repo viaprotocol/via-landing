@@ -5,6 +5,7 @@ import cx from 'classnames'
 import styles from './Header.module.scss'
 import { socials } from '@/data/socials'
 import { StateContext } from '@/state'
+import { Icon } from '@/components/kit'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(true)
@@ -49,8 +50,11 @@ function Header() {
           styles.headerProductsButton,
           isMenuOpen && styles.headerProductsButtonOpened
         )}>
-          Products
-          <Image className={styles.headerProductsIcon} src="/images/icons/close.svg" width="16" height="16" />
+          {isMenuOpen ?
+            <Icon icon="close" className="mt-1" />
+            :
+            <span>Products</span>
+          }
         </button>
         <div className={cx(
           styles.headerProducts,
