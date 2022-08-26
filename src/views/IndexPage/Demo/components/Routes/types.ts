@@ -1,4 +1,4 @@
-import { classNames } from 'classnames';
+import { classNames } from 'classnames'
 import type { MouseEventHandler } from 'react'
 
 export type TToken = {

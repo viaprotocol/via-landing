@@ -8,8 +8,8 @@ const createQueryKey = ({ chainId }: TUseGasPriceQuery) => ['gasPrice', chainId]
 
 const createQueryFn =
   ({ chainId }: TUseGasPriceQuery) =>
-  () =>
-    fetchGasPrice(chainId!)
+    () =>
+      fetchGasPrice(chainId!)
 
 const createQueryConfig = ({ chainId }: TUseGasPriceQuery) => ({
   enabled: !!chainId,

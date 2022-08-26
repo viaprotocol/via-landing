@@ -1,13 +1,13 @@
-import { TNetwork, TRoute, TRouteAction, TRouteActionWithMeta, TRouteStep, TRouteWithMeta, TToken, TTokenPrice } from "@/views/IndexPage/Demo/components/Routes";
-import { queryClient } from "../queries/common/queryClient";
+import type { TNetwork, TRoute, TRouteAction, TRouteActionWithMeta, TRouteStep, TRouteWithMeta, TToken, TTokenPrice } from '@/views/IndexPage/Demo/components/Routes'
+import { queryClient } from '../queries/common/queryClient'
 import { createQueryParams as createGasPriceQueryParams } from '@/hooks/queries/useGasPrice/config'
 import { createQueryParams as createTokenPriceQueryParams } from '@/hooks/queries/useTokenPrice/config'
-import { TChainInfo, TChainMap, TFormatActionOpts, TFormatRouteOpts } from "./types";
-import { formatValue, CURRENCY_USD, CURRENCY_CRYPTO } from "@/format-crypto/format";
-import { fromDecimal, getNetworkByChainId } from "@/views/IndexPage/Demo/components/Routes/utils";
+import type { TChainInfo, TChainMap, TFormatActionOpts, TFormatRouteOpts } from './types'
+import { formatValue, CURRENCY_USD, CURRENCY_CRYPTO } from '@/format-crypto/format'
+import { fromDecimal, getNetworkByChainId } from '@/views/IndexPage/Demo/components/Routes/utils'
 
-export const EVM_BASE_TOKEN_ADDRESS = "0x0000000000000000000000000000000000000000";
-const SOLANA_BASE_TOKEN_ADDRESS = "So11111111111111111111111111111111111111111";
+export const EVM_BASE_TOKEN_ADDRESS = '0x0000000000000000000000000000000000000000'
+const SOLANA_BASE_TOKEN_ADDRESS = 'So11111111111111111111111111111111111111111'
 
 /**
  * It takes a token amount and a list of steps, and returns the worth of that token amount in the
@@ -74,46 +74,46 @@ const getTokenPriceInfo = ({
  */
 const formatAction =
   (opts: TFormatActionOpts) =>
-  async (action: TRouteAction): Promise<TRouteActionWithMeta> => {
-    const { chainMap } = opts
-    const { fee, fromToken, additionalProviderFee } = action
-    const { gasActionApproveUnits, gasActionUnits } = fee
+    async (action: TRouteAction): Promise<TRouteActionWithMeta> => {
+      const { chainMap } = opts
+      const { fee, fromToken, additionalProviderFee } = action
+      const { gasActionApproveUnits, gasActionUnits } = fee
 
-    const { chainId, address } = fromToken
+      const { chainId, address } = fromToken
 
-    const chainInfo = chainMap[chainId]
+      const chainInfo = chainMap[chainId]
 
-    const { wei, network, priceUSD } = chainInfo
+      const { wei, network, priceUSD } = chainInfo
 
-    const isNativeToken = getNativeTokenAddress(chainId) === address
+      const isNativeToken = getNativeTokenAddress(chainId) === address
 
-    const gasActionApprove = getTokenPriceInfo({
-      wei: (gasActionApproveUnits || 0) * wei,
-      priceUSD,
-      network
-    })
-    const gasAction = getTokenPriceInfo({ wei: (gasActionUnits || 0) * wei, priceUSD, network })
-    const providerFee = getTokenPriceInfo({ wei: additionalProviderFee?.amount || 0, priceUSD, network })
+      const gasActionApprove = getTokenPriceInfo({
+        wei: (gasActionApproveUnits || 0) * wei,
+        priceUSD,
+        network
+      })
+      const gasAction = getTokenPriceInfo({ wei: (gasActionUnits || 0) * wei, priceUSD, network })
+      const providerFee = getTokenPriceInfo({ wei: additionalProviderFee?.amount || 0, priceUSD, network })
 
-    const totalGas = getTokenPriceInfo({
-      wei: gasAction.wei + gasActionApprove.wei + providerFee.wei,
-      priceUSD,
-      network
-    })
+      const totalGas = getTokenPriceInfo({
+        wei: gasAction.wei + gasActionApprove.wei + providerFee.wei,
+        priceUSD,
+        network
+      })
 
-    return {
-      ...action,
-      meta: {
-        isNeedApprove: true,
-        isNeedGas: false,
-        network,
-        gasAction,
-        gasActionApprove,
-        totalGas,
-        providerFee
+      return {
+        ...action,
+        meta: {
+          isNeedApprove: true,
+          isNeedGas: false,
+          network,
+          gasAction,
+          gasActionApprove,
+          totalGas,
+          providerFee
+        }
       }
     }
-  }
 
 /**
  * It takes a route and returns a route with meta data
@@ -128,52 +128,51 @@ const formatAction =
  */
 const formatRoute =
   (opts: TFormatRouteOpts) =>
-  async (route: TRoute): Promise<TRouteWithMeta> => {
-    const { startTime, chainMap, toTokenPrice } = opts
-    const actions = await Promise.all(route.actions.map(formatAction({ chainMap })))
+    async (route: TRoute): Promise<TRouteWithMeta> => {
+      const { startTime, chainMap, toTokenPrice } = opts
+      const actions = await Promise.all(route.actions.map(formatAction({ chainMap })))
 
-    const calculatedSteps = calculateSteps(route)
+      const calculatedSteps = calculateSteps(route)
 
-    const [totalGasUSD, providerFeeUSD, gasActionApproveUSD, gasActionUSD] = actions
-      .reduce(
-        ([localGasUSD, localProviderFeeUSD, localActionApproveUSD, localActionUSD], { meta }) => [
-          localGasUSD + Number(meta.totalGas.usd),
-          localProviderFeeUSD + Number(meta.providerFee.usd),
-          localActionApproveUSD + Number(meta.gasActionApprove.usd),
-          localActionUSD + Number(meta.gasAction.usd)
-        ],
-        [0, 0, 0, 0]
+      const [totalGasUSD, providerFeeUSD, gasActionApproveUSD, gasActionUSD] = actions
+        .reduce(
+          ([localGasUSD, localProviderFeeUSD, localActionApproveUSD, localActionUSD], { meta }) => [
+            localGasUSD + Number(meta.totalGas.usd),
+            localProviderFeeUSD + Number(meta.providerFee.usd),
+            localActionApproveUSD + Number(meta.gasActionApprove.usd),
+            localActionUSD + Number(meta.gasAction.usd)
+          ],
+          [0, 0, 0, 0]
+        )
+        .map(value => formatValue(CURRENCY_USD, value))
+
+      const toTokenWorth = getUsdAmount(getTokenWorth(route.toTokenAmount, calculatedSteps), toTokenPrice || 1)
+
+      const calculatedToTokenAmountUSD = formatValue(
+        CURRENCY_USD,
+        Number(formatValue(CURRENCY_USD, toTokenWorth)) - Number(totalGasUSD) - Number(providerFeeUSD)
       )
-      .map(value => formatValue(CURRENCY_USD, value))
 
-    const toTokenWorth = getUsdAmount(getTokenWorth(route.toTokenAmount, calculatedSteps), toTokenPrice || 1)
+      const toolList = calculatedSteps.map(step => `${step.tool.name}${step.fromToken.symbol}`).join('')
 
-    const calculatedToTokenAmountUSD = formatValue(
-      CURRENCY_USD,
-      Number(formatValue(CURRENCY_USD, toTokenWorth)) - Number(totalGasUSD) - Number(providerFeeUSD)
-    )
+      const isNeedGas = !!actions.find(action => action.meta.isNeedGas) || false
 
-    const toolList = calculatedSteps.map(step => `${step.tool.name}${step.fromToken.symbol}`).join('')
-
-    const isNeedGas = !!actions.find(action => action.meta.isNeedGas) || false
-
-    return {
-      ...route,
-      actions,
-      meta: {
-        calculatedToTokenAmountUSD: String(calculatedToTokenAmountUSD),
-        totalGasUSD: String(totalGasUSD),
-        providerFeeUSD: String(providerFeeUSD),
-        gasActionApproveUSD: String(gasActionApproveUSD),
-        gasActionUSD: String(gasActionUSD),
-        toolList,
-        searchDuration: (Date.now() / 1000 - startTime).toFixed(2),
-        isNeedGas
-      },
-      calculatedSteps
+      return {
+        ...route,
+        actions,
+        meta: {
+          calculatedToTokenAmountUSD: String(calculatedToTokenAmountUSD),
+          totalGasUSD: String(totalGasUSD),
+          providerFeeUSD: String(providerFeeUSD),
+          gasActionApproveUSD: String(gasActionApproveUSD),
+          gasActionUSD: String(gasActionUSD),
+          toolList,
+          searchDuration: (Date.now() / 1000 - startTime).toFixed(2),
+          isNeedGas
+        },
+        calculatedSteps
+      }
     }
-  }
-
 
 /**
  * It takes an array of routes and returns an object with the gas price and token price for each chain
@@ -191,13 +190,13 @@ const getChainMap = async (routes: TRoute[]): Promise<TChainMap> => {
 
   // Getting only unique chainIds
   const steps = routes.flatMap(route => calculateSteps(route))
-  steps.forEach(step => {
+  steps.forEach((step) => {
     uniqChainIdSet.add(step.fromToken.chainId)
     uniqChainIdSet.add(step.toToken.chainId)
   })
 
   await Promise.allSettled(
-    Array.from(uniqChainIdSet).map(async chainId => {
+    Array.from(uniqChainIdSet).map(async (chainId) => {
       const gasPriceParams = {
         chainId
       }
@@ -280,7 +279,7 @@ export const getFormattedRoutes = async (routes: TRoute[]) => {
  */
 const uniqueArrayByKey = (array: any[], key: string) => {
   const seen = new Set()
-  return array.filter(el => {
+  return array.filter((el) => {
     const keyMap = key.split('.')
     const k = keyMap.reduce((memo, innerKey) => memo[innerKey], el)
     return seen.has(k) ? false : seen.add(k)

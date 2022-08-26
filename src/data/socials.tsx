@@ -8,26 +8,26 @@ export const socials = [
   {
     name: 'Twitter',
     link: 'https://twitter.com/via_protocol',
-    icon: <TwitterIcon />,
+    icon: <TwitterIcon />
   },
   {
     name: 'Discord',
     link: 'https://discord.gg/viaexchange',
-    icon: <DiscordIcon/>,
+    icon: <DiscordIcon/>
   },
   {
     name: 'Medium',
     link: 'https://medium.com/via-exchange',
-    icon: <MediumIcon />,
+    icon: <MediumIcon />
   },
   {
     name: 'Gitcoin',
     link: 'https://gitcoin.co/grants/4665/via-protocol',
-    icon: <GitcoinIcon />,
+    icon: <GitcoinIcon />
   },
   {
     name: 'Github',
     link: 'https://github.com/viaprotocol',
-    icon: <GithubIcon />,
-  },
+    icon: <GithubIcon />
+  }
 ]

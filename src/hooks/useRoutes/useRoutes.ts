@@ -2,7 +2,7 @@ import type IsoWebSocket from 'isomorphic-ws'
 import { useEffect, useRef, useState } from 'react'
 import { cli } from '@/api/router'
 import { useFormattedRoutes } from './useFormattedRoutes'
-import { TRoute } from '@/views/IndexPage/Demo/components/Routes'
+import type { TRoute } from '@/views/IndexPage/Demo/components/Routes'
 
 export function useRoutes() {
   const [routes, setRoutes] = useState<TRoute[]>([])

@@ -1,4 +1,4 @@
-interface TTileProps {
+type TTileProps = {
   className?: string
   slots?: 1 | 2 | 3
   icon?: any
@@ -6,7 +6,7 @@ interface TTileProps {
   description?: string
 }
 
-interface TTileGroupProps {
+type TTileGroupProps = {
   className?: string
 }
 

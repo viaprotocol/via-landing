@@ -36,7 +36,7 @@ const Title = (props: TTitleProps) => {
       content={<NetValueInfo isMultiplyTransaction={isMultiplyTransaction} meta={meta} symbol={symbol} />}
       isAnimated={false}
     >
-      <h2 className='mb-0'>
+      <h2 className="mb-0">
         Net value: <span className="font-bold">${calculatedToTokenAmountUSD}</span>
       </h2>
     </Tooltip>

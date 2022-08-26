@@ -16,11 +16,11 @@ function Tile({ slots = 1, className, icon, title, description, children }: Prop
       isIconAndText && 'lg:justify-between',
       isIconAndText && slots === 2 && 'lg:flex-row-reverse',
       ({
-        1: `lg:col-span-1`,
-        2: `lg:col-span-2`,
-        3: `lg:col-span-3`,
+        1: 'lg:col-span-1',
+        2: 'lg:col-span-2',
+        3: 'lg:col-span-3'
       }[slots]),
-      isAllElements && slots === 1 && 'lg:pt-5 lg:pl-5',
+      isAllElements && slots === 1 && 'lg:pt-5 lg:pl-5'
     )}>
       {icon &&
         <div>
@@ -45,7 +45,7 @@ function Tile({ slots = 1, className, icon, title, description, children }: Prop
         {description &&
           <p className={cx(
             'text-white/40',
-            slots >= 2 && 'text-[24px] max-w-[300px]',
+            slots >= 2 && 'text-[24px] max-w-[300px]'
           )}>
             {description}
           </p>

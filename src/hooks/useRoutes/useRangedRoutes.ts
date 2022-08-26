@@ -4,7 +4,7 @@ import { CURRENCY_USD, formatValue } from '@/format-crypto/format'
 
 import { useTokenPrice } from '@/hooks/queries/useTokenPrice'
 
-import { TRouteWithMeta, TRangingRoute } from '@/views/IndexPage/Demo/components/Routes'
+import type { TRouteWithMeta, TRangingRoute } from '@/views/IndexPage/Demo/components/Routes'
 import { calculateRouteTime, EVM_BASE_TOKEN_ADDRESS, getRouteByMinProperty, getTokenWorth, getUsdAmount } from './utils'
 
 function useRangedRoutes(routes: TRouteWithMeta[]) {
@@ -42,7 +42,7 @@ function useRangedRoutes(routes: TRouteWithMeta[]) {
     const bestWorth = getTokenWorth(bestItem.toTokenAmount, bestItem.calculatedSteps)
     const bestUSDPrice = formatValue(CURRENCY_USD, getUsdAmount(bestWorth, toTokenPrice))
 
-    return formatterRouterList.map(route => {
+    return formatterRouterList.map((route) => {
       const tokenWorth = getTokenWorth(route.toTokenAmount, route.calculatedSteps)
       const priceUSD = formatValue(CURRENCY_USD, getUsdAmount(tokenWorth, toTokenPrice))
       const loss = (Number(bestUSDPrice) - Number(priceUSD)) / (Number(bestUSDPrice) / 100)

@@ -23,20 +23,20 @@ const Routes: FC<PropsWithChildren<TRoutesProps>> = memo(({ className }) => {
 
   return (
     <section className={className}>
-      <header className='dark:bg-[#ffffff0a] py-6 px-4 rounded-2xl flex items-center gap-2 md:gap-6 mb-2'>
-        <div className='flex'>
-          <UsdtLogo className='w-10 h-10 mr-[10px]' />
-          <div className='flex flex-col'>
-            <p className='text-semibold text-base text-[18px] mb-1 tracking-tight'>1000</p>
-            <span className='text-xs text-white/40'>on Phantom</span>
+      <header className="mb-2 flex items-center gap-2 rounded-2xl py-6 px-4 dark:bg-[#ffffff0a] md:gap-6">
+        <div className="flex">
+          <UsdtLogo className="mr-[10px] h-10 w-10" />
+          <div className="flex flex-col">
+            <p className="text-semibold mb-1 text-base text-[18px] tracking-tight">1000</p>
+            <span className="text-xs text-white/40">on Phantom</span>
           </div>
         </div>
-        <Icon icon="arrowRight" className='text-gray-500' width={24} height={24} />
-        <div className='flex'>
-          <EthLogo className='w-10 h-10 mr-[10px]' />
-          <div className='flex flex-col'>
-            <p className='text-semibold text-base text-[18px] mb-1 tracking-tight'>1000</p>
-            <span className='text-xs text-white/40'>on Ethereum</span>
+        <Icon icon="arrowRight" className="text-gray-500" width={24} height={24} />
+        <div className="flex">
+          <EthLogo className="mr-[10px] h-10 w-10" />
+          <div className="flex flex-col">
+            <p className="text-semibold mb-1 text-base text-[18px] tracking-tight">1000</p>
+            <span className="text-xs text-white/40">on Ethereum</span>
           </div>
         </div>
       </header>

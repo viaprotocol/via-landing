@@ -187,7 +187,7 @@ const Route = memo((props: PropsWithChildren<TRouteProps>) => {
             data-testid="button-show-route-details"
           >
             <div className="absolute -inset-y-3 -right-2 w-14 md:-inset-y-4 md:-right-4" />
-            <div className='flex w-full h-full items-center justify-center'>
+            <div className="flex h-full w-full items-center justify-center">
               <Icon
                 className={cx('text-[#111215cc] dark:text-[#ffffff66]', !isExpanded && '-rotate-90')}
                 icon="arrowDown"

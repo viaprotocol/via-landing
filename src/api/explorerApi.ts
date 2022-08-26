@@ -4,7 +4,7 @@ import type { TExplorerBalances, TGasPriceResponse } from './explorerApi.types'
 
 export const EXPLORER_URLS = {
   fetchTokenPriceUrl: `${EXPLORER_URL}v1/token_price`,
-  fetchGasPriceUrl: `${EXPLORER_URL}v1/gas_price`,
+  fetchGasPriceUrl: `${EXPLORER_URL}v1/gas_price`
 }
 
 export const fetchTokenPrice = async (chainId: number, tokenAddress: string) => {
