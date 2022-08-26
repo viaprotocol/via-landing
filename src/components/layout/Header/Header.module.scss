@@ -151,16 +151,16 @@
 .headerProductsButton {
   width: 99px;
   margin-right: 0;
+}
 
-  .headerProductsButtonOpened {
-    z-index: 27;
-    font-size: 0;
+.headerProductsButtonOpened {
+  z-index: 27;
+  font-size: 0;
+}
 
-    & .headerProductsIcon {
-      margin-top: 4px;
-      display: block;
-    }
-  }
+.headerProductsIcon {
+  margin-top: 4px;
+  display: block;
 }
 
 .headerProductsIcon {
@@ -184,13 +184,13 @@
   @supports (-moz-appearance: none) {
     background-color: #07080b;
   }
+}
 
-  .headerProductsOpened {
-    width: 660px;
-    transition: opacity 0.4s ease-in-out;
-    z-index: 20;
-    opacity: 1;
-  }
+.headerProductsOpened {
+  width: 660px;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 20;
+  opacity: 1;
 }
 
 .headerProductsCloseButton {

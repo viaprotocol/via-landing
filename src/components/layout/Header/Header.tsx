@@ -5,7 +5,7 @@ import styles from './Header.module.scss'
 import { socials } from '@/data/socials'
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(true)
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(state => !state)
@@ -40,12 +40,19 @@ function Header() {
         <a href="https://docs.via.exchange/product-docs/" className={styles.headerActionButton} target="_blank" rel="noreferrer">
           Docs
         </a>
-        <button onClick={toggleMenu} className={cx(styles.headerActionButton, styles.headerProductsButton, isMenuOpen && styles.headerProductsButtonOpened)}>
+        <button onClick={toggleMenu} className={cx(
+          styles.headerActionButton,
+          styles.headerProductsButton,
+          isMenuOpen && styles.headerProductsButtonOpened
+        )}>
           Products
           <Image className={styles.headerProductsIcon} src="/images/icons/close.svg" width="16" height="16" />
         </button>
-        <div className={cx(styles.headerProducts, isMenuOpen && styles.headerProductsOpened)}>
-          <ul className={styles.headerProducts}>
+        <div className={cx(
+          styles.headerProducts,
+          isMenuOpen && styles.headerProductsOpened
+        )}>
+          <ul className={styles.headerProductsList}>
             <li className={styles.menuProduct}>
               <a href="https://router.via.exchange/" className={styles.menuProductWrapper} target="_blank" rel="noopener noreferrer">
                 <div className={styles.menuProductImageWrapper}>
