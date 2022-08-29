@@ -20,8 +20,8 @@ function Wallets() {
         <h2 className={styles.title}>Your favorite wallets</h2>
         <p className={styles.description}>All major wallets with the ability to keep connected all at the same time</p>
 
-                  <WalletList items={firstHalfWallets}></WalletList>
-                  <WalletList items={secondHalfWallets} speed={15}></WalletList>
+        <WalletList items={firstHalfWallets}></WalletList>
+        <WalletList items={secondHalfWallets} speed={15} direction="left"></WalletList>
 
       </Section>
   )
