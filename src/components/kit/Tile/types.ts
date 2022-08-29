@@ -4,6 +4,7 @@ interface TTileProps {
   icon?: any
   title?: string
   description?: string
+  isMobileColumns?: boolean
 }
 
 interface TTileGroupProps {

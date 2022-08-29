@@ -7,7 +7,7 @@ const StateContext = createContext({
 })
 
 const StateContextProvider = function WalletProvider({ children }: { children: React.ReactNode }) {
-  const [isMobileMenuOpen, setMobileMenuOpen] = useState(true)
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const openMobileMenu = () => { setMobileMenuOpen(true) }
   const closeMobileMenu = () => { setMobileMenuOpen(false) }

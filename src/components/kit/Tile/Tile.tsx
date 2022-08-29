@@ -3,15 +3,15 @@ import type { PropsWithChildren } from 'react'
 
 import type { TTileGroupProps, TTileProps } from './types'
 
-function Tile({ slots = 1, className, icon, title, description, children }: PropsWithChildren<TTileProps>) {
+function Tile({ slots = 1, className, icon, title, description, isMobileColumned, children }: PropsWithChildren<TTileProps>) {
   const isOnlyTitle = title && !description
   const isIconAndText = (title || description) && icon
-  const isAllElements = title && description && icon
 
   return (
     <div className={cx(
       className,
-      'flex flex-col col-span-1 min-h-[180px] lg:min-h-[320px] bg-white/5 rounded-2xl px-5 py-6 lg:px-10 lg:py-10',
+      'flex col-span-1 min-h-[180px] lg:min-h-[320px] bg-white/5 rounded-2xl px-5 py-6 lg:px-10 lg:py-10',
+      isMobileColumned ? 'flex-row-reverse lg:flex-col justify-between items-center lg:items-start' : 'flex-col',
       (isOnlyTitle || slots === 2) && 'lg:items-center lg:justify-center',
       isIconAndText && 'lg:justify-between',
       isIconAndText && slots === 2 && 'lg:flex-row-reverse',
@@ -20,7 +20,6 @@ function Tile({ slots = 1, className, icon, title, description, children }: Prop
         2: `lg:col-span-2`,
         3: `lg:col-span-3`,
       }[slots]),
-      isAllElements && slots === 1 && 'lg:pt-5 lg:pl-5',
     )}>
       {icon &&
         <div>
@@ -28,8 +27,8 @@ function Tile({ slots = 1, className, icon, title, description, children }: Prop
         </div>
       }
       <div className={cx(
-        'mt-6 lg:mt-0 max-w-[400px]',
-        isAllElements && slots === 1 && 'lg:pl-5',
+        'max-w-[400px]',
+        !isMobileColumned ? 'mt-6 lg:mt-0' : 'mr-6 lg:mr-0',
         isIconAndText && slots >= 2 && 'pr-5'
       )}>
         {title &&

@@ -1,5 +1,5 @@
 .demo {
-  @apply grid items-end gap-4;
+  @apply grid items-end gap-4 px-2.5 md:px-0;
   grid-template-areas: "title"
                        "routes"
                        "description";
