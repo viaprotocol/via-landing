@@ -20,7 +20,7 @@ function Tile({ slots = 1, className, icon, title, description, isMobileColumned
         1: 'lg:col-span-1',
         2: 'lg:col-span-2',
         3: 'lg:col-span-3'
-      }[slots]),
+      }[slots])
     )}>
       {icon &&
         <div>
