@@ -92,7 +92,3 @@ function MobileMenu() {
 }
 
 export { MobileMenu }
-function useMenu(): { isMenuOpen: any } {
-  throw new Error('Function not implemented.')
-}
-

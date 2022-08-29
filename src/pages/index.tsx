@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { Demo, Intro, Investors, Safety, Features } from '@/views/IndexPage'
 
-import { Footer, Header } from '@/components/layout'
+import { Footer, Header, MobileMenu } from '@/components/layout'
 import { Wallets } from '@/views/IndexPage/Wallets'
 import { Shortcuts } from '@/views/IndexPage/Shortcuts'
 
