@@ -768,3 +768,8 @@ section.features {
     }
   }
 }
+
+// fix 'react-fast-marquee'
+.marquee {
+  min-width: auto!important;
+}
