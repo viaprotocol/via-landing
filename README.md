@@ -8,7 +8,7 @@ Site source
 
 ## Install
 
-```
+```bash
 git clone ...
 yarn
 ```
