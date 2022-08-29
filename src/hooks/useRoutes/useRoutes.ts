@@ -6,7 +6,7 @@ import type { TRoute } from '@/views/IndexPage/Demo/components/Routes'
 
 export function useRoutes() {
   const [routes, setRoutes] = useState<TRoute[]>([])
-  const [status, setStatus] = useState<string>('idle')
+  const [, setStatus] = useState<string>('idle')
   const ws = useRef<IsoWebSocket>()
 
   useEffect(() => {

@@ -51,8 +51,7 @@ const ICONS = {
   discord: icon(Discord),
   twitter: icon(Twitter),
   telegram: icon(Telegram),
-  medium: icon(Medium),
-
+  medium: icon(Medium)
 }
 
 export { ICONS }

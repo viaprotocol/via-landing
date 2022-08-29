@@ -51,37 +51,37 @@ function MobileMenu() {
       </ul>
       <ul className="mobile-menu__socials">
         <li>
-          <a className="mobile-menu__social-link" href="https://gitcoin.co/grants/4665/via-protocol" target="_blank">
+          <a className="mobile-menu__social-link" href="https://gitcoin.co/grants/4665/via-protocol" target="_blank" rel="noopener noreferrer">
             <Icon icon="gitcoin" width={24} height={24} />
             <span className="visually-hidden">Gitcoin</span>
           </a>
         </li>
         <li>
-          <a className="mobile-menu__social-link" href="https://github.com/viaprotocol" target="_blank">
+          <a className="mobile-menu__social-link" href="https://github.com/viaprotocol" target="_blank" rel="noopener noreferrer">
             <Icon icon="github" width={24} height={24} />
             <span className="visually-hidden">Github</span>
           </a>
         </li>
         <li>
-          <a className="mobile-menu__social-link" href="https://discord.gg/viaexchange" target="_blank">
+          <a className="mobile-menu__social-link" href="https://discord.gg/viaexchange" target="_blank" rel="noopener noreferrer">
             <Icon icon="discord" width={24} height={24} />
             <span className="visually-hidden">Discord</span>
           </a>
         </li>
         <li>
-          <a className="mobile-menu__social-link" href="https://twitter.com/via_protocol" target="_blank">
+          <a className="mobile-menu__social-link" href="https://twitter.com/via_protocol" target="_blank" rel="noopener noreferrer">
             <Icon icon="twitter" width={24} height={24} />
             <span className="visually-hidden">Twitter</span>
           </a>
         </li>
         <li>
-          <a className="mobile-menu__social-link" href="https://t.me/viaexchange" target="_blank">
+          <a className="mobile-menu__social-link" href="https://t.me/viaexchange" target="_blank" rel="noopener noreferrer">
             <Icon icon="telegram" width={24} height={24} />
             <span className="visually-hidden">Telegram</span>
           </a>
         </li>
         <li>
-          <a className="mobile-menu__social-link" href="https://medium.com/via-exchange" target="_blank">
+          <a className="mobile-menu__social-link" href="https://medium.com/via-exchange" target="_blank" rel="noopener noreferrer">
             <Icon icon="medium" width={24} height={24} />
             <span className="visually-hidden">Medium</span>
           </a>
