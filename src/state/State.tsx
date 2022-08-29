@@ -3,14 +3,18 @@ import React, { useEffect, useState, createContext } from 'react'
 const StateContext = createContext({
   isMobileMenuOpen: false,
   openMobileMenu: () => {},
-  closeMobileMenu: () => {},
+  closeMobileMenu: () => {}
 })
 
 const StateContextProvider = function WalletProvider({ children }: { children: React.ReactNode }) {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const openMobileMenu = () => { setMobileMenuOpen(true) }
-  const closeMobileMenu = () => { setMobileMenuOpen(false) }
+  const openMobileMenu = () => {
+    setMobileMenuOpen(true)
+  }
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false)
+  }
 
   useEffect(() => {
     document.body.classList.toggle('no-scroll', isMobileMenuOpen)

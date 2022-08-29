@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import type { FC, PropsWithChildren } from 'react'
 import { useMemo, memo } from 'react'
-import cx from 'classnames'
+
 import { Route, RouteSkeleton } from './Route'
 import type { TRangingRoute, TRoutesProps } from './types'
 
@@ -27,7 +28,7 @@ const Routes: FC<PropsWithChildren<TRoutesProps>> = memo(({ className }) => {
         <div className="flex">
           <UsdtLogo className="mr-[10px] h-10 w-10" />
           <div className="flex flex-col">
-            <p className="text-semibold mb-1 text-base text-[18px] tracking-tight">1000</p>
+            <p className="text-semibold mb-1 text-[18px] tracking-tight">1000</p>
             <span className="text-xs text-white/40">on Phantom</span>
           </div>
         </div>
@@ -35,7 +36,7 @@ const Routes: FC<PropsWithChildren<TRoutesProps>> = memo(({ className }) => {
         <div className="flex">
           <EthLogo className="mr-[10px] h-10 w-10" />
           <div className="flex flex-col">
-            <p className="text-semibold mb-1 text-base text-[18px] tracking-tight">1000</p>
+            <p className="text-semibold mb-1 text-[18px] tracking-tight">1000</p>
             <span className="text-xs text-white/40">on Ethereum</span>
           </div>
         </div>

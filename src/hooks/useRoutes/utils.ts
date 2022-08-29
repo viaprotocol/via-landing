@@ -79,13 +79,11 @@ const formatAction =
       const { fee, fromToken, additionalProviderFee } = action
       const { gasActionApproveUnits, gasActionUnits } = fee
 
-      const { chainId, address } = fromToken
+      const { chainId } = fromToken
 
       const chainInfo = chainMap[chainId]
 
       const { wei, network, priceUSD } = chainInfo
-
-      const isNativeToken = getNativeTokenAddress(chainId) === address
 
       const gasActionApprove = getTokenPriceInfo({
         wei: (gasActionApproveUnits || 0) * wei,

@@ -32,7 +32,7 @@ const Tooltip = dynamic<PropsWithChildren<TTooltipProps>>(() => import('@/compon
 const Route = memo((props: PropsWithChildren<TRouteProps>) => {
   const {
     route,
-    index,
+    // index,
     expanded = false,
     showGas = true,
     sectionStyles,
