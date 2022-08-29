@@ -14,7 +14,6 @@ export const fetchTokenPrice = async (chainId: number, tokenAddress: string) => 
       tokens_addresses: tokenAddress
     }
   })
-  // @ts-expect-error key is always defined
   return res.data?.[chainId][tokenAddress].USD as number
 }
 

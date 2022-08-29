@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import type { TNetwork, TRoute, TRouteAction, TRouteActionWithMeta, TRouteStep, TRouteWithMeta, TToken, TTokenPrice } from '@/views/IndexPage/Demo/components/Routes'
 import { queryClient } from '../queries/common/queryClient'
 import { createQueryParams as createGasPriceQueryParams } from '@/hooks/queries/useGasPrice/config'
