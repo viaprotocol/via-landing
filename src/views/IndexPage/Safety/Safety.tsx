@@ -18,11 +18,13 @@ function Safety() {
             icon={<WatchdogIcon/>}
             title="Bridges' watchdog"
             description="We analyze bridges' transactions and automatically disable those hacked or lacking liquidity"
+            isMobileColumned
           />
           <Tile
             icon={<SecurityScoreIcon/>}
             title="Security score"
             description="Conduct a research about the bridge according the decentralization, the actuality of audits and existence of centralized relayers"
+            isMobileColumned
           />
           <Tile
             slots={2}
@@ -34,6 +36,7 @@ function Safety() {
             icon={<AdvancedRoutesIcon/>}
             title="Advanced routes"
             description="Transfer tokens between any two networks, even if there is no direct bridge between them"
+            isMobileColumned
           />
         </Tile.Group>
       </>

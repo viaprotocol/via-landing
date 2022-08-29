@@ -4,6 +4,7 @@ type TTileProps = {
   icon?: any
   title?: string
   description?: string
+  isMobileColumned?: boolean
 }
 
 type TTileGroupProps = {
