@@ -8,7 +8,7 @@ import { StateContext } from '@/state'
 import { Icon } from '@/components/kit'
 
 function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(true)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const toggleMenu = useCallback(() => {
     setIsMenuOpen(state => !state)

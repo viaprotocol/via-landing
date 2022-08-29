@@ -23,7 +23,7 @@ const Home: NextPage = () => {
             <Features />
             <div className="h-[120px] md:h-[200px]"></div>
             <Wallets />
-              <div className="h-[120px] md:h-[200px]"></div>
+              <div className="h-[120px] md:h-[184px]"></div>
             <Shortcuts />
           </main>
 
