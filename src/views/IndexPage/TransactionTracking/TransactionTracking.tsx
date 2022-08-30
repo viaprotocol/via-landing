@@ -2,10 +2,10 @@ import React from 'react'
 import { Section } from '@/components/layout'
 import { Tile } from '@/components/kit'
 
-import WatchdogIcon from 'public/images/features/watchdog.svg'
-import SecurityScoreIcon from 'public/images/features/security-score.svg'
-import TransferGasIcon from 'public/images/features/transfer-gas.svg'
-import AdvancedRoutesIcon from 'public/images/features/advanced-routes.svg'
+import ProgressBarIcon from 'public/images/features/progress-bar.svg'
+import ProgressBarMobileIcon from 'public/images/features/progress-bar-mobile.svg'
+import PushNotificationsIcon from 'public/images/features/push-notifications.svg'
+import DynamicTitleIcon from 'public/images/features/dynamic-title.svg'
 
 function TransactionTracking() {
   return (
@@ -18,18 +18,19 @@ function TransactionTracking() {
         <Tile.Group>
           <Tile
             slots={3}
-            icon={<WatchdogIcon/>}
+            icon={<ProgressBarIcon/>}
+            mobileIcon={<ProgressBarMobileIcon/>}
             title="Progress bar"
             description="Track the transaction on the progress page"
           />
           <Tile
             slots={2}
-            icon={<TransferGasIcon/>}
+            icon={<PushNotificationsIcon/>}
             title="Push notifications"
             description="Subscribe to browser notifications to receive transaction status updates"
           />
           <Tile
-            icon={<AdvancedRoutesIcon/>}
+            icon={<DynamicTitleIcon/>}
             title="Dynamic title"
             description="Don't be afraid to go to another page and miss the second transaction"
           />
