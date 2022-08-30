@@ -6,7 +6,7 @@ import type { TTileGroupProps, TTileProps } from './types'
 
 import styles from './Tile.module.scss'
 
-function Tile({ slots = 1, className, icon, title, description, isMobileColumned, children }: PropsWithChildren<TTileProps>) {
+function Tile({ slots = 1, className, icon, mobileIcon, title, description, isMobileColumned, children }: PropsWithChildren<TTileProps>) {
   const isOnlyTitle = title && !description
   const isIconAndText = (title || description) && icon
 
@@ -24,9 +24,9 @@ function Tile({ slots = 1, className, icon, title, description, isMobileColumned
         className,
         'flex col-span-1 min-h-[180px] lg:min-h-[320px] bg-white/5 rounded-xl lg:rounded-2xl overflow-hidden',
         isMobileColumned ? 'flex-row-reverse lg:flex-col justify-between items-center lg:items-start' : 'flex-col',
-        (isOnlyTitle || slots === 2) && 'lg:items-center lg:justify-center',
+        (isOnlyTitle || slots >= 2) && 'lg:items-center lg:justify-center',
         isIconAndText && 'lg:justify-between',
-        isIconAndText && slots === 2 && 'lg:flex-row-reverse',
+        isIconAndText && slots >= 2 && 'lg:flex-row-reverse',
         isMobileColumned ? 'px-5 py-6 lg:px-10 lg:py-10' : 'px-10 py-10',
         ({
           1: 'lg:col-span-1',
@@ -39,10 +39,42 @@ function Tile({ slots = 1, className, icon, title, description, isMobileColumned
       style={{ '--cursor-x': cursorX, '--cursor-y': cursorY } as React.CSSProperties}
     >
       {icon &&
-        <div>
-          {icon}
-        </div>
+        <>
+          <div className={mobileIcon && 'hidden lg:block'}>
+            {icon}
+          </div>
+          {mobileIcon &&
+            <div className="lg:hidden">
+              {mobileIcon}
+            </div>
+          }
+        </>
       }
+      <div className={cx(
+        'max-w-[400px]',
+        !isMobileColumned ? 'mt-6 lg:mt-0' : 'mr-6 lg:mr-0',
+        isIconAndText && slots >= 2 && 'pr-5'
+      )}>
+        {title &&
+          <h3 className={cx(
+            'font-semibold',
+            slots >= 2 && '!text-[28px] lg:!text-[32px]',
+            !description ? 'text-[48px]' : 'text-[18px]',
+            description && slots >= 2 ? 'mb-3 lg:mb-2' : 'mb-3'
+          )}>
+            {title}
+          </h3>
+        }
+        {description &&
+          <p className={cx(
+            'text-white/40',
+            slots >= 2 && 'text-[24px] max-w-[300px]'
+          )}>
+            {description}
+          </p>
+        }
+      </div>
+      {children}
     </div>
   )
 }
