@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Demo, Intro, Investors, SafetyFirst, Features, ForDevelopers, ForOrganizations, TransactionTracking } from '@/views/IndexPage'
+import { Demo, Intro, Investors, SafetyFirst, Features, TransactionTracking } from '@/views/IndexPage'
 
 import { Footer, Header, MobileMenu } from '@/components/layout'
 import { Wallets } from '@/views/IndexPage/Wallets'
