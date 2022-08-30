@@ -11,9 +11,9 @@ function TransactionTracking() {
   return (
     <Section>
       <>
-        <div className="mb-10">
-          <h2 className="mb-3 lg:mb-6 text-[36px] font-semibold leading-[44px]">Transaction tracking</h2>
-          <p>Be sure that the money is on the way and will arrive at the appointed moment.</p>
+        <div className="ml-2.5 lg:ml-0 mb-10">
+          <h2 className="mb-3 lg:mb-6 font-semibold text-[36px] lg:text-[48px] leading-[44px] lg:leading-[56px]">Transaction tracking</h2>
+          <p className="max-w-[940px] text-white/40 text-[24px] lg:text-[32px] leading-[32px] lg:leading-[40px]">Be sure that the money is on the way and will arrive at the appointed moment.</p>
           </div>
         <Tile.Group>
           <Tile
@@ -32,7 +32,6 @@ function TransactionTracking() {
             icon={<AdvancedRoutesIcon/>}
             title="Dynamic title"
             description="Don't be afraid to go to another page and miss the second transaction"
-            isMobileColumned
           />
         </Tile.Group>
       </>
