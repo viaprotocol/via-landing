@@ -37,7 +37,7 @@ class MyDocument extends Document {
           <meta name="twitter:image" content="/images/meta/meta-preview.jpg" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=optional" rel="stylesheet" />
 
           {/* Google Tag Manager */}
