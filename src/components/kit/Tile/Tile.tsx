@@ -4,6 +4,8 @@ import { useState } from 'react'
 
 import type { TTileGroupProps, TTileProps } from './types'
 
+import styles from './Tile.module.scss'
+
 function Tile({ slots = 1, className, icon, title, description, isMobileColumned, children }: PropsWithChildren<TTileProps>) {
   const isOnlyTitle = title && !description
   const isIconAndText = (title || description) && icon
@@ -19,9 +21,8 @@ function Tile({ slots = 1, className, icon, title, description, isMobileColumned
   return (
     <div
       className={cx(
-        'Tile',
         className,
-        'flex col-span-1 min-h-[180px] lg:min-h-[320px] bg-white/5 rounded-2xl overflow-hidden',
+        'flex col-span-1 min-h-[180px] lg:min-h-[320px] bg-white/5 rounded-xl lg:rounded-2xl overflow-hidden',
         isMobileColumned ? 'flex-row-reverse lg:flex-col justify-between items-center lg:items-start' : 'flex-col',
         (isOnlyTitle || slots === 2) && 'lg:items-center lg:justify-center',
         isIconAndText && 'lg:justify-between',
@@ -31,7 +32,8 @@ function Tile({ slots = 1, className, icon, title, description, isMobileColumned
           1: 'lg:col-span-1',
           2: 'lg:col-span-2',
           3: 'lg:col-span-3'
-        }[slots])
+        }[slots]),
+        styles.tileEffect
       )}
       onMouseMove={setCursorPosition}
       style={{ '--cursor-x': cursorX, '--cursor-y': cursorY } as React.CSSProperties}
