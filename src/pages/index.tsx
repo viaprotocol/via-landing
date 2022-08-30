@@ -19,7 +19,9 @@ const Home: NextPage = () => {
             <Demo />
             <div className="h-[120px] md:h-[130px]"></div>
             <Safety />
-            <div className="h-[120px] md:h-[200px]"></div>
+            {/* todo: replace spacer after new blocks between */}
+            {/* <div className="h-[120px] md:h-[200px]"></div> */}
+            <div className="h-4"></div>
             <Features />
             <div className="h-[120px] md:h-[200px]"></div>
             <Wallets />
