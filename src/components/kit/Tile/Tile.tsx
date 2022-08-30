@@ -7,6 +7,13 @@ function Tile({ slots = 1, className, icon, title, description, isMobileColumned
   const isOnlyTitle = title && !description
   const isIconAndText = (title || description) && icon
 
+  /*
+    item.onmousemove = function(e) {
+     item.style.setProperty('--cursor-x', e.layerX)
+      item.style.setProperty('--cursor-y', e.layerY)
+    }
+  */
+
   return (
     <div className={cx(
       className,
