@@ -1,0 +1,16 @@
+.title {
+  @apply text-4xl leading-[44px] font-semibold mb-3 text-center;
+}
+
+.description {
+  @apply text-white/40 mb-10 lg:mb-20 text-2xl text-center px-5;
+}
+
+.image {
+  @apply mx-auto;
+
+  @media screen and (min-width: 768px) {
+    width: 540px;
+    height: 140px;
+  }
+}

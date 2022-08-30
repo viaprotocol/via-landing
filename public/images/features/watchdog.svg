@@ -1,0 +1,45 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_2414_17976" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="80" height="80">
+<rect width="80" height="80" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_2414_17976)">
+<mask id="mask1_2414_17976" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="-20" y="-22" width="120" height="120">
+<rect x="-20" y="-22" width="120" height="120" fill="url(#paint0_linear_2414_17976)"/>
+</mask>
+<g mask="url(#mask1_2414_17976)">
+<circle cx="14" cy="23" r="14" fill="white" fill-opacity="0.02"/>
+<circle cx="14" cy="23" r="13" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+<circle cx="66" cy="23" r="14" fill="white" fill-opacity="0.02"/>
+<circle cx="66" cy="23" r="13" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+<rect x="58" y="15" width="16" height="16" rx="6" fill="white" fill-opacity="0.02"/>
+<rect x="59" y="16" width="14" height="14" rx="5" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+<rect y="43" width="80" height="36" rx="8" fill="#00FF60" fill-opacity="0.08"/>
+<rect x="1" y="44" width="78" height="34" rx="7" stroke="#00FF60" stroke-opacity="0.48" stroke-width="2"/>
+<rect x="6" y="43" width="74" height="36" rx="8" fill="url(#paint1_linear_2414_17976)" fill-opacity="0.12"/>
+<rect x="7" y="44" width="72" height="34" rx="7" stroke="#00FF60" stroke-opacity="0.48" stroke-width="2"/>
+<g opacity="0.48">
+<path d="M70.9497 56.0498L61.0502 65.9493" stroke="#00FF60" stroke-width="2"/>
+<path d="M61.0503 56.0498L70.9498 65.9493" stroke="#00FF60" stroke-width="2"/>
+</g>
+<ellipse cx="21" cy="61" rx="6" ry="7" fill="url(#paint2_linear_2414_17976)" fill-opacity="0.08"/>
+<path d="M26 61C26 64.4639 23.6224 67 21 67C18.3776 67 16 64.4639 16 61C16 57.5361 18.3776 55 21 55C23.6224 55 26 57.5361 26 61Z" stroke="#00FF60" stroke-opacity="0.48" stroke-width="2"/>
+<path d="M20 7V7C32.6065 0.69676 47.4269 0.622892 60.0946 6.80224C60.2287 6.86768 60.3639 6.93359 60.5 7" stroke="white" stroke-opacity="0.24" stroke-width="2" stroke-linejoin="round" stroke-dasharray="2 7"/>
+<path d="M8.45744 19.6C10.2763 16.4496 11.1857 14.8744 12.3731 14.3458C13.4087 13.8847 14.5913 13.8847 15.6269 14.3458C16.8143 14.8744 17.7237 16.4496 19.5426 19.6L19.7158 19.9C21.5346 23.0504 22.4441 24.6256 22.3082 25.9181C22.1897 27.0455 21.5984 28.0697 20.6813 28.7361C19.6298 29.5 17.8109 29.5 14.1732 29.5H13.8268C10.1891 29.5 8.37019 29.5 7.31873 28.7361C6.4016 28.0697 5.81028 27.0455 5.69179 25.9181C5.55593 24.6256 6.46537 23.0504 8.28423 19.9L8.45744 19.6Z" fill="white" fill-opacity="0.02"/>
+<path d="M9.32346 20.1C10.2428 18.5077 10.8984 17.3741 11.4688 16.5668C12.0422 15.7552 12.4378 15.4116 12.7798 15.2594C13.5565 14.9135 14.4435 14.9135 15.2202 15.2594C15.5622 15.4116 15.9578 15.7552 16.5312 16.5668C17.1016 17.3741 17.7572 18.5077 18.6765 20.1L18.8497 20.4C19.769 21.9923 20.423 23.1269 20.8369 24.0245C21.2531 24.9269 21.3528 25.4413 21.3137 25.8136C21.2248 26.6592 20.7813 27.4273 20.0935 27.9271C19.7906 28.1471 19.2953 28.3179 18.3057 28.4087C17.3214 28.499 16.0118 28.5 14.1732 28.5H13.8268C11.9882 28.5 10.6786 28.499 9.69427 28.4087C8.70474 28.3179 8.20938 28.1471 7.90652 27.9271C7.21867 27.4273 6.77518 26.6592 6.68631 25.8136C6.64718 25.4413 6.74693 24.9269 7.16307 24.0245C7.57703 23.1269 8.23097 21.9923 9.15026 20.4L9.32346 20.1Z" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_2414_17976" x1="40" y1="-22" x2="40" y2="98" gradientUnits="userSpaceOnUse">
+<stop offset="0.509429"/>
+<stop offset="0.973152" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_2414_17976" x1="43" y1="43" x2="80" y2="43" gradientUnits="userSpaceOnUse">
+<stop stop-color="#00FF60" stop-opacity="0"/>
+<stop offset="1" stop-color="#00FF60"/>
+</linearGradient>
+<linearGradient id="paint2_linear_2414_17976" x1="21" y1="54" x2="27" y2="54" gradientUnits="userSpaceOnUse">
+<stop offset="0.645833" stop-color="#00FF60"/>
+<stop offset="1" stop-color="#00FF60" stop-opacity="0"/>
+</linearGradient>
+</defs>
+</svg>

@@ -1,0 +1,57 @@
+{"items": [
+    {
+        "name": "MetaMask",
+        "logo": "/images/wallets/metamask.svg"
+    },{
+        "name": "Phantom",
+        "logo": "/images/wallets/phantom.svg"
+    },{
+        "name": "Coinbase Wallet",
+        "logo": "/images/wallets/coinbase.svg"
+    },{
+        "name": "Wallet Connect",
+        "logo": "/images/wallets/walletconnect.svg"
+    },{
+        "name": "NEAR Wallet",
+        "logo": "/images/wallets/near.svg"
+    },{
+        "name": "Keplr",
+        "logo": "/images/wallets/keplr.svg"
+    },{
+        "name": "xDefi",
+        "logo": "/images/wallets/xdefi.svg"
+    },{
+        "name": "Trust Wallet",
+        "logo": "/images/wallets/trust.svg"
+    },{
+        "name": "Imtoken",
+        "logo": "/images/wallets/imtoken.svg"
+    },{
+        "name": "Token Pocket",
+        "logo": "/images/wallets/tokenpocket.svg"
+    },{
+        "name": "BitKeep",
+        "logo": "/images/wallets/bitkeep.svg"
+    },{
+        "name": "SafePal",
+        "logo": "/images/wallets/safepal.svg"
+    },{
+        "name": "Zerion Wallet",
+        "logo": "/images/wallets/zerion.svg"
+    },{
+        "name": "1inch Wallet",
+        "logo": "/images/wallets/1inch.svg"
+    },{
+        "name": "Rainbow",
+        "logo": "/images/wallets/rainbow.svg"
+    },{
+        "name": "Gnosis Safe",
+        "logo": "/images/wallets/gnosis.svg"
+    },{
+        "name": "Trustee",
+        "logo": "/images/wallets/trustee.svg"
+    },{
+        "name": "GoPocket",
+        "logo": "/images/wallets/gopocket.svg"
+    }
+]}
