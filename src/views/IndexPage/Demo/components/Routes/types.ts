@@ -1,6 +1,3 @@
-import { classNames } from 'classnames';
-import type { MouseEventHandler } from 'react'
-
 export type TToken = {
   chainId: number
   address: string

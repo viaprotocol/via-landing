@@ -1,4 +1,4 @@
-import { TNetwork } from "@/views/IndexPage/Demo/components/Routes"
+import type { TNetwork } from '@/views/IndexPage/Demo/components/Routes'
 
 type TRouteFetchStatus = {
   status: RouteFetchStatusEnum

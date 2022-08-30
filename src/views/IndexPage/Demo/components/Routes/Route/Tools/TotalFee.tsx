@@ -1,4 +1,4 @@
-import { getGasHref, getTokenWithSymbol } from '../helpers'
+import { /* getGasHref, */ getTokenWithSymbol } from '../helpers'
 import type { TActionFeeProps, TTotalFeeProps } from '../types'
 
 import type { TRouteActionWithMeta } from '../../types'
@@ -7,10 +7,10 @@ import { getNumberWithOrdinal } from '../../utils'
 function ActionFeeTooltip(props: TActionFeeProps) {
   const { transactionNo, action, isNeedGas = false, getHeader } = props
 
-  const { gasActionApprove, gasAction, providerFee, network, transferGasFromNetwork } = action.meta
+  const { gasActionApprove, gasAction, providerFee, network } = action.meta
   const { currencySymbol } = network!
   // TODO: use URL helper instead of direct setting of href
-  const gasHref = transferGasFromNetwork && getGasHref(transferGasFromNetwork, network!)
+  const gasHref = '' /* transferGasFromNetwork && getGasHref(transferGasFromNetwork, network!) */
 
   return (
     <div>

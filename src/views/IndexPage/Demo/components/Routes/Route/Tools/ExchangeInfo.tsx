@@ -81,7 +81,7 @@ const ExchangeInfo: FC<PropsWithChildren<TExchangeInfoProps>> = memo(
           </div>
           <ExchangeInfoStand token={fromToken} tokenAmount={fromTokenAmount} />
           <div className="flex justify-center">
-            <div className='flex w-full h-full items-center justify-center'>
+            <div className="flex h-full w-full items-center justify-center">
               {type === 'swap' ? <Icon icon="stepSwap" /> : <Icon icon="stepBridge" />}
             </div>
           </div>

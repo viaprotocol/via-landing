@@ -17,10 +17,10 @@ function Tile({ slots = 1, className, icon, title, description, isMobileColumned
       isIconAndText && slots === 2 && 'lg:flex-row-reverse',
       isMobileColumned ? 'px-5 py-6 lg:px-10 lg:py-10' : 'px-10 py-10',
       ({
-        1: `lg:col-span-1`,
-        2: `lg:col-span-2`,
-        3: `lg:col-span-3`,
-      }[slots]),
+        1: 'lg:col-span-1',
+        2: 'lg:col-span-2',
+        3: 'lg:col-span-3'
+      }[slots])
     )}>
       {icon &&
         <div>
@@ -45,7 +45,7 @@ function Tile({ slots = 1, className, icon, title, description, isMobileColumned
         {description &&
           <p className={cx(
             'text-white/40',
-            slots >= 2 && 'text-[24px] max-w-[300px]',
+            slots >= 2 && 'text-[24px] max-w-[300px]'
           )}>
             {description}
           </p>

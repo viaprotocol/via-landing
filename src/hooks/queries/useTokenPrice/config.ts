@@ -8,8 +8,8 @@ const createQueryKey = ({ address, chainId }: TUseTokenPriceQuery) => ['tokenPri
 
 const createQueryFn =
   ({ address, chainId }: TUseTokenPriceQuery) =>
-  () =>
-    fetchTokenPrice(chainId!, address!)
+    () =>
+      fetchTokenPrice(chainId!, address!)
 
 const createQueryConfig = ({ chainId }: TUseTokenPriceQuery) => ({
   enabled: !!chainId,

@@ -1,6 +1,9 @@
 import type { NextPage } from 'next'
 import { Demo, Intro, Investors, Safety, Features } from '@/views/IndexPage'
+
 import { Footer, Header, MobileMenu } from '@/components/layout'
+import { Wallets } from '@/views/IndexPage/Wallets'
+import { Shortcuts } from '@/views/IndexPage/Shortcuts'
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +21,10 @@ const Home: NextPage = () => {
             <Safety />
             <div className="h-[120px] md:h-[200px]"></div>
             <Features />
+            <div className="h-[120px] md:h-[200px]"></div>
+            <Wallets />
+              <div className="h-[120px] md:h-[184px]"></div>
+            <Shortcuts />
           </main>
 
           <Footer />

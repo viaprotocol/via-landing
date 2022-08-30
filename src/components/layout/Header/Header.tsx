@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { useCallback, useContext, useState } from 'react'
 import cx from 'classnames'
 

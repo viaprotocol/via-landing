@@ -35,7 +35,7 @@ class MyDocument extends Document {
           <meta name="twitter:image" content="/images/meta/meta-preview.jpg" />
           <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=optional" rel="stylesheet" />
         </Head>
-        <body className='dark'>
+        <body className="dark">
           <Main />
           <NextScript />
           <Script
@@ -48,7 +48,7 @@ class MyDocument extends Document {
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
               })(window,document,'script','dataLayer', 'GTM-NZG9GMK');
-            `,
+            `
             }}
           />
         </body>

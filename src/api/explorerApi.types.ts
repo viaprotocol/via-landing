@@ -1,5 +1,3 @@
-import type { TExplorerBalances } from '@/types'
-
 type TGasPriceChainResponse = {
   gwei: number
   usd: number
