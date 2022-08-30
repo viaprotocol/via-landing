@@ -409,41 +409,6 @@ section.tools {
   }
 }
 
-
-.Tile {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.02);
-  color: inherit;
-  position: relative;
-  --y: calc((var(--cursor-y) * 1px));
-  --x: calc((var(--cursor-x) * 1px));
-  transition: all 500ms ease;
-  will-change: background, border;
-
-  &:hover {
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    background: rgba(255, 255, 255, 0.04);
-
-    &::before {
-      opacity: 1;
-    }
-  }
-
-  &::before {
-    content: "";
-    pointer-events: none;
-    user-select: none;
-    position: absolute;
-    inset: 0px;
-    border-radius: inherit;
-    transition: opacity 500ms ease;
-    will-change: background, opacity;
-    background: radial-gradient(900px circle at var(--x) var(--y),rgba(0,255,102,0.15),transparent 40%);
-    opacity: 0;
-  }
-}
-
-
 .mobile-menu {
   display: none;
   z-index: 10;
