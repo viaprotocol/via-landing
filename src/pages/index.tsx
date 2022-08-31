@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { Demo, Intro, Investors, SafetyFirst, Features, TransactionTracking } from '@/views/IndexPage'
+import { Demo, Intro, Investors, SafetyFirst, Features, ForOrganizations, TransactionTracking } from '@/views/IndexPage'
 
 import { Footer, Header, MobileMenu } from '@/components/layout'
 import { Wallets } from '@/views/IndexPage/Wallets'
@@ -31,8 +31,6 @@ const Home: NextPage = () => {
             <Shortcuts />
             <div className="h-[120px] md:h-[200px]"></div>
             <ForOrganizations />
-            <div className="h-[120px] md:h-[200px]"></div>
-            <ForDevelopers />
           </main>
 
           <Footer />
