@@ -2,7 +2,11 @@ import React from 'react'
 import { Section } from '@/components/layout'
 import { Tile } from '@/components/kit'
 
-import ProgressBarIcon from 'public/images/features/progress-bar.svg'
+import LargeAmountsIcon from 'public/images/features/large-amounts.svg'
+import LargeAmountsMobile from 'public/images/features/large-amounts-mobile.svg'
+import InfinityLiquidityIcon from 'public/images/features/infinity-liquidity.svg'
+import GnosisSafeIcon from 'public/images/features/gnosis-safe.svg'
+import AddressValidationIcon from 'public/images/features/address-validation.svg'
 
 function ForOrganizations() {
   return (
@@ -15,25 +19,28 @@ function ForOrganizations() {
         <Tile.Group>
           <Tile
             slots={3}
-            icon={<ProgressBarIcon/>}
-            mobileIcon={<ProgressBarIcon/>}
+            icon={<LargeAmountsIcon/>}
+            mobileIcon={<LargeAmountsMobile/>}
             title="Highest efficiency for large amounts"
             description="By making on-chain transactions using 1inch and splitting large amounts into different bridges - bridge any amounts without fear of a huge slippage"
           />
           <Tile
-            icon={<ProgressBarIcon/>}
+            icon={<InfinityLiquidityIcon/>}
             title="Infinty liquidity"
             description="Bridge any amounts without fear of a huge slippage"
+            isMobileColumned
           />
           <Tile
-            icon={<ProgressBarIcon/>}
+            icon={<GnosisSafeIcon/>}
             title="Gnosis Safe"
             description="Use your favorite multisig wallet"
+            isMobileColumned
           />
           <Tile
-            icon={<ProgressBarIcon/>}
+            icon={<AddressValidationIcon/>}
             title="Address validation"
             description="Be sure that you will not send tokens to a smart contract that is not deployed in the destination network."
+            isMobileColumned
           />
         </Tile.Group>
       </>
