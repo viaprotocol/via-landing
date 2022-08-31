@@ -6,7 +6,7 @@ import type { TTileGroupProps, TTileProps } from './types'
 
 import styles from './Tile.module.scss'
 
-function Tile({ slots = 1, className, icon, mobileIcon, title, description, isMobileColumned, children }: PropsWithChildren<TTileProps>) {
+function Tile({ slots = 1, className, icon, mobileIcon, title, description, isMobileColumned, isDesktopReversed, children }: PropsWithChildren<TTileProps>) {
   const isOnlyTitle = title && !description
   const isIconAndText = (title || description) && icon
 
@@ -26,8 +26,10 @@ function Tile({ slots = 1, className, icon, mobileIcon, title, description, isMo
         isMobileColumned ? 'flex-row-reverse lg:flex-col justify-between items-center lg:items-start' : 'flex-col',
         (isOnlyTitle || slots >= 2) && 'lg:items-center lg:justify-center',
         isIconAndText && 'lg:justify-between',
-        isIconAndText && slots >= 2 && 'lg:flex-row-reverse',
+        isIconAndText && slots >= 2 &&
+          (isDesktopReversed ? 'lg:flex-row' : 'lg:flex-row-reverse'),
         isMobileColumned ? 'px-5 py-6 lg:px-10 lg:py-10' : 'px-10 py-10',
+        slots === 3 && 'lg:!py-[66px]',
         ({
           1: 'lg:col-span-1',
           2: 'lg:col-span-2',
@@ -51,9 +53,10 @@ function Tile({ slots = 1, className, icon, mobileIcon, title, description, isMo
         </>
       }
       <div className={cx(
-        'max-w-[400px]',
+        slots === 3 ? 'max-w-[300px]' : 'max-w-[400px]',
         !isMobileColumned ? 'mt-6 lg:mt-0' : 'mr-6 lg:mr-0',
-        isIconAndText && slots >= 2 && 'pr-5'
+        isIconAndText && slots >= 2 &&
+          (isDesktopReversed ? 'ml-5' : 'mr-5')
       )}>
         {title &&
           <h3 className={cx(

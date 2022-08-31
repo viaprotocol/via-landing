@@ -6,6 +6,7 @@ type TTileProps = {
   title?: string
   description?: string
   isMobileColumned?: boolean
+  isDesktopReversed?: boolean
 }
 
 type TTileGroupProps = {
