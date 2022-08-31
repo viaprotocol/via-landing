@@ -1,5 +1,6 @@
 export * from './Demo'
 export * from './Features'
+export * from './ForOrganizations'
 export * from './Intro'
 export * from './Investors'
 export * from './SafetyFirst'
