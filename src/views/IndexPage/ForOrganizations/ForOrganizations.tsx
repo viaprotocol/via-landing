@@ -22,7 +22,8 @@ function ForOrganizations() {
             icon={<LargeAmountsIcon/>}
             mobileIcon={<LargeAmountsMobile/>}
             title="Highest efficiency for large amounts"
-            description="By making on-chain transactions using 1inch and splitting large amounts into different bridges - bridge any amounts without fear of a huge slippage"
+            description="By making on-chain transactions using 1inch and splitting large amounts into different bridges &ndash; bridge any amounts without fear of a huge slippage"
+            isDesktopReversed
           />
           <Tile
             icon={<InfinityLiquidityIcon/>}
