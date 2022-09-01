@@ -14,7 +14,7 @@ function TransactionTracking() {
         <div className="ml-2.5 lg:ml-0 mb-10">
           <h2 className="mb-3 lg:mb-6 font-semibold text-[36px] lg:text-[48px] leading-[44px] lg:leading-[56px]">Transaction tracking</h2>
           <p className="max-w-[940px] text-white/40 text-[24px] lg:text-[32px] leading-[32px] lg:leading-[40px]">Be sure that the money is on the way and will arrive at the appointed moment.</p>
-          </div>
+        </div>
         <Tile.Group>
           <Tile
             slots={3}
