@@ -1,5 +1,6 @@
 type TTileProps = {
   className?: string
+  ySlots?: 1 | 2
   slots?: 1 | 2 | 3
   icon?: any
   mobileIcon?: any
