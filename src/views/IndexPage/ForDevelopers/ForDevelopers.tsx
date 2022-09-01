@@ -11,9 +11,9 @@ function ForDevelopers() {
   return (
     <Section>
       <>
-        <div className="ml-2.5 lg:ml-0 mb-10">
-          <h2 className="mb-3 lg:mb-6 font-semibold text-[36px] lg:text-[48px] leading-[44px] lg:leading-[56px]">For developers</h2>
-          <p className="max-w-[940px] text-white/40 text-[24px] lg:text-[32px] leading-[32px] lg:leading-[40px]">The most potent SDK with all aggregators and security features</p>
+        <div className="ml-2.5 mb-10 lg:ml-0">
+          <h2 className="mb-3 text-[36px] font-semibold leading-[44px] lg:mb-6 lg:text-[48px] lg:leading-[56px]">For developers</h2>
+          <p className="max-w-[940px] text-[24px] leading-[32px] text-white/40 lg:text-[32px] lg:leading-[40px]">The most potent SDK with all aggregators and security features</p>
         </div>
         <Tile.Group>
           <Tile

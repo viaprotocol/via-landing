@@ -34,6 +34,9 @@ module.exports = {
       },
       colors: {
         current: 'currentColor',
+        acid: {
+          DEFAULT: '#00FF60'
+        },
         green: {
           // todo: remove various green
           // only (34, 208, 102, *) will be used
@@ -42,7 +45,6 @@ module.exports = {
           200: '#03D954',
           light: '#61bb80',
           DEFAULT: '#418859',
-
           640: 'rgba(34, 208, 102, 0.64)'
         },
         blue: '#3F5DFF',
