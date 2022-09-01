@@ -2,14 +2,14 @@ const VIA_SDK_SNIPPET = `
 import {Via} from '@viaprotocol/router-sdk';
 
 const DEFAULT_API_KEY = 'e3db93a3-ae1c-41e5-8229-b8c1ecef5583';
-const cli = new Via({
+const via = new Via({
   apiKey: DEFAULT_API_KEY,
   url: 'https://router-api.via.exchange',
   timeout: 30000
 });
 
 // Get the best routes
-const pagesNum = await cli.routesPages(); // cache me!
+const pagesNum = await via.routesPages();
 const baseParams = {
     fromChainId: 1,
     fromTokenAddress: '0x0000000000000000000000000000000000000000',
@@ -28,7 +28,7 @@ const params = [...Array(pagesNum)].map(
 );
 
 const routes = await Promise.allSettled(
-    params.map(i => cli.getRoutes(i))
+    params.map(i => via.getRoutes(i))
 );
 `
 
