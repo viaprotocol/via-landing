@@ -8,6 +8,7 @@ type TTileProps = {
   description?: string
   isMobileColumned?: boolean
   isDesktopReversed?: boolean
+  disableEffect?: boolean
 }
 
 type TTileGroupProps = {

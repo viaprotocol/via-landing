@@ -18,8 +18,10 @@ function ForDevelopers() {
         <Tile.Group>
           <Tile
             slots={3}
-            title="SDK"
-            description="Show routes 5 times faster than with other aggregators API"
+            // title="SDK"
+            // description="Show routes 5 times faster than with other aggregators API"
+            disableEffect
+            // noPaddings
           >
             <Sdk />
           </Tile>
