@@ -658,3 +658,8 @@ section.tools {
 .marquee {
   min-width: auto!important;
 }
+
+// fix codeMirror
+.cm-gutterElement {
+  padding-right: 20px!important;
+}

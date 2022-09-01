@@ -3,6 +3,8 @@ import CodeMirror from '@uiw/react-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import { VIA_SDK_SNIPPET } from './config'
 
+import { sublime } from '@uiw/codemirror-theme-sublime'
+
 function Sdk() {
   return (
     <div className="flex w-full flex-col lg:flex-row">
@@ -16,7 +18,14 @@ function Sdk() {
         <CodeMirror
           value={VIA_SDK_SNIPPET}
           height="480px"
-          extensions={[javascript({ jsx: true })]}
+          extensions={[
+            javascript({ jsx: true })
+          ]}
+          theme={sublime}
+          editable={false}
+          basicSetup={{
+            foldGutter: false
+          }}
         />
       </div>
     </div>
