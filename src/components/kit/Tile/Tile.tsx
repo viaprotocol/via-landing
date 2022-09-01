@@ -6,7 +6,7 @@ import type { TTileGroupProps, TTileProps } from './types'
 
 import styles from './Tile.module.scss'
 
-function Tile({ slots = 1, className, icon, mobileIcon, title, description, isMobileColumned, isDesktopReversed, disableEffect, children }: PropsWithChildren<TTileProps>) {
+function Tile({ slots = 1, ySlots = 1, className, icon, mobileIcon, title, description, isMobileColumned, isDesktopReversed, disableEffect, children }: PropsWithChildren<TTileProps>) {
   const isOnlyTitle = title && !description
   const isIconAndText = (title || description) && icon
 
@@ -39,6 +39,10 @@ function Tile({ slots = 1, className, icon, mobileIcon, title, description, isMo
           2: 'lg:col-span-2',
           3: 'lg:col-span-3'
         }[slots]),
+        ({
+          1: 'lg:row-span-1',
+          2: 'lg:row-span-2'
+        }[ySlots]),
         !disableEffect && styles.tileEffect
       )}
       onMouseMove={setCursorPosition}

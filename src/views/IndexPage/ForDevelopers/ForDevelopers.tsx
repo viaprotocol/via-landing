@@ -18,10 +18,7 @@ function ForDevelopers() {
         <Tile.Group>
           <Tile
             slots={3}
-            // title="SDK"
-            // description="Show routes 5 times faster than with other aggregators API"
             disableEffect
-            // noPaddings
           >
             <Sdk />
           </Tile>
@@ -31,6 +28,7 @@ function ForDevelopers() {
             description="Don't worry about hacks and bridge bugs. Your users will not encounter them"
           />
           <Tile
+            ySlots={2}
             icon={<GrantProgramIcon/>}
             title="Grant program"
             description="Grant program for wallets & multichain dapps"
@@ -43,7 +41,7 @@ function ForDevelopers() {
           <Tile
             slots={2}
             icon={<TrustedTokensIcon/>}
-            title="Multichian trusted token standart"
+            title="Multichain trusted token standard"
             description="Tokenlist of trusted tokens across 25 chains"
             isDesktopReversed
           />
