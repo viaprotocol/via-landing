@@ -1676,6 +1676,22 @@
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
 
+"@uiw/codemirror-theme-sublime@^4.11.6":
+  version "4.11.6"
+  resolved "https://registry.yarnpkg.com/@uiw/codemirror-theme-sublime/-/codemirror-theme-sublime-4.11.6.tgz#81707a2c064747e5d32c8e6053f50b3096544955"
+  integrity sha512-ThWKnbdgdNgYdGkd2f7aSucNC39SvWwBb5Rgvg5zf99ULnDD5PJOdLcjjPwq26vrj5s1Un8gRILqwLmpD4KBxA==
+  dependencies:
+    "@uiw/codemirror-themes" "4.11.6"
+
+"@uiw/codemirror-themes@4.11.6":
+  version "4.11.6"
+  resolved "https://registry.yarnpkg.com/@uiw/codemirror-themes/-/codemirror-themes-4.11.6.tgz#bc5a1a4ef9b49a99edac20f989df4202357a4e2a"
+  integrity sha512-KAYqw/7UYZaFYKhv9xft5vA4L6YXSvOlga/2sN1YK+P6IfbpySegnxlxM2+CkPNDSFywiPUIKyOT2mf5KTDP+w==
+  dependencies:
+    "@codemirror/language" "^6.0.0"
+    "@codemirror/state" "^6.0.0"
+    "@codemirror/view" "^6.0.0"
+
 "@uiw/react-codemirror@^4.11.6":
   version "4.11.6"
   resolved "https://registry.yarnpkg.com/@uiw/react-codemirror/-/react-codemirror-4.11.6.tgz#99267c5128912e7daf01c3bdcda70c1a7a7a9c68"
