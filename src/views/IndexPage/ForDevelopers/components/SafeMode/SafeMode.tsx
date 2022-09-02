@@ -5,7 +5,7 @@ import { SAFE_ITEMS } from './constants'
 function SafeMode() {
   return (
     <div className="flex w-full flex-col p-10 lg:flex-row">
-      <div className="mb-10 lg:mb-0 lg:max-w-[300px] lg:pr-[80px]">
+      <div className="mb-10 lg:mb-0 lg:max-w-[300px] lg:pr-[45px]">
         <h3 className="mb-3 text-[28px] font-semibold leading-[40px] lg:text-[32px] lg:leading-[44px]">Safe mode</h3>
         <p className="max-w-[490px] text-[24px] leading-[32px] text-white/40 lg:mb-4 lg:text-[24px] lg:leading-[36px]">Don&apos;t worry about hacks and bridge bugs. Your users will not encounter them</p>
       </div>
