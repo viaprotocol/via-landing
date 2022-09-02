@@ -2,7 +2,7 @@ import React from 'react'
 import { Section } from '@/components/layout'
 import { Tile } from '@/components/kit'
 
-import { Sdk } from './components/Sdk'
+import { SafeMode, Sdk } from './components/'
 
 import GrantProgramIcon from 'public/images/features/grant-program.svg'
 import TrustedTokensIcon from 'public/images/features/trusted-tokens.svg'
@@ -24,9 +24,10 @@ function ForDevelopers() {
           </Tile>
           <Tile
             slots={3}
-            title="Safe mode"
-            description="Don't worry about hacks and bridge bugs. Your users will not encounter them"
-          />
+            className="lg:min-h-[280px]"
+          >
+            <SafeMode />
+          </Tile>
           <Tile
             ySlots={2}
             icon={<GrantProgramIcon/>}
