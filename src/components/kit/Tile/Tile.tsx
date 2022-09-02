@@ -66,7 +66,7 @@ function Tile({ slots = 1, ySlots = 1, className, icon, mobileIcon, title, descr
             slots === 3 ? 'max-w-[300px]' : 'max-w-[400px]',
             !isMobileColumned ? 'mt-6 lg:mt-0' : 'mr-6 lg:mr-0',
             isIconAndText && slots >= 2 &&
-              (isDesktopReversed ? 'ml-5' : 'mr-5')
+              (isDesktopReversed ? 'lg:ml-5' : 'mr-5')
           )}>
             {title &&
               <h3 className={cx(

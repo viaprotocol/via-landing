@@ -12,8 +12,18 @@ a {
   transition: all 500ms ease;
 }
 
+p {
+  letter-spacing: -0.02em;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
 h1 {
-  margin-top: 0;
   margin-bottom: 40px;
   font-size: 48px;
   font-weight: 600;
@@ -39,11 +49,6 @@ h1 {
     opacity: 1;
     transform: scale(1);
   }
-}
-
-h2,
-h3 {
-  margin: 0;
 }
 
 [data-button] {

@@ -2,7 +2,7 @@ import React from 'react'
 import { Section } from '@/components/layout'
 import { Tile } from '@/components/kit'
 
-import { GrantProgram, SafeMode, Sdk } from './components/'
+import { GrantProgram, SafeMode, Sdk, Web3Wallets } from './components/'
 
 import TrustedTokensIcon from 'public/images/features/trusted-tokens.svg'
 
@@ -15,28 +15,18 @@ function ForDevelopers() {
           <p className="max-w-[940px] text-[24px] leading-[32px] text-white/40 lg:text-[32px] lg:leading-[40px]">The most potent SDK with all aggregators and security features</p>
         </div>
         <Tile.Group>
-          <Tile
-            slots={3}
-            disableEffect
-          >
+          <Tile slots={3} disableEffect>
             <Sdk />
           </Tile>
-          <Tile
-            slots={3}
-            className="lg:min-h-[280px]"
-          >
+          <Tile slots={3} className="lg:min-h-[280px]">
             <SafeMode />
           </Tile>
-          <Tile
-            ySlots={2}
-          >
+          <Tile ySlots={2}>
             <GrantProgram />
           </Tile>
-          <Tile
-            slots={2}
-            title="Web3 Wallets library"
-            description="Wallets for 6 ecosystems with multiconnect"
-          />
+          <Tile slots={2}>
+            <Web3Wallets />
+          </Tile>
           <Tile
             slots={2}
             icon={<TrustedTokensIcon/>}
