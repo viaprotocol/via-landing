@@ -16,6 +16,7 @@ import Aggregator7Icon from 'public/images/aggregators/aggregator-7.svg'
 import Client1Icon from 'public/images/clients/client-1.svg'
 import Client2Icon from 'public/images/clients/client-2.svg'
 import Client3Icon from 'public/images/clients/client-3.svg'
+import { ActionLink } from '../ActionLink'
 
 function Sdk() {
   return (
@@ -36,7 +37,7 @@ function Sdk() {
             <Aggregator7Icon />
           </div>
           <div className="mt-8">
-            <a className="active:bg-acid/15 -ml-2 rounded-lg py-1.5 px-2 font-semibold text-acid/80 hover:bg-acid/10 hover:text-acid" href="https://docs.via.exchange/product-docs/features/sdk" target="_blank" rel="noreferrer" >Learn more</a>
+            <ActionLink text="Learn more" href="https://docs.via.exchange/product-docs/features/sdk" />
           </div>
         </div>
         <div className="mt-11">

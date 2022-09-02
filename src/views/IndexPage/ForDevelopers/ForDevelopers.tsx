@@ -2,9 +2,8 @@ import React from 'react'
 import { Section } from '@/components/layout'
 import { Tile } from '@/components/kit'
 
-import { SafeMode, Sdk } from './components/'
+import { GrantProgram, SafeMode, Sdk } from './components/'
 
-import GrantProgramIcon from 'public/images/features/grant-program.svg'
 import TrustedTokensIcon from 'public/images/features/trusted-tokens.svg'
 
 function ForDevelopers() {
@@ -30,10 +29,9 @@ function ForDevelopers() {
           </Tile>
           <Tile
             ySlots={2}
-            icon={<GrantProgramIcon/>}
-            title="Grant program"
-            description="Grant program for wallets & multichain dapps"
-          />
+          >
+            <GrantProgram />
+          </Tile>
           <Tile
             slots={2}
             title="Web3 Wallets library"
