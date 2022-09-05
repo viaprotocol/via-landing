@@ -58,6 +58,9 @@ module.exports = {
           640: 'rgba(17, 18, 21, 0.64)',
           800: 'rgba(17, 18, 21, 0.8)'
         },
+        darkblack: {
+          DEFAULT: '#000000'
+        },
         black: {
           DEFAULT: '#212325',
           40: 'rgba(33, 35, 37, 0.04)',

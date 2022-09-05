@@ -1,4 +1,5 @@
 import React from 'react'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import CodeMirror from '@uiw/react-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
 import { VIA_SDK_SNIPPET } from './config'
@@ -37,7 +38,7 @@ function Sdk() {
             <Aggregator7Icon />
           </div>
           <div className="mt-8">
-            <ActionLink text="Learn more" href="https://docs.via.exchange/product-docs/features/sdk" />
+            <ActionLink text="Learn more" href="https://github.com/viaprotocol/via-sdk-js#readme" />
           </div>
         </div>
         <div className="mt-11">
@@ -49,7 +50,7 @@ function Sdk() {
           </div>
         </div>
       </div>
-      <div className="w-full lg:w-1/2">
+      <div className="relative w-full lg:w-1/2">
         <CodeMirror
           value={VIA_SDK_SNIPPET}
           height="480px"
@@ -62,6 +63,9 @@ function Sdk() {
             foldGutter: false
           }}
         />
+        <CopyToClipboard text={VIA_SDK_SNIPPET}>
+          <button className="absolute right-4 bottom-4 rounded-lg bg-darkblack/60 px-2 py-1.5 font-semibold leading-[24px] text-white/80 transition-all hover:bg-darkblack/80 hover:text-white active:text-white/60">Copy</button>
+        </CopyToClipboard>
       </div>
     </div>
   )
