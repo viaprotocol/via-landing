@@ -62,6 +62,8 @@ function Sdk() {
           theme={sublime}
           editable={false}
           basicSetup={{
+            highlightActiveLine: false,
+            highlightActiveLineGutter: false,
             foldGutter: false
           }}
         />

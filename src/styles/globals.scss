@@ -674,3 +674,14 @@ section.tools {
 .cm-gutter {
   background: #18191b;
 }
+.cm-scroller::-webkit-scrollbar {
+  width: 16px;
+}
+.cm-scroller::-webkit-scrollbar-track {
+  border-radius: 12px;
+}
+.cm-scroller::-webkit-scrollbar-thumb {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 7px solid #131416;
+}
