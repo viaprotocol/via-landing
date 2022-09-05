@@ -2,6 +2,7 @@ import React from 'react'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import CodeMirror from '@uiw/react-codemirror'
 import { javascript } from '@codemirror/lang-javascript'
+import { EditorView } from '@codemirror/view'
 import { VIA_SDK_SNIPPET } from './config'
 
 import { sublime } from '@uiw/codemirror-theme-sublime'
@@ -55,7 +56,8 @@ function Sdk() {
           value={VIA_SDK_SNIPPET}
           height="480px"
           extensions={[
-            javascript({ jsx: true })
+            javascript({ jsx: true }),
+            EditorView.lineWrapping
           ]}
           theme={sublime}
           editable={false}
