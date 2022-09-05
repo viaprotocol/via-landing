@@ -1,0 +1,25 @@
+.demo {
+  @apply grid items-end gap-4 px-2.5 md:px-0 bg-white/5 rounded-xl;
+  grid-template-areas: "title"
+                       "content"
+                       "description";
+
+  @media only screen and (min-width: 1024px) {
+    grid-template-areas: "content title"
+                         "content description";
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.header {
+  grid-area: title;
+}
+
+.content {
+  @apply lg:max-w-2xl xl:max-w-3xl overflow-hidden max-h-[480px];
+  grid-area: content;
+}
+
+.description {
+  grid-area: description;
+}
