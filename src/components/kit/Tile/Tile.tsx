@@ -18,33 +18,34 @@ function Tile({ slots = 1, ySlots = 1, className, icon, mobileIcon, title, descr
     setCursorY(e.nativeEvent.layerY)
   }
 
+  const getStyleClassNames = () => cx(
+    'flex col-span-1 min-h-[180px] lg:min-h-[320px] bg-white/5 rounded-xl lg:rounded-2xl overflow-hidden',
+    isMobileColumned ? 'flex-row-reverse lg:flex-col justify-between items-center lg:items-start min-h-[140px]' : 'flex-col',
+    (isOnlyTitle || slots >= 2) && 'lg:items-center lg:justify-center',
+    isIconAndText && 'lg:justify-between',
+    isIconAndText && slots >= 2 &&
+      (isDesktopReversed ? 'lg:flex-row' : 'lg:flex-row-reverse'),
+    !children && (
+      isMobileColumned ? 'px-5 py-6 lg:px-10 lg:py-10' : 'px-10 py-10'
+    ),
+    !children && (
+      slots === 3 && 'lg:!py-[66px]'
+    ),
+    ({
+      1: 'lg:col-span-1',
+      2: 'lg:col-span-2',
+      3: 'lg:col-span-3'
+    }[slots]),
+    ({
+      1: 'lg:row-span-1',
+      2: 'lg:row-span-2'
+    }[ySlots]),
+    !disableEffect && styles.tileEffect
+  )
+
   return (
     <div
-      className={cx(
-        className,
-        'flex col-span-1 min-h-[180px] lg:min-h-[320px] bg-white/5 rounded-xl lg:rounded-2xl overflow-hidden',
-        isMobileColumned ? 'flex-row-reverse lg:flex-col justify-between items-center lg:items-start min-h-[140px]' : 'flex-col',
-        (isOnlyTitle || slots >= 2) && 'lg:items-center lg:justify-center',
-        isIconAndText && 'lg:justify-between',
-        isIconAndText && slots >= 2 &&
-          (isDesktopReversed ? 'lg:flex-row' : 'lg:flex-row-reverse'),
-        !children && (
-          isMobileColumned ? 'px-5 py-6 lg:px-10 lg:py-10' : 'px-10 py-10'
-        ),
-        !children && (
-          slots === 3 && 'lg:!py-[66px]'
-        ),
-        ({
-          1: 'lg:col-span-1',
-          2: 'lg:col-span-2',
-          3: 'lg:col-span-3'
-        }[slots]),
-        ({
-          1: 'lg:row-span-1',
-          2: 'lg:row-span-2'
-        }[ySlots]),
-        !disableEffect && styles.tileEffect
-      )}
+      className={cx(className, getStyleClassNames())}
       onMouseMove={setCursorPosition}
       style={{ '--cursor-x': cursorX, '--cursor-y': cursorY } as React.CSSProperties}
     >
