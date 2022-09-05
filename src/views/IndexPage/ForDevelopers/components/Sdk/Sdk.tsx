@@ -50,7 +50,7 @@ function Sdk() {
           </div>
         </div>
       </div>
-      <div className="relative w-full lg:w-1/2">
+      <div className="relative w-full lg:w-1/2 text-[15px]">
         <CodeMirror
           value={VIA_SDK_SNIPPET}
           height="480px"
