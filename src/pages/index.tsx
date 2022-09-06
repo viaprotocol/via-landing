@@ -4,6 +4,7 @@ import { Demo, Intro, Investors, SafetyFirst, Features, ForDevelopers, ForOrgani
 import { Footer, Header, MobileMenu } from '@/components/layout'
 import { Wallets } from '@/views/IndexPage/Wallets'
 import { Shortcuts } from '@/views/IndexPage/Shortcuts'
+import { Supported } from '@/views/IndexPage/Supported'
 
 const Home: NextPage = () => {
   return (
@@ -19,9 +20,8 @@ const Home: NextPage = () => {
             <Demo />
             <div className="h-[120px] md:h-[130px]"></div>
             <SafetyFirst />
-            {/* todo: replace spacer after new blocks between */}
-            {/* <div className="h-[120px] md:h-[200px]"></div> */}
-            <div className="h-4"></div>
+            <div className="h-[120px] md:h-[200px]"></div>
+            <Supported />
             <Features />
             <div className="h-[120px] md:h-[200px]"></div>
             <TransactionTracking />
