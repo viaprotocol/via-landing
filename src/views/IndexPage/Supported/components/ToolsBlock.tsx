@@ -2,7 +2,7 @@ import type { TTool } from '@/api/routerApi.types'
 import { Image } from '@/components/kit'
 import { useMemo } from 'react'
 import Marquee from 'react-fast-marquee'
-import clsx from 'classnames'
+import cx from 'classnames'
 import { useMedia } from '@/hooks'
 
 const getSplitSize = (count: number) => {
@@ -36,7 +36,7 @@ const ToolsBlock = ({ tools }: { tools: TTool[] }) => {
     return res
   }, [tools])
 
-  return <div className={clsx('origin-left lg:-ml-28 lg:-mb-60 lg:-rotate-45')} style={isLarge ? {
+  return <div className={cx('origin-left lg:-ml-28 lg:-mb-60 lg:-rotate-45')} style={isLarge ? {
     paddingTop: `${80 * 1 / splitSize}rem`
   } : undefined}>
     {splittedTools.map((tools, index) => (
@@ -45,7 +45,7 @@ const ToolsBlock = ({ tools }: { tools: TTool[] }) => {
         {tools.map((tool) => {
           return (
             <div className="mx-3.5 md:mx-5" key={tool.name}>
-              <Image src={tool.logoURI} alt={tool.name} width={48} height={48} className="rounded-full md:h-20 md:w-20" />
+              <Image src={tool.logoURI} alt={tool.name} title={tool.name} width={48} height={48} className="rounded-full md:h-20 md:w-20" />
             </div>
           )
         })}

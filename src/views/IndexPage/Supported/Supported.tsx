@@ -1,7 +1,7 @@
 import type { TTool } from '@/api/routerApi.types'
 import { Section } from '@/components/layout'
 import { Tab } from '@headlessui/react'
-import clsx from 'classnames'
+import cx from 'classnames'
 import { ToolsBlock } from './components'
 import { useTools } from './hooks'
 import styles from './Supported.module.scss'
@@ -20,7 +20,7 @@ function Supported() {
         <Tab.Group>
           <Tab.List className={styles.header}>
             {tabLabels.map(label => (
-              <Tab key={label} className={({ selected }) => clsx(styles.button, selected && styles.activeButton)}>{label}</Tab>
+              <Tab key={label} className={({ selected }) => cx(styles.button, selected && styles.activeButton)}>{label}</Tab>
             ))}
           </Tab.List>
           <Tab.Panels className={styles.content}>
