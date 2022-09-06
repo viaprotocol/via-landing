@@ -7,7 +7,7 @@ import SecurityScoreIcon from 'public/images/features/security-score.svg'
 import TransferGasIcon from 'public/images/features/transfer-gas.svg'
 import AdvancedRoutesIcon from 'public/images/features/advanced-routes.svg'
 
-function Safety() {
+function SafetyFirst() {
   return (
     <Section>
       <>
@@ -44,4 +44,4 @@ function Safety() {
   )
 }
 
-export { Safety }
+export { SafetyFirst }
