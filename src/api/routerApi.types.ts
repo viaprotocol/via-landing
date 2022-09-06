@@ -1,6 +1,7 @@
 enum ToolTypeEnum {
   Swap = 'swap',
-  Cross = 'cross'
+  Cross = 'cross',
+  Aggregator = 'aggregator'
 }
 
 type TTool = {

@@ -1,6 +1,7 @@
 import { fetchTools } from '@/api/routerApi'
 import type { TTool } from '@/api/routerApi.types'
 import { ToolTypeEnum } from '@/api/routerApi.types'
+import { aggregators } from '@/data/aggregators'
 import { useEffect, useMemo, useState } from 'react'
 
 export function useTools() {
@@ -23,7 +24,7 @@ export function useTools() {
           acc.bridge.push(tool)
         }
         return acc
-      }, { all: tools, dex: [] as TTool[], bridge: [] as TTool[], aggregator: [] as TTool[] })
+      }, { all: [...tools, ...aggregators], dex: [] as TTool[], bridge: [] as TTool[], aggregator: aggregators })
   }, [tools])
 
   return { filteredTools }

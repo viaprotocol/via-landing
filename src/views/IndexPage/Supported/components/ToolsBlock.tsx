@@ -37,7 +37,7 @@ const ToolsBlock = ({ tools }: { tools: TTool[] }) => {
   }, [tools])
 
   return <div className={cx('origin-left lg:-ml-28 lg:-mb-60 lg:-rotate-45')} style={isLarge ? {
-    paddingTop: `${80 * 1 / splitSize}rem`
+    paddingTop: `${80 * 1 / Math.max(splitSize, 3)}rem`
   } : undefined}>
     {splittedTools.map((tools, index) => (
       <Marquee key={index} gradient={false} speed={10 + index * 2} direction={index % 2 ? 'left' : 'right'} style={{ paddingInlineStart: `${index * 4}px` }}>
