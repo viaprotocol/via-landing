@@ -9,17 +9,18 @@ import styles from './Supported.module.scss'
 const tabLabels = ['All', 'DEXs', 'Bridges', 'Aggregators']
 function Supported() {
   const { filteredTools } = useTools()
+
   return (
     <Section>
       <div className="ml-2.5 mb-10 lg:ml-0">
-        <h2 className="mb-3 text-[36px] font-semibold leading-[44px] lg:mb-6 lg:text-[48px] lg:leading-[56px]">Supported Bridges, DEXs, Aggregators</h2>
-        <p className="max-w-[940px] text-[24px] leading-[32px] text-white/40 lg:text-[32px] lg:leading-[40px]">All popular bridges and aggregators in one interface</p>
+        <h2 className={styles.title}>Supported Bridges, DEXs, Aggregators</h2>
+        <p className={styles.subtitle}>All popular bridges and aggregators in one interface</p>
       </div>
       <div className={styles.demo}>
         <Tab.Group>
           <Tab.List className={styles.header}>
             {tabLabels.map(label => (
-              <Tab key={label} className={({ selected }) => clsx('mr-1 rounded-lg px-2 py-1.5 text-white/80 outline-none transition-colors hover:bg-white/5 hover:text-white', selected && '!bg-green-200 !text-[#090A0C]')}>{label}</Tab>
+              <Tab key={label} className={({ selected }) => clsx(styles.button, selected && styles.activeButton)}>{label}</Tab>
             ))}
           </Tab.List>
           <Tab.Panels className={styles.content}>
@@ -30,7 +31,10 @@ function Supported() {
             ))}
           </Tab.Panels>
         </Tab.Group>
-        <div className={styles.description}></div>
+        <div className={styles.description}>
+          <h3 className={styles.lot}>A lot</h3>
+          <p>We support most of them</p>
+        </div>
       </div>
     </Section>
   )

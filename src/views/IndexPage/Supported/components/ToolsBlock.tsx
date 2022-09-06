@@ -1,6 +1,9 @@
 import type { TTool } from '@/api/routerApi.types'
+import { Image } from '@/components/kit'
 import { useMemo } from 'react'
 import Marquee from 'react-fast-marquee'
+import clsx from 'classnames'
+import { useMedia } from '@/hooks'
 
 const getSplitSize = (count: number) => {
   if (count <= 14) {
@@ -16,9 +19,10 @@ const getSplitSize = (count: number) => {
 }
 
 const ToolsBlock = ({ tools }: { tools: TTool[] }) => {
-  const splittedTools = useMemo(() => {
-    const splitSize = getSplitSize(tools.length)
+  const { isLarge } = useMedia()
 
+  const splitSize = useMemo(() => getSplitSize(tools.length), [tools])
+  const splittedTools = useMemo(() => {
     const res = tools.reduce((acc, el) => {
       const arrLength = parseInt((tools.length / splitSize).toString())
       if (acc[acc.length - 1].length === arrLength && acc.length < splitSize) {
@@ -32,14 +36,16 @@ const ToolsBlock = ({ tools }: { tools: TTool[] }) => {
     return res
   }, [tools])
 
-  return <div className="origin-left lg:-ml-28 lg:-mb-60 lg:-rotate-45 lg:pt-64">
+  return <div className={clsx('origin-left lg:-ml-28 lg:-mb-60 lg:-rotate-45')} style={isLarge ? {
+    paddingTop: `${80 * 1 / splitSize}rem`
+  } : undefined}>
     {splittedTools.map((tools, index) => (
-      <Marquee key={index} gradient={false} delay={2 * index} speed={10 + index * 2} direction={index % 2 ? 'left' : 'right'}>
+      <Marquee key={index} gradient={false} speed={10 + index * 2} direction={index % 2 ? 'left' : 'right'} style={{ paddingInlineStart: `${index * 4}px` }}>
       <div className="mb-7 flex items-center md:mb-9">
         {tools.map((tool) => {
           return (
             <div className="mx-3.5 md:mx-5" key={tool.name}>
-              <img src={tool.logoURI} alt={tool.name} width={48} height={48} className="md:h-20 md:w-20" />
+              <Image src={tool.logoURI} alt={tool.name} width={48} height={48} className="rounded-full md:h-20 md:w-20" />
             </div>
           )
         })}

@@ -1,10 +1,11 @@
 .demo {
-  @apply grid items-end gap-4 px-2.5 md:px-0 bg-white/5 rounded-xl;
+  @apply grid items-end gap-4 px-2.5 md:px-0 bg-white/5 rounded-xl mb-2.5;
   grid-template-areas: "title"
                        "content"
                        "description";
 
   @media only screen and (min-width: 1024px) {
+    @apply mb-4;
     grid-template-areas: "content title"
                          "content description";
     grid-template-columns: 2fr 1fr;
@@ -13,13 +14,36 @@
 
 .header {
   grid-area: title;
+  @apply self-start pt-10 ml-2.5 lg:ml-0;
+}
+
+.title {
+  @apply mb-3 text-[36px] font-semibold leading-[44px] lg:mb-6 lg:text-[48px] lg:leading-[56px];
+}
+
+.subtitle {
+  @apply max-w-[940px] text-[24px] leading-[32px] text-white/40 lg:text-[32px] lg:leading-[40px];
+}
+
+.button {
+  @apply mr-1 mb-6 rounded-lg px-2 py-1.5 text-white/80 outline-none transition-colors hover:bg-white/5 hover:text-white font-semibold;
+}
+
+.activeButton {
+  @apply bg-green-200 text-[#090A0C] hover:bg-green-200 hover:text-[#090A0C];
 }
 
 .content {
-  @apply lg:max-w-2xl xl:max-w-3xl overflow-hidden max-h-[480px];
+  @apply lg:max-w-2xl xl:max-w-3xl overflow-hidden lg:h-[480px] min-h-[200px];
   grid-area: content;
 }
 
 .description {
+  @apply self-start max-w-[940px] text-[24px] leading-[32px] text-white/40 lg:-mt-24 mt-3 mb-10 ml-10 lg:ml-0;
+
   grid-area: description;
+}
+
+.lot {
+  @apply mb-2 text-[32px] font-semibold leading-[44px] text-white;
 }

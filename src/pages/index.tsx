@@ -22,7 +22,6 @@ const Home: NextPage = () => {
             <SafetyFirst />
             <div className="h-[120px] md:h-[200px]"></div>
             <Supported />
-            <div className="h-[120px] md:h-[200px]"></div>
             <Features />
             <div className="h-[120px] md:h-[200px]"></div>
             <TransactionTracking />
