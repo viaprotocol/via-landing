@@ -1,0 +1,29 @@
+.bg {
+  @apply bg-no-repeat bg-cover;
+  background-image: url('/images/backgrounds/bg-dotted.png');
+}
+
+.title {
+  @apply mb-3 text-[34px] font-semibold leading-[42px] lg:mb-6 lg:text-[48px] lg:leading-[56px];
+
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  @apply max-w-[940px] text-[22px] leading-[30px] text-white/40 lg:text-[32px] lg:leading-[40px];
+
+  letter-spacing: -0.02em;
+}
+
+.wrapper {
+  @apply grid gap-6 min-w-[496px] absolute inset-0;
+
+  transform: translateX(calc(calc(100vw - 496px) / 2));
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(7, 80px);
+}
+
+.text {
+  @apply text-center;
+  grid-area: 3/2/5/5;
+}
