@@ -24,13 +24,13 @@ const Home: NextPage = () => {
             <Supported />
             <Features />
             <div className="h-[120px] md:h-[200px]"></div>
-            <TransactionTracking />
+            <ForOrganizations />
             <div className="h-[120px] md:h-[200px]"></div>
             <Wallets />
             <div className="h-[120px] md:h-[184px]"></div>
             <Shortcuts />
             <div className="h-[120px] md:h-[200px]"></div>
-            <ForOrganizations />
+            <TransactionTracking />
             <div className="h-[120px] md:h-[200px]"></div>
             <ForDevelopers />
           </main>
