@@ -1,24 +1,38 @@
-import { useMemo } from 'react'
-import type { TSimpleNetwork } from '@/data/networks'
 import { networks } from '@/data/networks'
-import styles from './Ecosystem.module.scss'
 import { useMedia } from '@/hooks'
+import { useCallback, useEffect, useState } from 'react'
 import { EcoBlock } from './components/EcoBlock'
+import styles from './Ecosystem.module.scss'
+import type { TBlocks } from './types'
 
 function Ecosystem() {
   const { isLarge } = useMedia()
+  const [blocks, setBlocks] = useState<TBlocks>([])
 
   const blockLength = (isLarge ? 9 * 6 : 7 * 5) - 6
 
-  const blocks = useMemo(() => {
-    const res: Array<TSimpleNetwork | null> = networks.slice(0, blockLength / 2)
+  const refreshBlocks = useCallback(() => {
+    const allNetworks = [...networks]
+    const res: TBlocks = allNetworks.sort(() => Math.random() - 0.5).slice(0, 8)
 
     while (res.length < blockLength) {
       res.push(null)
     }
+    console.log('update')
 
-    return res.sort(() => Math.random() - 0.5)
-  }, [blockLength])
+    setBlocks(res.sort(() => Math.random() - 0.5))
+  }, [blockLength, networks])
+
+  useEffect(() => {
+    refreshBlocks()
+  }, [])
+
+  useEffect(() => {
+    // refresh blocks every 20 seconds
+    const interval = setInterval(refreshBlocks, 20 * 1000)
+    return () => clearInterval(interval)
+  }, [refreshBlocks])
+
   return (
     <div className={styles.bg}>
         <div className={styles.wrapper}>

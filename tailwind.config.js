@@ -172,7 +172,7 @@ module.exports = {
         },
         opacityInfinity: {
           '0%': { opacity: 0 },
-          '50%': { opacity: 1 },
+          '80%': { opacity: 1 },
           '100%': { opacity: 0 }
         },
         opacityOpen: {
@@ -233,7 +233,7 @@ module.exports = {
         progress: 'progress 1.5s linear infinite',
         progressHide: 'progressHide 150ms ease-in 150ms 1 normal forwards',
         opacity: 'opacity 0.4s ease-out',
-        opacityInfinity: 'opacityInfinity var(--loading-time) ease-in-out var(--loading-time) infinite',
+        opacityInfinity: 'opacityInfinity var(--loading-time) ease-out var(--loading-time) 1 forwards ',
         opacityOpen: 'opacityOpen 0.8s ease-out forwards',
         opacityClose: 'opacityClose 0.4s ease-out forwards',
         fill: 'fillBg var(--loading-time) cubic-bezier(0.4, 0, 0.6, 1) forwards, gradientMove 2.4s linear infinite',
