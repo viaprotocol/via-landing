@@ -6,7 +6,7 @@ import { Wallets } from '@/views/IndexPage/Wallets'
 import { Shortcuts } from '@/views/IndexPage/Shortcuts'
 import { Supported } from '@/views/IndexPage/Supported'
 import { Ecosystem } from '@/views/IndexPage/Ecosystem'
-import styles from '@/styles/common.module.scss'
+import styles from '@/styles/Common.module.scss'
 
 const Home: NextPage = () => {
   return (
