@@ -49,6 +49,13 @@ const ToolsBlock = ({ tools }: { tools: TTool[] }) => {
             </div>
           )
         })}
+        {tools.map((tool) => {
+          return (
+            <div className="mx-3.5 md:mx-5" key={tool.name}>
+              <Image src={tool.logoURI} alt={tool.name} title={tool.name} width={48} height={48} className="rounded-full md:h-20 md:w-20" />
+            </div>
+          )
+        })}
       </div>
     </Marquee>
     ))}
