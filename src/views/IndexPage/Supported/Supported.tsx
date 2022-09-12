@@ -17,7 +17,7 @@ function Supported() {
         <p className={styles.subtitle}>All popular bridges and aggregators in one interface</p>
       </div>
       <div className={styles.demo}>
-        <Tab.Group>
+        <Tab.Group defaultIndex={2}>
           <Tab.List className={styles.header}>
             {tabLabels.map(label => (
               <Tab key={label} className={({ selected }) => cx(styles.button, selected && styles.activeButton)}>{label}</Tab>

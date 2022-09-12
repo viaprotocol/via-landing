@@ -5,6 +5,8 @@ import { Footer, Header, MobileMenu } from '@/components/layout'
 import { Wallets } from '@/views/IndexPage/Wallets'
 import { Shortcuts } from '@/views/IndexPage/Shortcuts'
 import { Supported } from '@/views/IndexPage/Supported'
+import { Ecosystem } from '@/views/IndexPage/Ecosystem'
+import styles from '@/styles/Common.module.scss'
 
 const Home: NextPage = () => {
   return (
@@ -24,12 +26,16 @@ const Home: NextPage = () => {
             <Supported />
             <Features />
             <div className="h-[120px] md:h-[200px]"></div>
+            <Ecosystem />
+            <div className="h-[120px] md:h-[200px]"></div>
             <ForOrganizations />
             <div className="h-[120px] md:h-[200px]"></div>
-            <Wallets />
-            <div className="h-[120px] md:h-[184px]"></div>
-            <Shortcuts />
-            <div className="h-[120px] md:h-[200px]"></div>
+            <div className={styles.leftDot}>
+              <Wallets />
+              <div className="h-[120px] md:h-[184px]"></div>
+              <Shortcuts />
+              <div className="h-[120px] md:h-[200px]"></div>
+            </div>
             <TransactionTracking />
             <div className="h-[120px] md:h-[200px]"></div>
             <ForDevelopers />

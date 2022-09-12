@@ -15,7 +15,10 @@ const getSplitSize = (count: number) => {
   if (count <= 30) {
     return 4
   }
-  return 6
+  if (count <= 40) {
+    return 6
+  }
+  return 7
 }
 
 const ToolsBlock = ({ tools }: { tools: TTool[] }) => {
@@ -23,7 +26,7 @@ const ToolsBlock = ({ tools }: { tools: TTool[] }) => {
 
   const splitSize = useMemo(() => getSplitSize(tools.length), [tools])
   const splittedTools = useMemo(() => {
-    const res = tools.reduce((acc, el) => {
+    const res = tools.sort(() => Math.random() - 0.5).reduce((acc, el) => {
       const arrLength = parseInt((tools.length / splitSize).toString())
       if (acc[acc.length - 1].length === arrLength && acc.length < splitSize) {
         acc.push([])
@@ -36,12 +39,19 @@ const ToolsBlock = ({ tools }: { tools: TTool[] }) => {
     return res
   }, [tools])
 
-  return <div className={cx('origin-left lg:-ml-28 lg:-mb-60 lg:-rotate-45')} style={isLarge ? {
+  return <div className={cx('origin-left lg:-ml-36 lg:-mb-64 lg:-rotate-45')} style={isLarge ? {
     paddingTop: `${80 * 1 / Math.max(splitSize, 3)}rem`
   } : undefined}>
     {splittedTools.map((tools, index) => (
       <Marquee key={index} gradient={false} speed={10 + index * 2} direction={index % 2 ? 'left' : 'right'} style={{ paddingInlineStart: `${index * 4}px` }}>
-      <div className="mb-7 flex items-center md:mb-9">
+      <div className="mb-5 flex items-center">
+        {tools.map((tool) => {
+          return (
+            <div className="mx-2.5" key={tool.name}>
+              <Image src={tool.logoURI} alt={tool.name} title={tool.name} width={48} height={48} className="rounded-full md:h-20 md:w-20" />
+            </div>
+          )
+        })}
         {tools.map((tool) => {
           return (
             <div className="mx-3.5 md:mx-5" key={tool.name}>

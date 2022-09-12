@@ -14,3 +14,25 @@
     height: 140px;
   }
 }
+
+.marquee {
+  @apply relative;
+
+  &::before {
+    content: '';
+    @apply absolute top-0 left-0 w-40 h-[96px] bg-gradient-to-l from-transparent to-[#090a0c] z-[2];
+
+    @media screen and (min-width: 1024px) {
+      @apply h-[120px];
+    }
+  }
+
+  &::after {
+    content: '';
+    @apply absolute top-0 right-0 w-32 h-[96px] bg-gradient-to-r from-transparent to-[#090a0c] z-[2];
+
+    @media screen and (min-width: 1024px) {
+      @apply h-[120px];
+    }
+  }
+}

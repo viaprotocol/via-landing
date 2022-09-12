@@ -26,11 +26,11 @@
 }
 
 .button {
-  @apply mr-1 mb-6 rounded-lg px-2 py-1.5 text-white/80 outline-none transition-colors hover:bg-white/5 hover:text-white font-semibold;
+  @apply mr-1 mb-6 rounded-lg px-2 py-1.5 text-white/80 outline-none transition-colors hover:bg-white/5 hover:text-[#00ff60] font-semibold;
 }
 
 .activeButton {
-  @apply bg-green-200 text-[#090A0C] hover:bg-green-200 hover:text-[#090A0C];
+  @apply bg-[#00ff60]/5 text-[#00ff60] hover:bg-[#00ff60]/10 ;
 }
 
 .content {

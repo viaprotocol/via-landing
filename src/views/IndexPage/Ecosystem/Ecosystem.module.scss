@@ -1,0 +1,52 @@
+.bg {
+  @apply bg-cover bg-no-repeat ml-auto mr-auto px-2.5 md:px-8 xl:px-0 relative min-h-[704px] w-full lg:min-h-[1000px];
+  background-image: url('/images/backgrounds/bg-dotted.png');
+
+  @media (min-width: 768px) {
+    background-image: url('/images/backgrounds/bg-dotted-desktop.png');
+  }
+}
+
+.title {
+  @apply mb-3 text-[34px] font-semibold leading-[42px] lg:mb-6 lg:text-[48px] lg:leading-[56px];
+
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  @apply max-w-[940px] text-[22px] leading-[30px] text-white/40 lg:text-[32px] lg:leading-[40px];
+
+  letter-spacing: -0.02em;
+}
+
+.wrapper {
+  @apply grid gap-6 min-w-[496px] absolute inset-0 lg:gap-10;
+
+  transform: translateX(calc(calc(100vw - 496px) / 2));
+  grid-template-columns: repeat(5, 80px);
+  grid-template-rows: repeat(7, 80px);
+
+  @media screen and (min-width: 516px) and (max-width: 1023px) {
+    @apply w-[496px] mx-auto transform-none relative;
+  }
+
+  @media screen and (min-width: 1024px) {
+    @apply min-w-[1400px];
+    transform: translateX(calc(calc(100vw - 1400px) / 2));
+    grid-template-columns: repeat(9, 120px);
+    grid-template-rows: repeat(6, 120px);
+  }
+
+  @media screen and (min-width: 1400px) {
+    @apply w-[1400px] mx-auto transform-none relative;
+  }
+}
+
+.text {
+  @apply text-center;
+  grid-area: 3/2/5/5;
+
+  @media screen and (min-width: 1024px) {
+    grid-area: 3/4/5/7;
+  }
+}
