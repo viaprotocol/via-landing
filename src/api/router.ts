@@ -1,6 +1,6 @@
 import { Via } from '@viaprotocol/router-sdk'
 
-const DEFAULT_API_KEY = 'e3db93a3-ae1c-41e5-8229-b8c1ecef5583'
+const DEFAULT_API_KEY = 'e3db93a3-ae1c-41e5-8229-b8c1ecef5683'
 export const cli = new Via({ apiKey: DEFAULT_API_KEY, url: 'https://router-api.via.exchange', timeout: 30000 })
 
 // const getLandingRoutes = async (): Promise<any> => {
