@@ -4,7 +4,7 @@ import { Tile } from '@/components/kit'
 
 import WatchdogIcon from 'public/images/features/watchdog.svg'
 import SecurityScoreIcon from 'public/images/features/security-score.svg'
-import TransferGasIcon from 'public/images/features/transfer-gas.svg'
+import RefuelIcon from 'public/images/features/refuel.svg'
 import AdvancedRoutesIcon from 'public/images/features/advanced-routes.svg'
 
 function SafetyFirst() {
@@ -28,8 +28,8 @@ function SafetyFirst() {
           />
           <Tile
             slots={2}
-            icon={<TransferGasIcon/>}
-            title="Transfer gas"
+            icon={<RefuelIcon/>}
+            title="Refuel"
             description="Move gas between any networks in 1 click"
           />
           <Tile
