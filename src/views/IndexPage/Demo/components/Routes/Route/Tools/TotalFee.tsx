@@ -37,7 +37,7 @@ function ActionFeeTooltip(props: TActionFeeProps) {
           href={gasHref}
           className="mt-2.5 flex h-8 w-[92px] items-center rounded-md bg-coal/5 py-0.5 px-2 font-semibold transition-opacity hover:bg-coal/10 active:bg-coal/20 dark:bg-white/5 dark:hover:bg-white/10 dark:active:bg-white/20"
         >
-          Transfer gas
+          Refuel
         </a>
       )}
     </div>
