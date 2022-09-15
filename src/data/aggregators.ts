@@ -5,27 +5,27 @@ const aggregators: TTool[] = [
   {
     name: 'Rango',
     type: ToolTypeEnum.Aggregator,
-    logoURI: '/images/aggregators/aggregator-1.svg'
+    logoURI: '/images/aggregators/rango.svg'
   },
   {
     name: 'Symbiosis',
     type: ToolTypeEnum.Aggregator,
-    logoURI: '/images/aggregators/aggregator-2.svg'
+    logoURI: '/images/aggregators/symbiosis.svg'
   },
   {
     name: 'deBridge',
     type: ToolTypeEnum.Aggregator,
-    logoURI: '/images/aggregators/aggregator-3.svg'
+    logoURI: '/images/aggregators/debridge.svg'
   },
   {
     name: 'Li Finance',
     type: ToolTypeEnum.Aggregator,
-    logoURI: '/images/aggregators/aggregator-4.svg'
+    logoURI: '/images/aggregators/lifi.svg'
   },
   {
     name: 'XY Finance',
     type: ToolTypeEnum.Aggregator,
-    logoURI: '/images/aggregators/aggregator-5.svg'
+    logoURI: '/images/aggregators/xy.svg'
   },
   {
     name: 'Rubic',

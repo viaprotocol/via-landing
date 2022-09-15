@@ -7,13 +7,13 @@ import { VIA_SDK_SNIPPET } from './config'
 
 import { sublime } from '@uiw/codemirror-theme-sublime'
 
-import Aggregator1Icon from 'public/images/aggregators/aggregator-1.svg'
-import Aggregator2Icon from 'public/images/aggregators/aggregator-2.svg'
-import Aggregator3Icon from 'public/images/aggregators/aggregator-3.svg'
-import Aggregator4Icon from 'public/images/aggregators/aggregator-4.svg'
-import Aggregator5Icon from 'public/images/aggregators/aggregator-5.svg'
-import Aggregator6Icon from 'public/images/aggregators/aggregator-6.svg'
-import Aggregator7Icon from 'public/images/aggregators/aggregator-7.svg'
+import RangoIcon from 'public/images/aggregators/rango.svg'
+import SymbiosisIcon from 'public/images/aggregators/symbiosis.svg'
+import DebridgeIcon from 'public/images/aggregators/debridge.svg'
+import LifiIcon from 'public/images/aggregators/lifi.svg'
+import XyIcon from 'public/images/aggregators/xy.svg'
+import SocketIcon from 'public/images/aggregators/socket.svg'
+import ViaIcon from 'public/images/aggregators/via.svg'
 
 import Client1Icon from 'public/images/clients/client-1.svg'
 import Client2Icon from 'public/images/clients/client-2.svg'
@@ -30,13 +30,13 @@ function Sdk() {
             Show routes 5 times faster than with other aggregators API
           </p>
           <div className="mt-6 flex gap-2">
-            <Aggregator1Icon />
-            <Aggregator2Icon />
-            <Aggregator3Icon />
-            <Aggregator4Icon />
-            <Aggregator5Icon />
-            <Aggregator6Icon />
-            <Aggregator7Icon />
+            <RangoIcon />
+            <SymbiosisIcon />
+            <DebridgeIcon />
+            <LifiIcon />
+            <XyIcon />
+            <SocketIcon />
+            <ViaIcon />
           </div>
           <div className="mt-8">
             <ActionLink text="Learn more" href="https://github.com/viaprotocol/via-sdk-js#readme" />
