@@ -77,7 +77,7 @@ function Header() {
                   <img className={styles.menuProductImage} width="24" height="24" src="/images/icons/api.svg" alt="API" />
                 </div>
                 <div className={styles.menuProductInfo}>
-                  <h4 className={styles.menuProductTitle}>API</h4>
+                  <h4 className={styles.menuProductTitle}>SDK</h4>
                   <p className={styles.menuProductDescription}>Access to multi-chain for wallets, games and marketplaces</p>
                 </div>
               </a>

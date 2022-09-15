@@ -28,9 +28,6 @@ function MobileMenu() {
       <ul className="mobile-menu__products">
         <li className="mobile-menu__product menu-product">
           <a href="https://router.via.exchange/" className="menu-product__wrapper" target="_blank" rel="noopener noreferrer">
-            <div className="menu-product__image-wrapper">
-              <img className="menu-product__image" width={24} height={24} src="/images/icons/router.svg" alt="Cross-chain Aggregation Protocol" />
-            </div>
             <div className="menu-product__info">
               <h4 className="menu-product__title">Cross-chain Aggregation Protocol</h4>
               <p className="menu-product__description">The best router for any-to-any cross-chain swaps</p>
@@ -39,11 +36,8 @@ function MobileMenu() {
         </li>
         <li className="mobile-menu__product menu-product">
           <a href="https://github.com/viaprotocol/via-sdk-js" className="menu-product__wrapper" target="_blank" rel="noopener noreferrer">
-            <div className="menu-product__image-wrapper">
-              <img className="menu-product__image" width={24} height={24} src="/images/icons/api.svg" alt="API" />
-            </div>
             <div className="menu-product__info">
-              <h4 className="menu-product__title">API</h4>
+              <h4 className="menu-product__title">SDK</h4>
               <p className="menu-product__description">Access to multi-chain for wallets, games and marketplaces</p>
             </div>
           </a>

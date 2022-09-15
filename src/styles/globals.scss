@@ -428,7 +428,7 @@ section.tools {
 
   &__header {
     padding: 0;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -475,37 +475,23 @@ section.tools {
   }
 
   &__title {
-    font-weight: 600;
     font-size: 16px;
-    line-height: 26px;
-    color: #ffffff;
-    margin-bottom: 8px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 12px;
   }
 
   &__products {
     margin: 0 0 35px;
     padding: 0;
     list-style: none;
-    background-color: rgba(255, 255, 255, 0.04);
-    border-radius: 12px;
   }
 
   &__product {
+    margin-bottom: 8px;
     overflow: hidden;
-
-    &:first-child {
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-    }
-
-    &:last-child {
-      border-bottom-left-radius: 12px;
-      border-bottom-right-radius: 12px;
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-    }
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.04);
   }
 
   &__socials {
@@ -567,9 +553,8 @@ section.tools {
   &__wrapper {
     overflow: hidden;
     display: flex;
-    padding: 8px;
+    padding: 12px 20px;
     align-items: flex-start;
-    color: rgba(255, 255, 255, 0.8);
     transition: background-color 0.25s ease-in-out;
     background-color: transparent;
 
@@ -637,25 +622,16 @@ section.tools {
     padding: 0;
     margin: 0 0 4px;
     font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-
-    @media screen and (min-width: 768px) {
-      font-size: 16px;
-      line-height: 24px;
-    }
+    font-size: 18px;
+    line-height: 24px;
   }
 
   &__description {
     margin: 0;
     padding: 0;
-    font-size: 13px;
-    line-height: 20px;
-
-    @media screen and (min-width: 768px) {
-      font-size: 16px;
-      line-height: 24px;
-    }
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.4)
   }
 }
 
