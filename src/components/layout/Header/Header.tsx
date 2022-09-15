@@ -20,8 +20,8 @@ function Header() {
       <div className={styles.headerLogoContainer}>
         <img src="/images/logo.svg" alt="Via" className={styles.headerLogoImage} />
         <div className={styles.headerLogoDescription}>
-          <strong>Cross-chain</strong>
-          <div>liquidity aggregation protocol</div>
+          <strong>The most efficient</strong>
+          <div>Cross-chain router</div>
         </div>
       </div>
 
