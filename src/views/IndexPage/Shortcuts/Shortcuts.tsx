@@ -1,9 +1,7 @@
 import { Section } from '@/components/layout'
 import { Image } from '@/components/kit'
-import { useMedia } from '@/hooks'
 
 function Shortcuts() {
-  const { isLarge } = useMedia()
   return (
     <Section className="flex flex-col items-center justify-center">
       <div className="mb-1 ml-[2em] text-center text-[12px] leading-[12px] tracking-[2em] text-[#00FF60]">SOON</div>
