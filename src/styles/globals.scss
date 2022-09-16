@@ -34,9 +34,9 @@ h1 {
   animation: appear 1.5s ease 1 normal forwards;
 
   @media only screen and (min-width: 960px) {
-    margin-bottom: 64px;
-    font-size: 96px;
-    line-height: 108px;
+    margin-bottom: 60px;
+    font-size: 84px;
+    line-height: 96px;
   }
 }
 
@@ -79,22 +79,18 @@ h1 {
 }
 
 [data-button='large'] {
-  min-width: 240px;
-  padding: 18px 40px;
-  line-height: 20px;
-  font-size: 18px;
+  min-width: 172px;
+  padding: 16px 20px;
+  line-height: 1em;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   box-shadow: 0px 0px 40px transparent;
 
   @media only screen and (min-width: 960px) {
-    line-height: 18px;
-  }
-
-  @media only screen and (min-width: 1420px) {
-    font-size: 20px;
-    line-height: 23px;
-    letter-spacing: -0.03em;
+    min-width: 240px;
+    padding: 23px 20px;
+    font-size: 18px;
   }
 
   &:hover {
