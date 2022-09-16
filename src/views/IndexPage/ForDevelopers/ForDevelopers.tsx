@@ -2,9 +2,7 @@ import React from 'react'
 import { Section } from '@/components/layout'
 import { Tile } from '@/components/kit'
 
-import { GrantProgram, SafeMode, Sdk, Web3Wallets } from './components/'
-
-import TrustedTokensIcon from 'public/images/features/trusted-tokens.svg'
+import { GrantProgram, SafeMode, Sdk, TokenList, Web3Wallets } from './components/'
 
 function ForDevelopers() {
   return (
@@ -27,13 +25,9 @@ function ForDevelopers() {
           <Tile slots={2}>
             <Web3Wallets />
           </Tile>
-          <Tile
-            slots={2}
-            icon={<TrustedTokensIcon/>}
-            title="Multichain trusted token standard"
-            description="Tokenlist of trusted tokens across 25 chains"
-            isDesktopReversed
-          />
+          <Tile slots={2}>
+            <TokenList />
+          </Tile>
         </Tile.Group>
       </>
     </Section>

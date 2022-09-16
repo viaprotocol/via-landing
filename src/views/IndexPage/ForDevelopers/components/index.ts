@@ -1,4 +1,5 @@
 export * from './GrantProgram'
 export * from './SafeMode'
 export * from './Sdk'
+export * from './TokenList'
 export * from './Web3Wallets'
