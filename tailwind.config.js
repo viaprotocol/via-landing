@@ -126,7 +126,8 @@ module.exports = {
         'success-gradient': 'linear-gradient(60.27deg, rgba(0, 240, 255, 0.5) 27.73%, #00FF66 62.84%)',
         'error-gradient': 'linear-gradient(60.27deg, rgba(0, 102, 255, 0.3) 27.73%, #FF0909 62.84%)',
         'history-gradient': 'linear-gradient(180deg, rgba(17, 18, 21, 0.04) 0, rgba(17, 18, 21, 0) 40px)',
-        'history-gradient-dark': 'linear-gradient(180deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%)'
+        'history-gradient-dark': 'linear-gradient(180deg, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0) 100%)',
+        'demo-routes': 'linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%)'
       },
       height: {
         17: '68px'

@@ -25,7 +25,7 @@
 }
 
 .routes {
-  @apply p-0 tracking-normal max-w-[553px] place-self-center w-full;
+  @apply p-0 tracking-normal max-w-[553px] place-self-center w-full rounded-3xl lg:p-4 lg:bg-demo-routes lg:border lg:border-white-160;
   grid-area: routes;
   font-family: "Inter", sans-serif;
 }
@@ -38,7 +38,7 @@
   @apply h-[300px] overflow-y-scroll overflow-x-hidden pr-1 flex flex-col;
 
   @media screen and (min-width: 1024px) {
-    @apply h-[556px]
+    @apply h-[467px]
   }
 
   &::-webkit-scrollbar {
