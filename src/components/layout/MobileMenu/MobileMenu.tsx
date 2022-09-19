@@ -69,12 +69,6 @@ function MobileMenu() {
           </a>
         </li>
         <li>
-          <a className="mobile-menu__social-link" href="https://t.me/viaexchange" target="_blank" rel="noopener noreferrer">
-            <Icon icon="telegram" width={24} height={24} />
-            <span className="visually-hidden">Telegram</span>
-          </a>
-        </li>
-        <li>
           <a className="mobile-menu__social-link" href="https://medium.com/via-exchange" target="_blank" rel="noopener noreferrer">
             <Icon icon="medium" width={24} height={24} />
             <span className="visually-hidden">Medium</span>
