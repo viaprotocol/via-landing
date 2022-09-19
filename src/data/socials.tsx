@@ -35,5 +35,5 @@ export const socials = [
     name: 'Guild',
     link: 'https://guild.xyz/via',
     icon: <GuildIcon />
-  },
+  }
 ]
