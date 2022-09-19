@@ -21,6 +21,7 @@ import Discord from 'public/images/socials/discord.svg'
 import Twitter from 'public/images/socials/twitter.svg'
 import Telegram from 'public/images/socials/telegram.svg'
 import Medium from 'public/images/socials/medium.svg'
+import Guild from 'public/images/socials/guild.svg'
 
 const icon = (
   Component: FunctionComponent<PropsWithChildren<SVGProps<SVGSVGElement>>> & { title?: string | undefined },
@@ -51,7 +52,8 @@ const ICONS = {
   discord: icon(Discord),
   twitter: icon(Twitter),
   telegram: icon(Telegram),
-  medium: icon(Medium)
+  medium: icon(Medium),
+  guild: icon(Guild)
 }
 
 export { ICONS }
