@@ -20,8 +20,8 @@ function Header() {
       <div className={styles.headerLogoContainer}>
         <img src="/images/logo.svg" alt="Via" className={styles.headerLogoImage} />
         <div className={styles.headerLogoDescription}>
-          <strong>Cross-chain</strong>
-          <div>liquidity aggregation protocol</div>
+          <strong>The most efficient</strong>
+          <div>Cross-chain router</div>
         </div>
       </div>
 
@@ -77,7 +77,7 @@ function Header() {
                   <img className={styles.menuProductImage} width="24" height="24" src="/images/icons/api.svg" alt="API" />
                 </div>
                 <div className={styles.menuProductInfo}>
-                  <h4 className={styles.menuProductTitle}>API</h4>
+                  <h4 className={styles.menuProductTitle}>SDK</h4>
                   <p className={styles.menuProductDescription}>Access to multi-chain for wallets, games and marketplaces</p>
                 </div>
               </a>
