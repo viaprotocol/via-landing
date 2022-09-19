@@ -11,7 +11,9 @@ function Footer() {
         <div>Socials...</div>
       </div>
       <div className="mt-[44px] hidden lg:block">
-        <img src="images/producthunt.png" alt="PRODUCT HUNT #1 Product of the Day" width="250" height="54" />
+        <a className="inline-block hover:brightness-125" href="https://www.producthunt.com/products/via-protocol" target="_blank" rel="noopener noreferrer">
+          <img src="images/producthunt.png" alt="PRODUCT HUNT #1 Product of the Day" width="250" height="54" />
+        </a>
       </div>
     </div>
   )
