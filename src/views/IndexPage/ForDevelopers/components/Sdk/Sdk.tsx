@@ -17,7 +17,6 @@ import ViaIcon from 'public/images/aggregators/via.svg'
 
 import Client1Icon from 'public/images/clients/client-1.svg'
 import Client2Icon from 'public/images/clients/client-2.svg'
-import Client3Icon from 'public/images/clients/client-3.svg'
 import { ActionLink } from '../ActionLink'
 
 function Sdk() {
@@ -47,7 +46,6 @@ function Sdk() {
           <div className="flex flex-wrap gap-6">
             <Client1Icon />
             <Client2Icon />
-            <Client3Icon />
           </div>
         </div>
       </div>
