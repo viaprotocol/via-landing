@@ -36,7 +36,7 @@ const Route = memo((props: PropsWithChildren<TRouteProps>) => {
     expanded = false,
     showGas = true,
     sectionStyles,
-    isCollapsible = true,
+    isCollapsible = false,
     type = RouteViewEnum.regular
   } = props
 

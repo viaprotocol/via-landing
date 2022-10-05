@@ -29,14 +29,7 @@ const RouteSkeleton = function RouteSkeleton({ active }: PropsWithChildren<TRout
 
   return (
     <section className="mb-2 rounded-xl bg-[#1112150a] py-3 px-2 hover:bg-[#11121514] active:bg-[#11121529] dark:bg-[#ffffff0a] dark:hover:bg-[#ffffff14] dark:active:bg-[#ffffff29] md:p-4">
-      <header className="flex flex-1 items-center justify-between">
-        <Skeleton h="16px" />
-        <div>
-          <button type="button" onClick={onClick} className="'hover:bg-[#11121514] dark:active:bg-white-160' flex items-center justify-center rounded-lg p-1 active:bg-coal-160 dark:hover:bg-[#ffffff14]">
-            <Icon icon="arrowDown" width={18} height={18} className={cx(!isExpanded && '-rotate-90')} />
-          </button>
-        </div>
-      </header>
+      <Skeleton h="16px" />
       <main ref={ref} style={collapseStyles} onTransitionEnd={onTransitionEnd}>
         <article className="flex flex-row gap-1 pt-4">
           <div className="flex items-center justify-center gap-1.5 rounded-3xl bg-[#1112150a] dark:bg-[#ffffff0a]">
