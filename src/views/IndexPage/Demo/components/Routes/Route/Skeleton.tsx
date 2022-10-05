@@ -1,27 +1,15 @@
 import type { PropsWithChildren } from 'react'
 import { useEffect, useMemo, useState } from 'react'
 import useCollapse from 'react-collapsed'
-import cx from 'classnames'
-import { Icon, Skeleton } from '@/components/kit'
+
+import { Skeleton } from '@/components/kit'
 
 import type { TRouteSkeletonProps } from '../types'
 
 const RouteSkeleton = function RouteSkeleton({ active }: PropsWithChildren<TRouteSkeletonProps>) {
   const [isExpanded, setExpanded] = useState(active)
-  const { getToggleProps, getCollapseProps } = useCollapse({ isExpanded })
-  const { onClick } = useMemo(
-    () =>
-      getToggleProps({
-        onClick: (e) => {
-          // Stop event bubbling
-          e.preventDefault()
-          e.stopPropagation()
+  const { getCollapseProps } = useCollapse({ isExpanded })
 
-          setExpanded(currentStatus => !currentStatus)
-        }
-      }),
-    [getToggleProps, setExpanded]
-  )
   // @ts-expect-error ref not found in type definition
   const { style: collapseStyles, onTransitionEnd, ref } = useMemo(() => getCollapseProps(), [getCollapseProps])
 
