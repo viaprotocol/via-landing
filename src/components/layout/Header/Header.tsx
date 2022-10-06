@@ -1,4 +1,5 @@
-import { useContext } from 'react'
+import cx from 'classnames'
+import { useContext, useEffect, useState } from 'react'
 
 import styles from './Header.module.scss'
 import { socials } from '@/data/socials'
@@ -7,8 +8,22 @@ import { StateContext } from '@/state'
 function Header() {
   const { openMobileMenu } = useContext(StateContext)
 
+  const [isHeaderCompact, setHeaderCompact] = useState(false)
+
+  const handleScroll = () => {
+    setHeaderCompact(window.pageYOffset > 5)
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
   return (
-    <header className={styles.header}>
+    <header className={cx(styles.header, isHeaderCompact && styles.headerCompact)}>
       <div className={styles.headerLogoContainer}>
         <img src="/images/logo.svg" alt="Via" className={styles.headerLogoImage} />
         <div className={styles.headerLogoDescription}>
