@@ -9,13 +9,14 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#000000" />
-          <link rel="apple-touch-icon" href="/images/meta/meta-logo-192.png" />
+          <link rel="apple-touch-icon" href="https://via.exchange/images/meta/meta-logo-192.png" />
           <link rel="manifest" href="/manifest.json" />
 
           <meta
             name="description"
             content="Via Protocol unites cross-chain protocols and finds the cheapest 1-transaction any-to-any swaps."
           />
+          <meta name="thumbnail" content="https://via.exchange/images/meta/meta-logo-192.png" />
 
           <meta property="og:url" content="https://via.exchange/" />
           <meta property="og:type" content="website" />
@@ -24,7 +25,7 @@ class MyDocument extends Document {
             property="og:description"
             content="Via Protocol unites cross-chain protocols and finds the cheapest 1-transaction any-to-any swaps."
           />
-          <meta property="og:image" content="/images/meta/meta-preview-fb.jpg" />
+          <meta property="og:image" content="https://via.exchange/images/meta/meta-preview-fb.jpg" />
 
           <meta name="twitter:card" content="summary_large_image" />
           <meta property="twitter:domain" content="via.exchange" />
@@ -34,7 +35,7 @@ class MyDocument extends Document {
             name="twitter:description"
             content="Via Protocol unites cross-chain protocols and finds the cheapest 1-transaction any-to-any swaps."
           />
-          <meta name="twitter:image" content="/images/meta/meta-preview.jpg" />
+          <meta name="twitter:image" content="https://via.exchange/images/meta/meta-preview.jpg" />
 
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
