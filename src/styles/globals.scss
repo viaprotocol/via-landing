@@ -35,8 +35,8 @@ h1 {
 
   @media only screen and (min-width: 960px) {
     margin-bottom: 60px;
-    font-size: 84px;
-    line-height: 96px;
+    font-size: 60px;
+    line-height: 1.15em;
   }
 }
 
@@ -196,7 +196,7 @@ section.intro {
     max-width: 480px;
 
     @media only screen and (min-width: 960px) {
-      width: 720px;
+      width: 542px;
       max-width: unset;
     }
   }
