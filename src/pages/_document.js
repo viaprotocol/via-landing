@@ -19,7 +19,7 @@ class MyDocument extends Document {
 
           <meta property="og:url" content="https://via.exchange/" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Via Protocol | Advanced Cross-Chain Liquidity Aggregation Protocol" />
+          <meta property="og:title" content="Via Protocol | The most efficient cross-chain router" />
           <meta
             property="og:description"
             content="Via Protocol unites cross-chain protocols and finds the cheapest 1-transaction any-to-any swaps."
@@ -29,7 +29,7 @@ class MyDocument extends Document {
           <meta name="twitter:card" content="summary_large_image" />
           <meta property="twitter:domain" content="via.exchange" />
           <meta property="twitter:url" content="https://via.exchange/" />
-          <meta name="twitter:title" content="Via Protocol | Advanced Cross-Chain Liquidity Aggregation Protocol" />
+          <meta name="twitter:title" content="Via Protocol | The most efficient cross-chain router" />
           <meta
             name="twitter:description"
             content="Via Protocol unites cross-chain protocols and finds the cheapest 1-transaction any-to-any swaps."
