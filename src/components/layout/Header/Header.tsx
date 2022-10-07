@@ -36,7 +36,7 @@ function Header() {
 
   return (
     <header className={cx(styles.header, isHeaderCompact && styles.headerCompact)}>
-      <div className={styles.headerLogoContainer}>
+      <div className={cx(styles.headerLogoContainer, isHeaderCompact && styles.headerLogoContainerFaded)}>
         <img src="/images/logo.svg" alt="Via" className={styles.headerLogoImage} />
         <div className={styles.headerLogoDescription}>
           <strong>The most efficient</strong>

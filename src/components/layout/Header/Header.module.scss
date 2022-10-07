@@ -45,9 +45,17 @@
 }
 
 .headerLogoContainer {
+  margin-left: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  opacity: 1;
+  transition: opacity 0.1s ease;
+  will-change: opacity;
+}
+
+.headerLogoContainerFaded {
+  opacity: 0.4;
 }
 
 .headerLogoImage {
