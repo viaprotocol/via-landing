@@ -124,21 +124,19 @@
   display: none;
   position: relative;
   align-items: center;
+  margin-left: 24px;
+  min-height: 32px;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+  padding-left: 24px;
 
   @media screen and (min-width: 768px) {
     display: flex;
+    gap: 8px;
   }
 
   @media screen and (min-width: 1420px) {
     margin-left: 90px;
   }
-}
-
-.headerDivider {
-  margin: auto 24px;
-  height: 32px;
-  width: 1px;
-  background: rgba(255, 255, 255, 0.12);
 }
 
 .headerButton {
@@ -147,30 +145,46 @@
   justify-content: center;
   border: none;
   appearance: none;
-  padding: 10px 16px;
-  border-radius: 12px;
-  font-size: 18px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 16px;
   line-height: 24px;
   font-weight: 700;
-  margin-right: 8px;
   letter-spacing: -0.03em;
-  z-index: 5;
-
-  background-color: rgba(255, 255, 255, 0.04);
-  color: #FFFFFFCC;
-  transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+  color: #FFFFFF66;
+  background-color: transparent;
+  transition: min-width 0.1s linear, background-color 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 
   &:hover {
-    background-color: #04ff66;
-    box-shadow: 0px 0px 16px rgba(4, 255, 102, 0.6);
-    color: #07080b;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: #FFFFFFCC;
   }
 
   &:active {
-    background-color: #30ba66;
-    box-shadow: none;
-    color: #07080b;
+    background-color: rgba(255, 255, 255, 0.16);
+    color: #FFFFFF;
   }
+}
+
+.headerLaunchButton {
+  min-width: 105px;
+  background-color: #00FF60;
+  color: #090A0C;
+
+  &:hover {
+    background-color: #FF2E2E;
+    color: #FFFFFF;
+    box-shadow: 0px 0px 40px #ff002e;
+  }
+
+  &:active {
+    background-color: #b90d2c;
+    color: #f1cfd5;
+  }
+}
+
+.headerLaunchButtonCompact {
+  min-width: 80px;
 }
 
 .mobileMenu {

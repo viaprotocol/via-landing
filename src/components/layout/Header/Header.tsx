@@ -48,14 +48,13 @@ function Header() {
       </button>
 
       <nav className={styles.headerButtons}>
-        <div className={styles.headerDivider} />
         <a href="https://docs.via.exchange/product-docs" className={styles.headerButton} target="_blank" rel="noreferrer">
           Docs
         </a>
         <a href="https://github.com/viaprotocol/via-sdk-js" className={styles.headerButton} target="_blank" rel="noreferrer">
           SDK
         </a>
-        <a href="https://router.via.exchange" className={styles.headerButton} target="_blank" rel="noreferrer">
+        <a href="https://router.via.exchange" className={cx(styles.headerButton, styles.headerLaunchButton, isHeaderCompact && styles.headerLaunchButtonCompact)} target="_blank" rel="noreferrer">
           Launch
         </a>
       </nav>
