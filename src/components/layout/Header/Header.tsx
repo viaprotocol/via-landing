@@ -48,6 +48,7 @@ function Header() {
       </button>
 
       <nav className={styles.headerButtons}>
+        <div className={styles.headerDivider} />
         <a href="https://docs.via.exchange/product-docs" className={styles.headerButton} target="_blank" rel="noreferrer">
           Docs
         </a>
