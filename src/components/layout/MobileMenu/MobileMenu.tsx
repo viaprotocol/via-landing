@@ -29,7 +29,7 @@ function MobileMenu() {
         <li className="mobile-menu__product menu-product">
           <a href="https://router.via.exchange/" className="menu-product__wrapper" target="_blank" rel="noopener noreferrer">
             <div className="menu-product__info">
-              <h4 className="menu-product__title">Cross-chain Aggregation Protocol</h4>
+              <h4 className="menu-product__title">Cross-chain aggregation protocol</h4>
               <p className="menu-product__description">The best router for any-to-any cross-chain swaps</p>
             </div>
             <img src="/images/icons/external.svg" alt="External link" width="16" height="16" />

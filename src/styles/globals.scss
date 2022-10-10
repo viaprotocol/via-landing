@@ -406,20 +406,29 @@ section.tools {
 }
 
 .mobile-menu {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
   z-index: 10;
   padding: 10px;
   background-color: rgba(26, 27, 30, 0.64);
   box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(120px);
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: all 0.25s ease;
+
+  @media only screen and (min-width: 960px) {
+    display: none;
+  }
 
   &--opened {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
+    opacity: 1;
+    transform: scaleY(1);
   }
 
   &__header {
