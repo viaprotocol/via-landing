@@ -32,12 +32,26 @@
 
 .headerBurgerButton {
   appearance: none;
-  background-color: rgba(255, 255, 255, 0.04);
-  box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   border-radius: 8px;
   border: none;
   padding: 8px;
   font-size: 0;
+  color: rgba(255, 255, 255, 0.4);
+  transition: all 0.25s ease;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
 
   @media screen and (min-width: 960px) {
     display: none;

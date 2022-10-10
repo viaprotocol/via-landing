@@ -8,6 +8,8 @@ import { StateContext } from '@/state'
 import MoreIcon from 'public/images/socials/more.svg'
 import LessIcon from 'public/images/socials/less.svg'
 
+import MenuIcon from 'public/images/icons/menu-icon.svg'
+
 function Header() {
   const { openMobileMenu } = useContext(StateContext)
 
@@ -76,7 +78,7 @@ function Header() {
       </div>
 
       <button type="button" className={styles.headerBurgerButton} onClick={openMobileMenu}>
-        <img src="/images/icons/menu-icon.svg" alt="Menu icon" width="24" height="24" />
+        <MenuIcon alt="Menu" />
       </button>
     </header>
   )
