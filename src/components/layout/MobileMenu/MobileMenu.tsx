@@ -18,7 +18,7 @@ function MobileMenu() {
         </button>
 
         <a href="https://docs.via.exchange/product-docs/" className="mobile-menu__docs" target="_blank" rel="noopener noreferrer">
-          <span>Via Docs</span>
+          <span>Docs</span>
           <img src="/images/icons/external.svg" alt="External link" width="16" height="16" />
         </a>
       </header>
@@ -32,6 +32,7 @@ function MobileMenu() {
               <h4 className="menu-product__title">Cross-chain Aggregation Protocol</h4>
               <p className="menu-product__description">The best router for any-to-any cross-chain swaps</p>
             </div>
+            <img src="/images/icons/external.svg" alt="External link" width="16" height="16" />
           </a>
         </li>
         <li className="mobile-menu__product menu-product">
@@ -40,6 +41,7 @@ function MobileMenu() {
               <h4 className="menu-product__title">SDK</h4>
               <p className="menu-product__description">Access to multi-chain for wallets, games and marketplaces</p>
             </div>
+            <img src="/images/icons/external.svg" alt="External link" width="16" height="16" />
           </a>
         </li>
       </ul>
