@@ -5,6 +5,9 @@ import styles from './Header.module.scss'
 import { socials } from '@/data/socials'
 import { StateContext } from '@/state'
 
+import MoreIcon from 'public/images/socials/more.svg'
+import LessIcon from 'public/images/socials/less.svg'
+
 function Header() {
   const { openMobileMenu } = useContext(StateContext)
 
@@ -32,7 +35,9 @@ function Header() {
     </li>
   )
 
-  const toggleSocials = () => { setSocialsExpanded(!isSocialsExpanded) }
+  const toggleSocials = () => {
+    setSocialsExpanded(!isSocialsExpanded)
+  }
 
   return (
     <header className={cx(styles.header, isHeaderCompact && styles.headerCompact)}>
@@ -48,12 +53,12 @@ function Header() {
         <div className={styles.headerSocialsWrapper}>
           <ul className={cx(styles.headerSocials, styles.headerSocialsPreview, isSocialsExpanded && styles.headerSocialsHidden)}>
             {socials.slice(0, 3).map(socialItem)}
-            <button className={styles.headerSocialToggler} onClick={toggleSocials}>...</button>
+            <button className={styles.headerSocialToggler} onClick={toggleSocials}><MoreIcon /></button>
           </ul>
 
           <ul className={cx(styles.headerSocials, !isSocialsExpanded && styles.headerSocialsHidden)}>
             {socials.map(socialItem)}
-            <button className={styles.headerSocialToggler} onClick={toggleSocials}>...</button>
+            <button className={styles.headerSocialToggler} onClick={toggleSocials}><LessIcon /></button>
           </ul>
         </div>
 

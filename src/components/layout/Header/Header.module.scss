@@ -94,6 +94,10 @@
   position: relative;
 }
 
+.headerSocials {
+  position: relative;
+}
+
 .headerSocialsPreview {
   position: absolute;
   right: 0;
@@ -101,6 +105,7 @@
 
 .headerSocialsHidden {
   opacity: 0;
+  z-index: -1;
 }
 
 .headerSocials {
@@ -148,15 +153,17 @@
   width: 32px;
   height: 32px;
   border-radius: 8px;
-  color: white;
+  color: rgba(255, 255, 255, 0.4);
   transition: all 0.25s ease-in-out;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.6);
   }
 
   &:active {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.16);
+    color: rgba(255, 255, 255, 0.8);
   }
 }
 
