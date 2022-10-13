@@ -119,7 +119,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   background-image: url('/images/backgrounds/bg-top-small.jpg');
   position: relative;
   letter-spacing: -0.02em;
@@ -182,7 +182,7 @@ body {
 }
 
 section.intro {
-  padding: 80px 10px 80px;
+  padding: 90px 10px 80px;
   text-align: center;
 
   @media only screen and (min-width: 960px) {
