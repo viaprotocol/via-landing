@@ -14,7 +14,7 @@ function App({ Component, pageProps }: AppProps) {
       <StateContextProvider>
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-          <title>Via Protocol | Advanced Cross-Chain Liquidity Aggregation Protocol</title>
+          <title>Via Protocol | The most efficient cross-chain router</title>
         </Head>
         <Component {...pageProps} />
       </StateContextProvider>

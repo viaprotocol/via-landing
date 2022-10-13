@@ -14,7 +14,7 @@ function Footer() {
         <ul className="mb-[80px] flex gap-4 lg:mb-0 lg:gap-8">
           {socials.map(social => (
             <li key={social.name}>
-              <a href={social.link} className="flex h-10 w-10 items-center justify-center lg:h-8 lg:w-8" target="_blank" rel="noopener noreferrer">
+              <a href={social.link} className="flex h-10 w-10 items-center justify-center lg:h-8 lg:w-8 hover:text-white/40 active:text-white/60" target="_blank" rel="noopener noreferrer">
                 {social.icon}
               </a>
             </li>

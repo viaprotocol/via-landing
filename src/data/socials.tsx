@@ -17,11 +17,6 @@ export const socials = [
     icon: <DiscordIcon/>
   },
   {
-    name: 'Medium',
-    link: 'https://medium.com/via-exchange',
-    icon: <MediumIcon />
-  },
-  {
     name: 'Gitcoin',
     link: 'https://gitcoin.co/grants/4665/via-protocol',
     icon: <GitcoinIcon />
@@ -35,5 +30,10 @@ export const socials = [
     name: 'Guild',
     link: 'https://guild.xyz/via',
     icon: <GuildIcon />
+  },
+  {
+    name: 'Medium',
+    link: 'https://medium.com/via-exchange',
+    icon: <MediumIcon />
   }
 ]

@@ -3,7 +3,7 @@
 
   &::before {
     content: '';
-    @apply absolute left-0 right-0 top-0 bottom-0 bg-no-repeat z-50;
+    @apply absolute left-0 right-0 top-0 bottom-0 bg-no-repeat z-[5];
     background-image: url('/images/backgrounds/bg-dotted-desktop.png');
     background-position: -1247px;
 

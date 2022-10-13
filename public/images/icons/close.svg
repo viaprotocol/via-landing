@@ -1,3 +1,6 @@
-<svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="m9.41 8 3.3-3.29a1.004 1.004 0 1 0-1.42-1.42L8 6.59l-3.29-3.3a1.004 1.004 0 0 0-1.42 1.42L6.59 8l-3.3 3.29a.999.999 0 0 0 0 1.42 1 1 0 0 0 1.42 0L8 9.41l3.29 3.3a1.001 1.001 0 0 0 1.639-.325 1 1 0 0 0-.22-1.095L9.41 8Z" fill="currentColor"/>
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g>
+<rect x="1.63574" y="0.22168" width="20" height="2" rx="1" transform="rotate(45 1.63574 0.22168)" fill="currentColor"/>
+<rect x="0.22168" y="14.3643" width="20" height="2" rx="1" transform="rotate(-45 0.22168 14.3643)" fill="currentColor"/>
+</g>
 </svg>

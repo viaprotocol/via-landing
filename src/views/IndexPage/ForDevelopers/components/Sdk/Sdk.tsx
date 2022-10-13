@@ -26,7 +26,7 @@ function Sdk() {
         <div>
           <h3 className="mb-3 text-[28px] font-semibold leading-[40px] lg:text-[32px] lg:leading-[44px]">SDK</h3>
           <p className="mb-6 max-w-[490px] text-[24px] leading-[32px] text-white/40 lg:mb-4 lg:text-[24px] lg:leading-[36px]">
-            Show routes 5 times faster than with other aggregators API
+            Show routes 5 times faster than with other aggregators SDK
           </p>
           <div className="mt-6 flex gap-2">
             <RangoIcon />

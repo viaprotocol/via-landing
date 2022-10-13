@@ -35,8 +35,8 @@ h1 {
 
   @media only screen and (min-width: 960px) {
     margin-bottom: 60px;
-    font-size: 84px;
-    line-height: 96px;
+    font-size: 62px;
+    line-height: 1.15em;
   }
 }
 
@@ -119,7 +119,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: contain;
   background-image: url('/images/backgrounds/bg-top-small.jpg');
   position: relative;
   letter-spacing: -0.02em;
@@ -182,11 +182,11 @@ body {
 }
 
 section.intro {
-  padding: 40px 10px 80px;
+  padding: 90px 10px 80px;
   text-align: center;
 
   @media only screen and (min-width: 960px) {
-    padding: 62px 46px 180px;
+    padding: 200px 46px 180px;
   }
 
   .form-wrapper {
@@ -196,7 +196,7 @@ section.intro {
     max-width: 480px;
 
     @media only screen and (min-width: 960px) {
-      width: 720px;
+      width: 560px;
       max-width: unset;
     }
   }
@@ -406,20 +406,31 @@ section.tools {
 }
 
 .mobile-menu {
-  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 10;
-  padding: 20px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
   background-color: rgba(26, 27, 30, 0.64);
   box-shadow: 0px 24px 80px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(120px);
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: all 0.25s ease;
+
+  @media only screen and (min-width: 960px) {
+    display: none;
+  }
 
   &--opened {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
+    opacity: 1;
+    transform: scaleY(1);
   }
 
   &__header {
@@ -439,15 +450,16 @@ section.tools {
     border-radius: 8px;
     padding: 12px;
     margin-bottom: 24px;
-    background-color: #07080b;
-    color: white;
-    transition: background-color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, color 0.25s ease-in-out;
+    color: rgba(255, 255, 255, 0.4);
+    transition: all 0.25s ease;
 
-    &:active,
     &:hover {
-      background-color: #04ff66;
-      box-shadow: 0px 0px 16px rgba(4, 255, 102, 0.6);
-      color: #07080b;
+      background-color: rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.8);
+    }
+  
+    &:active {
+      background-color: rgba(255, 255, 255, 0.12);
     }
   }
 
@@ -458,14 +470,17 @@ section.tools {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px 12px 8px 8px;
-    font-size: 16px;
+    padding: 12px 12px 12px 20px;
+    font-size: 18px;
     line-height: 24px;
-    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
     transition: background 0.25s ease-in-out;
 
-    &:active,
     &:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    &:active {
       background-color: rgba(255, 255, 255, 0.16);
     }
   }
@@ -492,8 +507,9 @@ section.tools {
 
   &__socials {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 16px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -511,6 +527,34 @@ section.tools {
     &:hover {
       background-color: rgba(255, 255, 255, 0.12);
       color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  &__launch-button {
+    margin: 30px auto;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 12px;
+    padding: 16px 20px;
+    background-color: #00ff66;
+    color: #07080b;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1em;
+    letter-spacing: -0.02em;
+    text-align: center;
+    box-shadow: 0px 0px 40px transparent;
+
+    &:hover {
+      box-shadow: 0px 0px 40px #ff002e;
+      background-color: #ff002e;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: #b90d2c;
+      color: #f1cfd5;
     }
   }
 }
@@ -549,7 +593,9 @@ section.tools {
   &__wrapper {
     overflow: hidden;
     display: flex;
-    padding: 12px 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 12px 12px 12px 20px;
     align-items: flex-start;
     transition: background-color 0.25s ease-in-out;
     background-color: transparent;
@@ -606,11 +652,7 @@ section.tools {
   }
 
   &__info {
-    padding: 6px 0;
-
-    @media screen and (min-width: 768px) {
-      padding: 0;
-    }
+    margin-right: 10px;
   }
 
   &__title {
