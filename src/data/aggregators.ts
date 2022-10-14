@@ -47,6 +47,11 @@ const aggregators: TTool[] = [
     name: 'iSwap',
     type: ToolTypeEnum.Aggregator,
     logoURI: '/images/aggregators/iswap.svg'
+  },
+  {
+    name: 'Socket',
+    type: ToolTypeEnum.Aggregator,
+    logoURI: '/images/aggregators/socket.svg'
   }
 ]
 
