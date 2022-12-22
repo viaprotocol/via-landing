@@ -9,6 +9,7 @@ import MoreIcon from 'public/images/socials/more.svg'
 import LessIcon from 'public/images/socials/less.svg'
 
 import MenuIcon from 'public/images/icons/menu-icon.svg'
+import { isNewYear } from './utils'
 
 function Header() {
   const { openMobileMenu } = useContext(StateContext)
@@ -44,7 +45,7 @@ function Header() {
   return (
     <header className={cx(styles.header, isHeaderCompact && styles.headerCompact)}>
       <div className={cx(styles.headerLogoContainer, isHeaderCompact && styles.headerLogoContainerFaded)}>
-        <img src="/images/logo.svg" alt="Via" className={styles.headerLogoImage} />
+        <img src={isNewYear() ? '/images/logo-ny.svg' : '/images/logo.svg'} alt="Via" className={styles.headerLogoImage} />
         <div className={styles.headerLogoDescription}>
           <strong>The most efficient</strong>
           <div>Cross-chain router</div>
