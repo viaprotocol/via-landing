@@ -8,7 +8,7 @@ function Footer() {
         <div className="flex flex-col items-center gap-2.5 lg:flex-row lg:gap-8">
           <Image src="/images/logo-footer.svg" alt="Via" width={74} height={16} unoptimized />
           <div>
-            Cross&#8209;chain aggregation protocol, 2022
+            Cross&#8209;chain aggregation protocol, {new Date().getFullYear()}
           </div>
         </div>
         <ul className="mb-[80px] flex gap-4 lg:mb-0 lg:gap-8">
