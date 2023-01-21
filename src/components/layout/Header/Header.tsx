@@ -16,6 +16,7 @@ function Header() {
 
   const [isHeaderCompact, setHeaderCompact] = useState(false)
   const [isSocialsExpanded, setSocialsExpanded] = useState(false)
+  const [isNewYearLogo, setIsNewYearLogo] = useState(false)
 
   const handleScroll = () => {
     setHeaderCompact(window.pageYOffset > 5)
@@ -27,6 +28,10 @@ function Header() {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
+  }, [])
+
+  useEffect(() => {
+    setIsNewYearLogo(isNewYear())
   }, [])
 
   const socialItem = social => (
@@ -45,7 +50,7 @@ function Header() {
   return (
     <header className={cx(styles.header, isHeaderCompact && styles.headerCompact)}>
       <div className={cx(styles.headerLogoContainer, isHeaderCompact && styles.headerLogoContainerFaded)}>
-        <img src={isNewYear() ? '/images/logo-ny.svg' : '/images/logo.svg'} alt="Via" className={styles.headerLogoImage} />
+        <img src={isNewYearLogo ? '/images/logo-ny.svg' : '/images/logo.svg'} alt="Via" className={styles.headerLogoImage} />
         <div className={styles.headerLogoDescription}>
           <strong>The most efficient</strong>
           <div>Cross-chain router</div>
