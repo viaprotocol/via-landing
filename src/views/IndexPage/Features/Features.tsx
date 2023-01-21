@@ -46,7 +46,7 @@ function Features() {
           />
           <Tile
             icon={<GasEstimationIcon/>}
-            title="Gas usage estamation"
+            title="Gas usage estimation"
             description="We estimate gas on historical data for fair competition among bridges and aggregators"
           />
           <Tile
