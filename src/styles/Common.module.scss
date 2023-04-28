@@ -3,12 +3,14 @@
 
   &::before {
     content: '';
-    @apply absolute left-0 right-0 top-0 bottom-0 bg-no-repeat z-[5];
+    @apply absolute left-0 right-0 -top-[600px] -bottom-[300px] bg-no-repeat z-[5];
     background-image: url('/images/backgrounds/bg-dotted-desktop.png');
     background-position: -1247px;
+    opacity: 0.6;
 
     @media screen and (min-width: 1024px) {
       background-position: -1147px;
+      opacity: 0.8;
     }
   }
 }

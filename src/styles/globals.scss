@@ -182,11 +182,11 @@ body {
 }
 
 section.intro {
-  padding: 90px 10px 80px;
+  padding: 90px 10px 0;
   text-align: center;
 
   @media only screen and (min-width: 960px) {
-    padding: 200px 46px 180px;
+    padding: 200px 46px 0;
   }
 
   .form-wrapper {

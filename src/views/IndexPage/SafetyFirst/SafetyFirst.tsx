@@ -5,6 +5,7 @@ import { Tile } from '@/components/kit'
 import WatchdogIcon from 'public/images/features/watchdog.svg'
 import SecurityScoreIcon from 'public/images/features/security-score.svg'
 import RefuelIcon from 'public/images/features/refuel.svg'
+import AuditIcon from 'public/images/features/audit.svg'
 import AdvancedRoutesIcon from 'public/images/features/advanced-routes.svg'
 
 function SafetyFirst() {
@@ -27,10 +28,15 @@ function SafetyFirst() {
             isMobileColumned
           />
           <Tile
-            slots={2}
             icon={<RefuelIcon/>}
             title="Refuel"
             description="Move gas between any networks in 1 click"
+          />
+          <Tile
+            icon={<AuditIcon/>}
+            title="Passed audit"
+            description="Audit by Pessimistic successfully passed in Q4 2022. Next one is scheduled for Q2 2023"
+            isMobileColumned
           />
           <Tile
             icon={<AdvancedRoutesIcon/>}
