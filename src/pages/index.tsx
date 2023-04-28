@@ -30,11 +30,11 @@ const Home: NextPage = () => {
             <div className="h-[120px] md:h-[200px]" />
             <Ecosystem />
             <div className="h-[120px] md:h-[200px]" />
+            <TransactionTracking />
+            <div className="h-[120px] md:h-[200px]" />
             <div className={styles.leftDot}>
               <Wallets />
             </div>
-            <div className="h-[120px] md:h-[200px]" />
-            <TransactionTracking />
             <div className="h-[120px] md:h-[200px]" />
             <ForDevelopers />
           </main>
