@@ -11,8 +11,8 @@ function Intro() {
         </a>
       </div>
       <h1>
-        Find profitable cross&#8209;chain<br />
-        arbitrage opportunities
+        Safe and efficient<br />
+        cross-chain router
       </h1>
       <a data-button="large" href="https://router.via.exchange/" target="_blank" rel="noreferrer">Launch dApp</a>
     </Section>
