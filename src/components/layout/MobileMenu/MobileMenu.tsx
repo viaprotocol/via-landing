@@ -60,7 +60,7 @@ function MobileMenu() {
             </a>
           </li>
           <li>
-            <a className="mobile-menu__social-link" href="https://discord.gg/viaexchange" target="_blank" rel="noopener noreferrer">
+            <a className="mobile-menu__social-link" href="https://discord.gg/HD6KysaHCP" target="_blank" rel="noopener noreferrer">
               <Icon icon="discord" width={24} height={24} />
               <span className="visually-hidden">Discord</span>
             </a>
