@@ -8,7 +8,6 @@ export const cli = new Via({ apiKey: DEFAULT_API_KEY, url: 'https://router-api.v
 //     fromAddress: '0xD75183E452d6915356814454D2D64Df149853D38',
 //     fromAmount: 148875000000000000,
 //     fromChainId: 56,
-//     toChainId: 56,
 //     fromTokenAddress: '0x0000000000000000000000000000000000000000',
 //     toTokenAddress: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
 //     multiTx: true,
